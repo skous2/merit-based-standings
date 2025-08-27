@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Football - Merit Based Standings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>College Football - Merit Based Standings</h1>
+            <nav class="nav">
+                <a href="#" class="nav-item active" onclick="showPage('current-standings')">Current Standings</a>
+                <a href="#" class="nav-item" onclick="showPage('about')">About the Standings</a>
+                <a href="#" class="nav-item" onclick="showPage('total-points')">Total Points</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item">Week Details ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item" onclick="showPage('week-1')">Week 1</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-2')">Week 2</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-3')">Week 3</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-4')">Week 4</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-5')">Week 5</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-6')">Week 6</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-7')">Week 7</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-8')">Week 8</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-9')">Week 9</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-10')">Week 10</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-11')">Week 11</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-12')">Week 12</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-13')">Week 13</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-14')">Week 14</a>
+                        <a href="#" class="dropdown-item" onclick="showPage('week-15')">Week 15</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Current Standings Page -->
+        <div id="current-standings" class="page active">
+            <div class="container">
+                <h2>Current Standings</h2>
+                <p>The latest merit-based rankings showing where each team stands in the current season.</p>
+                <div id="currentMessageArea"></div>
+                <div id="currentTableSection">
+                    <div id="currentTableInfo" class="table-info"></div>
+                    <div id="currentTableContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About the Standings Page -->
+        <div id="about" class="page">
+            <div class="container">
+                <h2>About the Standings</h2>
+                <p>Welcome to the College Football Merit Based Standings system. This standings methodology aims for transparency and simplicity. It evaluates teams based on what was accomplished on the field, not hidden human biases in traditional polls or the black box of computer rankings alone.</p>
+                <p>Like soccer, who give teams 3 points for a win, 1 for a tie, and 0 for a loss, we wondered if the same could apply to football. The challenge is not every team plays one another, so you must account for strength of schedule. We propose a method to do just that.</p>
+                
+                <h3>How It Works</h3>
+                <p>Every game can be worth up to 10 points for a total of 120 points possible in the season</p>
+                <p>Our merit-based system considers 4 factors:</p>
+                
+                <ul>
+                    <li><strong>Did you win?</strong> If you lose your game that week you get no points, if you won you get <strong>4</strong> points </li>
+                    <li><strong>How did you win?</strong> If you had a quality win (deemed as more than 10 points or a win on the road) you get <strong>2</strong> points</li>
+                    <li><strong>Who did you beat (part 1)?</strong> If you beat a team from a power 4 conference you get <strong>1</strong> point</li>
+                    <li><strong>Who did you beat (part 2)?</strong> If you beat a team who is <strong>currently (updated weekly)</strong> in the top 30 of total points you get <strong>3</strong> points; A team in the top 60 gets <strong>2</strong> points; And a team in the top 100 gets <strong>1</strong> point </li>
+
+                </ul>
+                
+                <h3>Point System</h3>
+                <p>Teams accumulate points each week based on if they win, how they won, and who they beat. The total points system provides a cumulative view of the entire season, while weekly details show how teams performed in specific weeks.</p>
+                
+                <h3>Updates</h3>
+                <p>Standings are updated weekly after all games are completed and verified.</p>
+                <p>Ultimately, the standings won't truly reflect the winner until the final week.</p>
+            </div>
+        </div>
+
+        <!-- Total Points Page -->
+        <div id="total-points" class="page">
+            <div class="container">
+                <h2>Total Points Standings</h2>
+                <div id="totalMessageArea"></div>
+                <div id="totalTableSection">
+                    <div id="totalTableInfo" class="table-info"></div>
+                    <div id="totalTableContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Week Pages -->
+        <div id="week-1" class="page">
+            <div class="container">
+                <h2>Week 1 Details</h2>
+                <p>Week 1 performance breakdown and standings after the first week of competition.</p>
+                <div id="week1MessageArea"></div>
+                <div id="week1TableSection">
+                    <div id="week1TableInfo" class="table-info"></div>
+                    <div id="week1TableContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-2" class="page">
+            <div class="container">
+                <h2>Week 2 Details</h2>
+                <p>Week 2 performance breakdown and standings after the second week of competition.</p>
+                <div id="week2-content">
+                    <div class="no-data">
+                        <p>Week 2 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-3" class="page">
+            <div class="container">
+                <h2>Week 3 Details</h2>
+                <p>Week 3 performance breakdown and standings after the third week of competition..</p>
+                <div id="week3-content">
+                    <div class="no-data">
+                        <p>Week 3 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-4" class="page">
+            <div class="container">
+                <h2>Week 4 Details</h2>
+                <p>Week 4 performance breakdown and standings after the fourth week of competition..</p>
+                <div id="week4-content">
+                    <div class="no-data">
+                        <p>Week 4 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-5" class="page">
+            <div class="container">
+                <h2>Week 5 Details</h2>
+                <p>Week 5 performance breakdown and standings after the fifth week of competition..</p>
+                <div id="week5-content">
+                    <div class="no-data">
+                        <p>Week 5 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-6" class="page">
+            <div class="container">
+                <h2>Week 6 Details</h2>
+                <p>Week 6 performance breakdown and standings after the sixth week of competition..</p>
+                <div id="week6-content">
+                    <div class="no-data">
+                        <p>Week 6 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-7" class="page">
+            <div class="container">
+                <h2>Week 7 Details</h2>
+                <p>Week 7 performance breakdown and standings after the seventh week of competition..</p>
+                <div id="week7-content">
+                    <div class="no-data">
+                        <p>Week 7 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-8" class="page">
+            <div class="container">
+                <h2>Week 8 Details</h2>
+                <p>Week 8 performance breakdown and standings after the eighth week of competition..</p>
+                <div id="week8-content">
+                    <div class="no-data">
+                        <p>Week 8 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-9" class="page">
+            <div class="container">
+                <h2>Week 9 Details</h2>
+                <p>Week 9 performance breakdown and standings after the ninth week of competition..</p>
+                <div id="week9-content">
+                    <div class="no-data">
+                        <p>Week 9 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-10" class="page">
+            <div class="container">
+                <h2>Week 10 Details</h2>
+                <p>Week 10 performance breakdown and standings after the tenth week of competition..</p>
+                <div id="week10-content">
+                    <div class="no-data">
+                        <p>Week 10 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-11" class="page">
+            <div class="container">
+                <h2>Week 11 Details</h2>
+                <p>Week 11 performance breakdown and standings after the eleventh week of competition..</p>
+                <div id="week11-content">
+                    <div class="no-data">
+                        <p>Week 11 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-12" class="page">
+            <div class="container">
+                <h2>Week 12 Details</h2>
+                <p>Week 12 performance breakdown and standings after the twelfth week of competition..</p>
+                <div id="week12-content">
+                    <div class="no-data">
+                        <p>Week 12 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-13" class="page">
+            <div class="container">
+                <h2>Week 13 Details</h2>
+                <p>Week 13 performance breakdown and standings after the thirteenth week of competition..</p>
+                <div id="week13-content">
+                    <div class="no-data">
+                        <p>Week 13 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-14" class="page">
+            <div class="container">
+                <h2>Week 14 Details</h2>
+                <p>Week 14 performance breakdown and standings after the fourteenth week of competition..</p>
+                <div id="week14-content">
+                    <div class="no-data">
+                        <p>Week 14 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="week-15" class="page">
+            <div class="container">
+                <h2>Week 15 Details</h2>
+                <p>Week 15 performance breakdown and standings after the fifteenth week of competition..</p>
+                <div id="week15-content">
+                    <div class="no-data">
+                        <p>Week 15 data will be displayed here when available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Global variables for current standings
+        let currentStandingsData = [];
+        let currentStandingsHeaders = [];
+        let currentSortColumn = null;
+        let currentSortDirection = 'asc';
+
+        // Global variables for total points
+        let totalPointsData = [];
+        let totalPointsHeaders = [];
+        let totalSortColumn = null;
+        let totalSortDirection = 'asc';
+
+        // Global variables for week data
+        let weekDataCache = {};
+        let weekHeaders = {};
+        let weekSortColumns = {};
+        let weekSortDirections = {};
+
+        // Page navigation
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Remove active class from nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Add active class to corresponding nav item and load data
+            if (pageId === 'current-standings') {
+                document.querySelector('.nav-item[onclick="showPage(\'current-standings\')"]').classList.add('active');
+                loadCurrentStandingsData();
+            } else if (pageId === 'about') {
+                document.querySelector('.nav-item[onclick="showPage(\'about\')"]').classList.add('active');
+            } else if (pageId === 'total-points') {
+                document.querySelector('.nav-item[onclick="showPage(\'total-points\')"]').classList.add('active');
+                loadTotalPointsData();
+            } else if (pageId.startsWith('week-')) {
+                const weekNumber = parseInt(pageId.split('-')[1]);
+                loadWeekData(weekNumber);
+            }
+            
+            // Update page title
+            if (pageId === 'current-standings') {
+                document.title = 'Current Standings - College Football Merit Based Standings';
+            } else if (pageId === 'about') {
+                document.title = 'About the Standings - College Football Merit Based Standings';
+            } else if (pageId === 'total-points') {
+                document.title = 'Total Points - College Football Merit Based Standings';
+            } else if (pageId.startsWith('week-')) {
+                const weekNum = pageId.split('-')[1];
+                document.title = `Week ${weekNum} - College Football Merit Based Standings`;
+            }
+        }
+
+        // Load current standings data
+        function loadCurrentStandingsData() {
+            const messageArea = document.getElementById('currentMessageArea');
+            showMessage('Loading current standings...', 'loading', messageArea);
+            
+            fetch('/api/current-standings')
+                .then(response => response.json())
+                .then(data => {
+                    messageArea.innerHTML = '';
+                    
+                    if (data.headers.length === 0 || data.data.length === 0) {
+                        showNoData('currentTableContainer', 'currentTableInfo', 'current-standings.csv');
+                    } else {
+                        currentStandingsHeaders = data.headers;
+                        currentStandingsData = [...data.data];
+                        displayCurrentStandingsTable(currentStandingsHeaders, currentStandingsData);
+                    }
+                })
+                .catch(error => {
+                    showMessage('Error loading current standings: ' + error.message, 'error', messageArea);
+                });
+        }
+
+        // Load total points data
+        function loadTotalPointsData() {
+            const messageArea = document.getElementById('totalMessageArea');
+            showMessage('Loading total points...', 'loading', messageArea);
+            
+            fetch('/api/total-points')
+                .then(response => response.json())
+                .then(data => {
+                    messageArea.innerHTML = '';
+                    
+                    if (data.headers.length === 0 || data.data.length === 0) {
+                        showNoData('totalTableContainer', 'totalTableInfo', 'total-points.csv');
+                    } else {
+                        totalPointsHeaders = data.headers;
+                        totalPointsData = [...data.data];
+                        displayTotalPointsTable(totalPointsHeaders, totalPointsData);
+                    }
+                })
+                .catch(error => {
+                    showMessage('Error loading total points: ' + error.message, 'error', messageArea);
+                });
+        }
+
+        // Sort data by column (Current Standings)
+        function sortCurrentStandingsData(columnIndex, direction) {
+            const column = currentStandingsHeaders[columnIndex];
+            
+            currentStandingsData.sort((a, b) => {
+                let valueA = a[column] || '';
+                let valueB = b[column] || '';
+                
+                const numA = parseFloat(valueA);
+                const numB = parseFloat(valueB);
+                
+                if (!isNaN(numA) && !isNaN(numB)) {
+                    return direction === 'asc' ? numA - numB : numB - numA;
+                } else {
+                    valueA = valueA.toString().toLowerCase();
+                    valueB = valueB.toString().toLowerCase();
+                    
+                    if (direction === 'asc') {
+                        return valueA.localeCompare(valueB);
+                    } else {
+                        return valueB.localeCompare(valueA);
+                    }
+                }
+            });
+        }
+
+        // Sort data by column (Total Points)
+        function sortTotalPointsData(columnIndex, direction) {
+            const column = totalPointsHeaders[columnIndex];
+            
+            totalPointsData.sort((a, b) => {
+                let valueA = a[column] || '';
+                let valueB = b[column] || '';
+                
+                const numA = parseFloat(valueA);
+                const numB = parseFloat(valueB);
+                
+                if (!isNaN(numA) && !isNaN(numB)) {
+                    return direction === 'asc' ? numA - numB : numB - numA;
+                } else {
+                    valueA = valueA.toString().toLowerCase();
+                    valueB = valueB.toString().toLowerCase();
+                    
+                    if (direction === 'asc') {
+                        return valueA.localeCompare(valueB);
+                    } else {
+                        return valueB.localeCompare(valueA);
+                    }
+                }
+            });
+        }
+
+        // Handle header click for sorting (Current Standings)
+        function handleCurrentStandingsHeaderClick(columnIndex) {
+            if (currentSortColumn === columnIndex) {
+                currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortDirection = 'asc';
+            }
+            
+            currentSortColumn = columnIndex;
+            sortCurrentStandingsData(columnIndex, currentSortDirection);
+            displayCurrentStandingsTable(currentStandingsHeaders, currentStandingsData);
+        }
+
+        // Handle header click for sorting (Total Points)
+        function handleTotalPointsHeaderClick(columnIndex) {
+            if (totalSortColumn === columnIndex) {
+                totalSortDirection = totalSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                totalSortDirection = 'asc';
+            }
+            
+            totalSortColumn = columnIndex;
+            sortTotalPointsData(columnIndex, totalSortDirection);
+            displayTotalPointsTable(totalPointsHeaders, totalPointsData);
+        }
+
+        // Display current standings table
+        function displayCurrentStandingsTable(headers, data) {
+            const tableInfo = document.getElementById('currentTableInfo');
+            const tableContainer = document.getElementById('currentTableContainer');
+            
+            tableInfo.innerHTML = `Showing ${data.length} rows × ${headers.length} columns`;
+
+            let html = '<table><thead><tr>';
+            headers.forEach((header, index) => {
+                let headerClass = 'sortable';
+                if (currentSortColumn === index) {
+                    headerClass += currentSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
+                }
+                html += `<th class="${headerClass}" onclick="handleCurrentStandingsHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                html += '<tr>';
+                headers.forEach(header => {
+                    html += `<td>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            tableContainer.innerHTML = html;
+        }
+
+        // Display total points table
+        function displayTotalPointsTable(headers, data) {
+            const tableInfo = document.getElementById('totalTableInfo');
+            const tableContainer = document.getElementById('totalTableContainer');
+            
+            tableInfo.innerHTML = `Showing ${data.length} rows × ${headers.length} columns`;
+
+            let html = '<table><thead><tr>';
+            headers.forEach((header, index) => {
+                let headerClass = 'sortable';
+                if (totalSortColumn === index) {
+                    headerClass += totalSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
+                }
+                html += `<th class="${headerClass}" onclick="handleTotalPointsHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                html += '<tr>';
+                headers.forEach(header => {
+                    html += `<td>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            tableContainer.innerHTML = html;
+        }
+
+        // Show no data message
+        function showNoData(containerId, infoId, filename) {
+            const tableInfo = document.getElementById(infoId);
+            const tableContainer = document.getElementById(containerId);
+            
+            tableInfo.innerHTML = '';
+            tableContainer.innerHTML = `
+                <div class="no-data">
+                    <h3>No Data Available</h3>
+                    <p>Please add your <strong>${filename}</strong> file in the project root directory and restart the server.</p>
+                </div>
+            `;
+        }
+
+        // Show messages
+        function showMessage(message, type, messageArea) {
+            messageArea.innerHTML = `<div class="message ${type}">${message}</div>`;
+        }
+
+        // Load week data (placeholder for future implementation)
+        function loadWeekData(weekNumber) {
+            const messageArea = document.getElementById(`week${weekNumber}MessageArea`);
+            showMessage(`Loading week ${weekNumber} data...`, 'loading', messageArea);
+            
+            fetch(`/api/week/${weekNumber}`)
+                .then(response => response.json())
+                .then(data => {
+                    messageArea.innerHTML = '';
+                    
+                    if (data.headers.length === 0 || data.data.length === 0) {
+                        showNoData(`week${weekNumber}TableContainer`, `week${weekNumber}TableInfo`, `week-${weekNumber}.csv`);
+                    } else {
+                        weekHeaders[weekNumber] = data.headers;
+                        weekDataCache[weekNumber] = [...data.data];
+                        weekSortColumns[weekNumber] = null;
+                        weekSortDirections[weekNumber] = 'asc';
+                        displayWeekTable(weekNumber, weekHeaders[weekNumber], weekDataCache[weekNumber]);
+                    }
+                })
+                .catch(error => {
+                    showMessage(`Error loading week ${weekNumber} data: ` + error.message, 'error', messageArea);
+                });
+        }
+
+        // Sort week data by column
+        function sortWeekData(weekNumber, columnIndex, direction) {
+            const column = weekHeaders[weekNumber][columnIndex];
+            
+            weekDataCache[weekNumber].sort((a, b) => {
+                let valueA = a[column] || '';
+                let valueB = b[column] || '';
+                
+                const numA = parseFloat(valueA);
+                const numB = parseFloat(valueB);
+                
+                if (!isNaN(numA) && !isNaN(numB)) {
+                    return direction === 'asc' ? numA - numB : numB - numA;
+                } else {
+                    valueA = valueA.toString().toLowerCase();
+                    valueB = valueB.toString().toLowerCase();
+                    
+                    if (direction === 'asc') {
+                        return valueA.localeCompare(valueB);
+                    } else {
+                        return valueB.localeCompare(valueA);
+                    }
+                }
+            });
+        }
+
+        // Handle header click for sorting (Week data)
+        function handleWeekHeaderClick(weekNumber, columnIndex) {
+            if (weekSortColumns[weekNumber] === columnIndex) {
+                weekSortDirections[weekNumber] = weekSortDirections[weekNumber] === 'asc' ? 'desc' : 'asc';
+            } else {
+                weekSortDirections[weekNumber] = 'asc';
+            }
+            
+            weekSortColumns[weekNumber] = columnIndex;
+            sortWeekData(weekNumber, columnIndex, weekSortDirections[weekNumber]);
+            displayWeekTable(weekNumber, weekHeaders[weekNumber], weekDataCache[weekNumber]);
+        }
+
+        // Display week table
+        function displayWeekTable(weekNumber, headers, data) {
+            const tableInfo = document.getElementById(`week${weekNumber}TableInfo`);
+            const tableContainer = document.getElementById(`week${weekNumber}TableContainer`);
+            
+            tableInfo.innerHTML = `Showing ${data.length} rows × ${headers.length} columns`;
+
+            let html = '<table><thead><tr>';
+            headers.forEach((header, index) => {
+                let headerClass = 'sortable';
+                if (weekSortColumns[weekNumber] === index) {
+                    headerClass += weekSortDirections[weekNumber] === 'asc' ? ' sort-asc' : ' sort-desc';
+                }
+                html += `<th class="${headerClass}" onclick="handleWeekHeaderClick(${weekNumber}, ${index})" title="Click to sort by ${header}">${header}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                html += '<tr>';
+                headers.forEach(header => {
+                    html += `<td>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            tableContainer.innerHTML = html;
+        }
+
+        // Initialize page
+        window.addEventListener('load', function() {
+            // Show current standings page by default and load its data
+            showPage('current-standings');
+        });
+    </script>
+</body>
+</html>
