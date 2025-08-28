@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
-//const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Serve static files from public directory
 app.use(express.static('public'));
@@ -13,6 +12,7 @@ app.use(express.static('public'));
 // Store table data for different sections
 let currentStandingsData = { headers: [], data: [] };
 let totalPointsData = { headers: [], data: [] };
+let comparisonData = { headers: [], data: [] };
 let weekData = {};
 
 // Load CSV data function
@@ -63,6 +63,16 @@ function loadAllCSVData() {
     }
   });
 
+  // Load 2024 comparison from 2024-comparison.csv
+  loadCSVFile('2024-comparison.csv', (data) => {
+    comparisonData = data;
+    if (data.headers.length > 0) {
+      console.log('Loaded 2024-comparison.csv successfully');
+    } else {
+      console.log('2024-comparison.csv not found or empty');
+    }
+  });
+
   // Load week data (weeks 1-15)
   for (let week = 1; week <= 15; week++) {
     loadCSVFile(`week-${week}.csv`, (data) => {
@@ -89,6 +99,11 @@ app.get('/api/total-points', (req, res) => {
   res.json(totalPointsData);
 });
 
+// Get 2024 comparison data
+app.get('/api/2024-comparison', (req, res) => {
+  res.json(comparisonData);
+});
+
 // Get week data
 app.get('/api/week/:weekNumber', (req, res) => {
   const weekNumber = parseInt(req.params.weekNumber);
@@ -102,12 +117,12 @@ app.get('/api/week/:weekNumber', (req, res) => {
 // Load CSV data when server starts
 loadAllCSVData();
 
-app.listen(PORT, '0.0.0.0', () => console.log('up on', PORT));
-///app.listen(PORT, () => {
-  //console.log(`Server running on http://localhost:${PORT}`);
-  //console.log('Required CSV files:');
-  //console.log('- current-standings.csv (for Current Standings page)');
-  //console.log('- total-points.csv (for Total Points page)');
-  //console.log('- week-X.csv (for individual week pages, X = 1-15)');
-  //console.log('No fallback files will be used.');
-///});
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log('Required CSV files:');
+  console.log('- current-standings.csv (for Current Standings page)');
+  console.log('- total-points.csv (for Total Points page)');
+  console.log('- 2024-comparison.csv (for 2024 Standing Comparison page)');
+  console.log('- week-X.csv (for individual week pages, X = 1-15)');
+  console.log('No fallback files will be used.');
+});
