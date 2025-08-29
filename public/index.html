@@ -99,7 +99,7 @@
         <div id="2024-comparison" class="page">
             <div class="container">
                 <h2>2024 Standing Comparison</h2>
-                <p>Compare the 2024 merit-based standings with traditional 2024 rankings and polls.</p>
+                <p>Compare the current merit-based standings with traditional 2024 rankings and polls.</p>
                 <div id="comparisonMessageArea"></div>
                 <div id="comparisonTableSection">
                     <div id="comparisonTableInfo" class="table-info"></div>
@@ -308,6 +308,7 @@
         let comparisonHeaders = [];
         let comparisonSortColumn = null;
         let comparisonSortDirection = 'asc';
+        let highlightedTeam = null;
 
         // Global variables for week data
         let weekDataCache = {};
@@ -625,7 +626,49 @@
             display2024ComparisonTable(comparisonHeaders, comparisonData);
         }
 
-        // Display 2024 comparison table
+        // Handle team cell click for highlighting
+        function handleTeamCellClick(teamName, event) {
+            event.stopPropagation();
+            console.log('Cell clicked:', teamName); // Debug log
+            
+            // Clear previous highlights
+            document.querySelectorAll('.highlighted-team').forEach(cell => {
+                cell.classList.remove('highlighted-team');
+                console.log('Removed highlight from:', cell.textContent); // Debug log
+            });
+            
+            if (highlightedTeam === teamName) {
+                // If clicking the same team, unhighlight
+                highlightedTeam = null;
+                console.log('Unhighlighted team:', teamName); // Debug log
+            } else {
+                // Highlight all cells with matching team name
+                highlightedTeam = teamName;
+                console.log('Highlighting team:', teamName); // Debug log
+                highlightTeamCells(teamName);
+            }
+        }
+
+        // Highlight all cells containing the specified team name
+        function highlightTeamCells(teamName) {
+            if (!teamName) return;
+            
+            const cells = document.querySelectorAll('#comparisonTableContainer td');
+            console.log('Found cells to check:', cells.length); // Debug log
+            
+            let highlightCount = 0;
+            cells.forEach(cell => {
+                const cellText = cell.textContent.trim();
+                // Check for exact match or if team name is contained in the cell
+                if (cellText === teamName || cellText.toLowerCase().includes(teamName.toLowerCase())) {
+                    cell.classList.add('highlighted-team');
+                    highlightCount++;
+                    console.log('Highlighted cell:', cellText); // Debug log
+                }
+            });
+            
+            console.log('Total cells highlighted:', highlightCount); // Debug log
+        }
         function display2024ComparisonTable(headers, data) {
             const tableInfo = document.getElementById('comparisonTableInfo');
             const tableContainer = document.getElementById('comparisonTableContainer');

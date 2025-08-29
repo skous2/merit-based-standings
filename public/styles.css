@@ -199,6 +199,37 @@ tr:nth-child(even) {
     padding: 40px;
 }
 
+/* Highlight styles for team comparison - ONLY for 2024 comparison page */
+.highlighted-team {
+    background-color: #fff3cd !important;
+    border: 2px solid #ffc107 !important;
+    font-weight: bold !important;
+    color: #856404 !important;
+}
+
+.highlighted-team:hover {
+    background-color: #ffeaa7 !important;
+}
+
+/* Override any conflicting styles */
+tr:nth-child(even) .highlighted-team {
+    background-color: #fff3cd !important;
+}
+
+tr:nth-child(odd) .highlighted-team {
+    background-color: #fff3cd !important;
+}
+
+/* Make table cells clickable ONLY in comparison table */
+#comparisonTableContainer td {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#comparisonTableContainer td:hover {
+    background-color: #f8f9fa;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
