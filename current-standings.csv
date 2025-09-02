@@ -1,137 +1,1 @@
-Current Standing,Team,Total Points,Start of Year Standing
-1,Iowa State,10,9
-2,Western Kentucky,8,54
-3,Kansas,7,69
-4,Hawai'i,5,97
-5,UNLV,4,18
-6,Oregon,0,1
-7,Notre Dame,0,2
-8,Penn State,0,3
-9,Texas,0,4
-10,SMU,0,5
-11,Georgia,0,6
-12,Indiana,0,7
-13,Ohio State,0,8
-14,BYU,0,10
-15,Boise State,0,11
-16,Miami,0,12
-17,Alabama,0,13
-18,Ole Miss,0,14
-19,Tennessee,0,15
-20,South Carolina,0,16
-21,Arizona State,0,17
-22,Clemson,0,19
-23,Louisville,0,20
-24,Louisiana,0,21
-25,Syracuse,0,22
-26,Colorado,0,23
-27,Kansas State,0,24
-28,Illinois,0,25
-29,Army,0,26
-30,Baylor,0,27
-31,Tulane,0,28
-32,LSU,0,29
-33,Iowa,0,30
-34,Memphis,0,31
-35,Texas Tech,0,32
-36,Texas A&M,0,33
-37,TCU,0,34
-38,Missouri,0,35
-39,Ohio,0,36
-40,Marshall,0,37
-41,Duke,0,38
-42,Florida,0,39
-43,Washington State,0,40
-44,Minnesota,0,41
-45,Navy,0,42
-46,Michigan,0,43
-47,Miami (OH),0,44
-48,Georgia Southern,0,45
-49,Pittsburgh,0,46
-50,Sam Houston,0,47
-51,Liberty,0,48
-52,James Madison,0,49
-53,Rutgers,0,50
-54,Boston College,0,51
-55,Georgia Tech,0,52
-56,Jacksonville State,0,53
-57,Buffalo,0,55
-58,USC,0,56
-59,Virginia Tech,0,57
-60,Northern Illinois,0,58
-61,Toledo,0,59
-62,Colorado State,0,60
-63,East Carolina,0,61
-64,Oklahoma,0,62
-65,Bowling Green,0,63
-66,Texas State,0,64
-67,UConn,0,65
-68,West Virginia,0,66
-69,Nebraska,0,67
-70,Washington,0,68
-71,Vanderbilt,0,70
-72,North Carolina,0,71
-73,San José State,0,72
-74,Arkansas,0,73
-75,NC State,0,74
-76,California,0,75
-77,Cincinnati,0,76
-78,South Alabama,0,77
-79,Coastal Carolina,0,78
-80,UTSA,0,79
-81,Fresno State,0,80
-82,Virginia,0,81
-83,North Texas,0,82
-84,Utah,0,83
-85,Auburn,0,84
-86,USF,0,85
-87,Old Dominion,0,86
-88,Western Michigan,0,87
-89,UCLA,0,88
-90,Wisconsin,0,89
-91,Arkansas State,0,90
-92,Oregon State,0,91
-93,Michigan State,0,92
-94,App State,0,93
-95,Air Force,0,94
-96,UCF,0,95
-97,Kentucky,0,96
-98,New Mexico,0,98
-99,ULM,0,99
-100,Arizona,0,100
-101,Houston,0,101
-102,Maryland,0,102
-103,Wake Forest,0,103
-104,Eastern Michigan,0,104
-105,Charlotte,0,105
-106,Louisiana Tech,0,106
-107,Troy,0,107
-108,Northwestern,0,108
-109,Rice,0,109
-110,Stanford,0,110
-111,Utah State,0,111
-112,Wyoming,0,112
-113,Florida International,0,113
-114,Akron,0,114
-115,Central Michigan,0,115
-116,Oklahoma State,0,116
-117,Florida Atlantic,0,117
-118,UAB,0,118
-119,Temple,0,119
-120,Nevada,0,120
-121,Georgia State,0,121
-122,Ball State,0,122
-123,Tulsa,0,123
-124,San Diego State,0,124
-125,Middle Tennessee,0,125
-126,New Mexico State,0,126
-127,UTEP,0,127
-128,Florida State,0,128
-129,Mississippi State,0,129
-130,Massachusetts,0,130
-131,Kennesaw State,0,131
-132,Purdue,0,132
-133,Southern Miss,0,133
-134,Kent State,0,134
-135,Delaware,0,135
-136,Missouri State,0,136
+Current Standing,Team,Total Points,Start of Year Standing1,Iowa State,16,92,Western Kentucky,14,543,Kansas,13,694,UNLV,12,185,Tennessee,10,156,LSU,10,297,Georgia Tech,10,528,Auburn,10,849,Florida State,10,12810,South Carolina,9,1611,South Florida,9,8512,Arizona,9,10013,Rice,9,10914,Georgia,8,615,Ohio State,8,816,Miami,8,1217,TCU,8,3418,Minnesota,8,4119,Nebraska,8,6720,California,8,7521,Utah,8,8322,Wisconsin,8,8923,Indiana,7,724,Tulane,7,2825,Texas A&M,7,3326,Michigan,7,4327,Washington,7,6828,Virginia,7,8129,Michigan State,7,9230,Central Michigan,7,11531,Oregon,6,132,Penn State,6,333,SMU,6,534,BYU,6,1035,Ole Miss,6,1436,Arizona State,6,1737,Louisville,6,2038,Illinois,6,2539,Iowa,6,3040,Memphis,6,3141,Texas Tech,6,3242,Missouri,6,3543,Duke,6,3844,Florida,6,3945,Navy,6,4246,Pittsburgh,6,4647,Liberty,6,4848,James Madison,6,4949,Rutgers,6,5050,Boston College,6,5151,USC,6,5652,Oklahoma,6,6253,Bowling Green,6,6354,Texas State,6,6455,UConn,6,6556,West Virginia,6,6657,Vanderbilt,6,7058,Arkansas,6,7359,South Alabama,6,7760,North Texas,6,8261,Arkansas State,6,9062,App State,6,9363,Air Force,6,9464,UCF,6,9565,Houston,6,10166,Maryland,6,10267,Louisiana Tech,6,10668,Troy,6,10769,Utah State,6,11170,Wyoming,6,11271,Florida International,6,11372,Oklahoma State,6,11673,Temple,6,11974,Tulsa,6,12375,San Diego State,6,12476,New Mexico State,6,12677,Mississippi State,6,12978,Purdue,6,13279,Delaware,6,13580,NC State,5,7481,Kentucky,5,9682,Hawai'i,5,9783,Kansas State,4,2484,Washington State,4,4085,Northern Illinois,4,5886,Wake Forest,4,10387,UAB,4,11888,Kent State,4,13489,Notre Dame,0,290,Texas,0,491,Boise State,0,1192,Alabama,0,1393,Clemson,0,1994,Louisiana,0,2195,Syracuse,0,2296,Colorado,0,2397,Army,0,2698,Baylor,0,2799,Ohio,0,36100,Marshall,0,37101,Miami (OH),0,44102,Georgia Southern,0,45103,Sam Houston,0,47104,Jacksonville State,0,53105,Buffalo,0,55106,Virginia Tech,0,57107,Toledo,0,59108,Colorado State,0,60109,East Carolina,0,61110,North Carolina,0,71111,San JosŽ State,0,72112,Cincinnati,0,76113,Coastal Carolina,0,78114,UTSA,0,79115,Fresno State,0,80116,Old Dominion,0,86117,Western Michigan,0,87118,UCLA,0,88119,Oregon State,0,91120,New Mexico,0,98121,ULM,0,99122,Eastern Michigan,0,104123,Charlotte,0,105124,Northwestern,0,108125,Stanford,0,110126,Akron,0,114127,Florida Atlantic,0,117128,Nevada,0,120129,Georgia State,0,121130,Ball State,0,122131,Middle Tennessee,0,125132,UTEP,0,127133,Massachusetts,0,130134,Kennesaw State,0,131135,Southern Miss,0,133136,Missouri State,0,136

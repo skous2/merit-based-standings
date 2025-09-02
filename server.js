@@ -11,6 +11,7 @@ app.use(express.static('public'));
 
 // Store table data for different sections
 let currentStandingsData = { headers: [], data: [] };
+let previousStandingsData = { headers: [], data: [] };
 let totalPointsData = { headers: [], data: [] };
 let comparisonData = { headers: [], data: [] };
 let weekData = {};
@@ -24,6 +25,8 @@ function loadCSVFile(filename, callback) {
     callback({ headers: [], data: [] });
     return;
   }
+
+
 
   const results = [];
   
@@ -52,6 +55,15 @@ function loadAllCSVData() {
       console.log('current-standings.csv not found or empty');
     }
   });
+
+  loadCSVFile('previous-standings.csv', (data) => {
+  previousStandingsData = data;
+  if (data.headers.length > 0) {
+    console.log('Loaded previous-standings.csv successfully');
+  } else {
+    console.log('previous-standings.csv not found or empty');
+  }
+});
 
   // Load total points from total-points.csv only
   loadCSVFile('total-points.csv', (data) => {
@@ -94,6 +106,11 @@ app.get('/api/current-standings', (req, res) => {
   res.json(currentStandingsData);
 });
 
+//Get previous standings data
+app.get('/api/previous-standings', (req, res) => {
+  res.json(previousStandingsData);
+});
+
 // Get total points data
 app.get('/api/total-points', (req, res) => {
   res.json(totalPointsData);
@@ -121,6 +138,7 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log('Required CSV files:');
   console.log('- current-standings.csv (for Current Standings page)');
+  console.log('- previous-standings.csv (for Previous Standings page)');
   console.log('- total-points.csv (for Total Points page)');
   console.log('- 2024-comparison.csv (for 2024 Standing Comparison page)');
   console.log('- week-X.csv (for individual week pages, X = 1-15)');

@@ -12,31 +12,37 @@
         <div class="header-content">
             <h1>College Football - Merit Based Standings</h1>
             <nav class="nav">
-                <a href="#" class="nav-item active" onclick="showPage('current-standings')">Current Standings</a>
-                <a href="#" class="nav-item" onclick="showPage('about')">About the Standings</a>
-                <a href="#" class="nav-item" onclick="showPage('total-points')">Total Points</a>
-                <a href="#" class="nav-item" onclick="showPage('2024-comparison')">2024 Standing Comparison</a>
-                <div class="dropdown">
-                    <a href="#" class="nav-item">Week Details ▼</a>
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-item" onclick="showPage('week-1')">Week 1</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-2')">Week 2</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-3')">Week 3</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-4')">Week 4</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-5')">Week 5</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-6')">Week 6</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-7')">Week 7</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-8')">Week 8</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-9')">Week 9</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-10')">Week 10</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-11')">Week 11</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-12')">Week 12</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-13')">Week 13</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-14')">Week 14</a>
-                        <a href="#" class="dropdown-item" onclick="showPage('week-15')">Week 15</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item active">Standings ▼</a>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item" onclick="showPage('current-standings')">Current Standings</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('previous-standings')">Previous Standings</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                    <a href="#" class="nav-item" onclick="showPage('about')">About the Standings</a>
+                    <a href="#" class="nav-item" onclick="showPage('total-points')">Total Points</a>
+                    <a href="#" class="nav-item" onclick="showPage('2024-comparison')">2024 Standing Comparison</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item">Week Details ▼</a>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item" onclick="showPage('week-1')">Week 1</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-2')">Week 2</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-3')">Week 3</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-4')">Week 4</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-5')">Week 5</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-6')">Week 6</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-7')">Week 7</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-8')">Week 8</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-9')">Week 9</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-10')">Week 10</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-11')">Week 11</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-12')">Week 12</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-13')">Week 13</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-14')">Week 14</a>
+                            <a href="#" class="dropdown-item" onclick="showPage('week-15')">Week 15</a>
+                        </div>
+                    </div>
+                </nav>
         </div>
     </header>
 
@@ -51,6 +57,20 @@
                 <div id="currentTableSection">
                     <div id="currentTableInfo" class="table-info"></div>
                     <div id="currentTableContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Previous Standings Page -->
+        <div id="previous-standings" class="page">
+            <div class="container">
+                <h2>Previous Standings</h2>
+                <p>The previous merit-based rankings from an earlier period in the season.</p>
+                <div id="previousMessageArea"></div>
+                <div id="previousTableSection">
+                    <div id="previousTableInfo" class="table-info"></div>
+                    <div id="previousTableContainer"></div>
                 </div>
             </div>
         </div>
@@ -100,6 +120,7 @@
             <div class="container">
                 <h2>2024 Standing Comparison</h2>
                 <p>Compare the current merit-based standings with traditional 2024 rankings and polls.</p>
+                <p>Strength of schedule reflects the team's standing from the week prior</p>
                 <div id="comparisonMessageArea"></div>
                 <div id="comparisonTableSection">
                     <div id="comparisonTableInfo" class="table-info"></div>
@@ -112,7 +133,8 @@
         <div id="week-1" class="page">
             <div class="container">
                 <h2>Week 1 Details</h2>
-                <p>Week 1 performance breakdown and standings after the first week of competition.</p>
+                <p>Week 1 performance breakdown after the first week of competition.</p>
+                <p>Strength of schedule reflects the team's standing from the week prior</p>
                 <div id="week1MessageArea"></div>
                 <div id="week1TableSection">
                     <div id="week1TableInfo" class="table-info"></div>
@@ -124,11 +146,12 @@
         <div id="week-2" class="page">
             <div class="container">
                 <h2>Week 2 Details</h2>
-                <p>Week 2 performance breakdown and standings after the second week of competition.</p>
-                <div id="week2-content">
-                    <div class="no-data">
-                        <p>Week 2 data will be displayed here when available.</p>
-                    </div>
+                <p>Week 2 performance breakdown after the first week of competition.</p>
+                <p>Strength of schedule reflects the team's standing from the week prior</p>
+                <div id="week2MessageArea"></div>
+                <div id="week2TableSection">
+                    <div id="week2TableInfo" class="table-info"></div>
+                    <div id="week2TableContainer"></div>
                 </div>
             </div>
         </div>
@@ -297,6 +320,12 @@
         let currentSortColumn = null;
         let currentSortDirection = 'asc';
 
+        // Global variables for previous standings (add near the top with other variables)
+        let previousStandingsData = [];
+        let previousStandingsHeaders = [];
+        let previousSortColumn = null;
+        let previousSortDirection = 'asc';
+
         // Global variables for total points
         let totalPointsData = [];
         let totalPointsHeaders = [];
@@ -333,10 +362,20 @@
             
             // Add active class to corresponding nav item and load data
             if (pageId === 'current-standings') {
-                document.querySelector('.nav-item[onclick="showPage(\'current-standings\')"]').classList.add('active');
+                const standingsDropdown = document.querySelector('.dropdown .nav-item');
+                if (standingsDropdown && standingsDropdown.classList) {
+                    standingsDropdown.classList.add('active');
+                }
                 loadCurrentStandingsData();
+            } else if (pageId === 'previous-standings') {
+                const standingsDropdown = document.querySelector('.dropdown .nav-item');
+                if (standingsDropdown && standingsDropdown.classList) {
+                    standingsDropdown.classList.add('active');
+                }
+                loadPreviousStandingsData();
             } else if (pageId === 'about') {
-                document.querySelector('.nav-item[onclick="showPage(\'about\')"]').classList.add('active');
+                const aboutNav = document.querySelector('.nav-item[onclick="showPage(\'about\')"]');
+                if (aboutNav) aboutNav.classList.add('active');
             } else if (pageId === 'total-points') {
                 document.querySelector('.nav-item[onclick="showPage(\'total-points\')"]').classList.add('active');
                 loadTotalPointsData();
@@ -386,6 +425,28 @@
                 });
         }
 
+        // Load previous standings data
+        function loadPreviousStandingsData() {
+            const messageArea = document.getElementById('previousMessageArea');
+            showMessage('Loading previous standings...', 'loading', messageArea);
+    
+            fetch('/api/previous-standings')
+                .then(response => response.json())
+        .then(data => {
+            messageArea.innerHTML = '';
+            
+            if (data.headers.length === 0 || data.data.length === 0) {
+                showNoData('previousTableContainer', 'previousTableInfo', 'previous-standings.csv');
+            } else {
+                previousStandingsHeaders = data.headers;
+                previousStandingsData = [...data.data];
+                displayPreviousStandingsTable(previousStandingsHeaders, previousStandingsData);
+            }
+        })
+        .catch(error => {
+            showMessage('Error loading previous standings: ' + error.message, 'error', messageArea);
+        });
+}
         // Load total points data
         function loadTotalPointsData() {
             const messageArea = document.getElementById('totalMessageArea');
@@ -435,6 +496,33 @@
             });
         }
 
+        // Sort data by column (Previous Standings)
+        function sortPreviousStandingsData(columnIndex, direction) {
+            const column = previousStandingsHeaders[columnIndex];
+            
+            previousStandingsData.sort((a, b) => {
+                let valueA = a[column] || '';
+                let valueB = b[column] || '';
+                
+                const numA = parseFloat(valueA);
+                const numB = parseFloat(valueB);
+                
+                if (!isNaN(numA) && !isNaN(numB)) {
+                    return direction === 'asc' ? numA - numB : numB - numA;
+                } else {
+                    valueA = valueA.toString().toLowerCase();
+                    valueB = valueB.toString().toLowerCase();
+                    
+                    if (direction === 'asc') {
+                        return valueA.localeCompare(valueB);
+                    } else {
+                        return valueB.localeCompare(valueA);
+                    }
+                }
+            });
+        }
+
+
         // Sort data by column (Total Points)
         function sortTotalPointsData(columnIndex, direction) {
             const column = totalPointsHeaders[columnIndex];
@@ -474,6 +562,19 @@
             displayCurrentStandingsTable(currentStandingsHeaders, currentStandingsData);
         }
 
+        // Handle header click for sorting (Previous Standings)
+        function handlePreviousStandingsHeaderClick(columnIndex) {
+            if (previousSortColumn === columnIndex) {
+                previousSortDirection = previousSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                previousSortDirection = 'asc';
+            }
+            
+            previousSortColumn = columnIndex;
+            sortPreviousStandingsData(columnIndex, previousSortDirection);
+            displayPreviousStandingsTable(previousStandingsHeaders, previousStandingsData);
+        }
+
         // Handle header click for sorting (Total Points)
         function handleTotalPointsHeaderClick(columnIndex) {
             if (totalSortColumn === columnIndex) {
@@ -501,6 +602,36 @@
                     headerClass += currentSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
                 }
                 html += `<th class="${headerClass}" onclick="handleCurrentStandingsHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                html += '<tr>';
+                headers.forEach(header => {
+                    html += `<td>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            tableContainer.innerHTML = html;
+        }
+
+
+        // Display previous standings table
+        function displayPreviousStandingsTable(headers, data) {
+            const tableInfo = document.getElementById('previousTableInfo');
+            const tableContainer = document.getElementById('previousTableContainer');
+            
+            tableInfo.innerHTML = `Showing ${data.length} rows × ${headers.length} columns`;
+
+            let html = '<table><thead><tr>';
+            headers.forEach((header, index) => {
+                let headerClass = 'sortable';
+                if (previousSortColumn === index) {
+                    headerClass += previousSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
+                }
+                html += `<th class="${headerClass}" onclick="handlePreviousStandingsHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
             });
             html += '</tr></thead><tbody>';
 
