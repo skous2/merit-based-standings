@@ -313,3 +313,176 @@ tr:nth-child(odd) .highlighted-team {
         font-size: 1.5rem;
     }
 }
+
+/* Mobile-friendly table styles - Add this to your styles.css */
+
+/* Make all table containers scrollable horizontally */
+#currentTableContainer,
+#previousTableContainer,
+#totalTableContainer,
+#comparisonTableContainer,
+#allgamesTableContainer,
+[id^="week"][id$="TableContainer"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Ensure tables don't shrink below minimum readable width */
+#currentTableContainer table,
+#previousTableContainer table,
+#totalTableContainer table,
+#comparisonTableContainer table,
+#allgamesTableContainer table,
+[id^="week"][id$="TableContainer"] table {
+    min-width: 600px; /* Minimum width to keep columns readable */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    /* Reduce container padding on mobile */
+    .container {
+        padding: 10px;
+    }
+    
+    /* Make navigation more mobile-friendly */
+    .header-content {
+        padding: 10px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .nav-item {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    /* Adjust filter controls for mobile */
+    .filter-controls {
+        padding: 15px;
+    }
+    
+    .filter-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .filter-group input[type="text"],
+    .filter-group select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Table info adjustments */
+    .table-info {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    /* Add scroll hint for tables */
+    #currentTableContainer::after,
+    #previousTableContainer::after,
+    #totalTableContainer::after,
+    #comparisonTableContainer::after,
+    #allgamesTableContainer::after,
+    [id^="week"][id$="TableContainer"]::after {
+        content: "← Scroll horizontally to see more columns →";
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        color: #6c757d;
+        padding: 8px;
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        font-style: italic;
+    }
+    
+    /* Hide scroll hint on larger screens */
+    @media (min-width: 769px) {
+        #currentTableContainer::after,
+        #previousTableContainer::after,
+        #totalTableContainer::after,
+        #comparisonTableContainer::after,
+        #allgamesTableContainer::after,
+        [id^="week"][id$="TableContainer"]::after {
+            display: none;
+        }
+    }
+    
+    /* Make table cells more readable on mobile */
+    table td,
+    table th {
+        padding: 8px 6px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+    
+    /* Adjust main heading */
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    /* Make dropdown content mobile-friendly */
+    .dropdown-content {
+        position: absolute;
+        min-width: 180px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 16px;
+    }
+    
+    .nav-item {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .container {
+        padding: 5px;
+    }
+    
+    table td,
+    table th {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+    
+    /* Stack navigation vertically on very small screens */
+    .nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .dropdown {
+        width: 100%;
+    }
+    
+    .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+}
