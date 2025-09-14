@@ -153,11 +153,10 @@ th, td {
 th {
     background-color: #f8f9fa;
     font-weight: bold;
-    position: sticky;
-    top: 60px;
     cursor: pointer;
     user-select: none;
     transition: background-color 0.2s;
+    border-bottom: 2px solid #dee2e6;
 }
 
 th:hover {
