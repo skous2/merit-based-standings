@@ -22,6 +22,8 @@
                     <a href="#" class="nav-item" onclick="showPage('about')">About the Standings</a>
                     <a href="#" class="nav-item" onclick="showPage('total-points')">Total Points</a>
                     <a href="#" class="nav-item" onclick="showPage('2024-comparison')">2024 Standing Comparison</a>
+                    <a href="#" class="nav-item" onclick="showPage('all-games')">All Game Data</a>
+                    <!--
                     <div class="dropdown">
                         <a href="#" class="nav-item">Week Details ▼</a>
                         <div class="dropdown-content">
@@ -42,6 +44,7 @@
                             <a href="#" class="dropdown-item" onclick="showPage('week-15')">Week 15</a>
                         </div>
                     </div>
+                -->
                 </nav>
         </div>
     </header>
@@ -128,6 +131,54 @@
                 </div>
             </div>
         </div>
+
+        <!-- All Games Page -->
+        <div id="all-games" class="page">
+            <div class="container">
+            <h2>All Game Data</h2>
+            <p>See all the game data in this master table. Sort and filter to see specific teams or games by week</p>
+            
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="teamFilter">Filter by Team 1:</label>
+                        <input type="text" id="teamFilter" placeholder="Enter team name..." onkeyup="filterAllGamesData()">
+                    </div>
+                    <div class="filter-group">
+                        <label for="weekFilter">Filter by Week:</label>
+                        <select id="weekFilter" onchange="filterAllGamesData()">
+                            <option value="">All Weeks</option>
+                            <option value="1">Week 1</option>
+                            <option value="2">Week 2</option>
+                            <option value="3">Week 3</option>
+                            <option value="4">Week 4</option>
+                            <option value="5">Week 5</option>
+                            <option value="6">Week 6</option>
+                            <option value="7">Week 7</option>
+                            <option value="8">Week 8</option>
+                            <option value="9">Week 9</option>
+                            <option value="10">Week 10</option>
+                            <option value="11">Week 11</option>
+                            <option value="12">Week 12</option>
+                            <option value="13">Week 13</option>
+                            <option value="14">Week 14</option>
+                            <option value="15">Week 15</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <button onclick="clearAllGamesFilter()" class="clear-filter-btn">Clear Filters</button>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="allgamesMessageArea"></div>
+        <div id="allgamesTableSection">
+            <div id="allgamesTableInfo" class="table-info"></div>
+            <div id="allgamesTableContainer"></div>
+        </div>
+    </div>
+</div>
 
         <!-- Week Pages -->
         <div id="week-1" class="page">
@@ -341,6 +392,13 @@
         let comparisonSortDirection = 'asc';
         let highlightedTeam = null;
 
+         // Global variables for All games data
+        let allgameData = [];
+        let allgameHeaders = [];
+        let allgameSortColumn = null;
+        let allgameSortDirection = 'asc';
+        let originalAllGameData = []; // Store original unfiltered data
+
         // Global variables for week data
         let weekDataCache = {};
         let weekHeaders = {};
@@ -384,6 +442,9 @@
             } else if (pageId === '2024-comparison') {
                 document.querySelector('.nav-item[onclick="showPage(\'2024-comparison\')"]').classList.add('active');
                 load2024ComparisonData();
+            } else if (pageId === 'all-games') {
+                document.querySelector('.nav-item[onclick="showPage(\'all-games\')"]').classList.add('active');
+                loadAllGamesData();
             } else if (pageId.startsWith('week-')) {
                 const weekNumber = parseInt(pageId.split('-')[1]);
                 loadWeekData(weekNumber);
@@ -398,6 +459,8 @@
                 document.title = 'Total Points - College Football Merit Based Standings';
             } else if (pageId === '2024-comparison') {
                 document.title = '2024 Standing Comparison - College Football Merit Based Standings';
+            } else if (pageId === 'all-games') {
+                document.title = 'All Game Data - College Football Merit Based Standings';
             } else if (pageId.startsWith('week-')) {
                 const weekNum = pageId.split('-')[1];
                 document.title = `Week ${weekNum} - College Football Merit Based Standings`;
@@ -759,6 +822,69 @@
             display2024ComparisonTable(comparisonHeaders, comparisonData);
         }
 
+        // Load all games data
+        function loadAllGamesData() {
+            const messageArea = document.getElementById('allgamesMessageArea');
+            showMessage('Loading All Games data...', 'loading', messageArea);
+            
+            fetch('/api/all-games')
+                .then(response => response.json())
+                .then(data => {
+                    messageArea.innerHTML = '';
+                    
+                    if (data.headers.length === 0 || data.data.length === 0) {
+                        showNoData('allgamesTableContainer', 'allgamesTableInfo', 'all-games.csv');
+                    } else {
+                        allgameHeaders = data.headers;
+                        allgameData = [...data.data];
+                        originalAllGameData = [...data.data]; // Store original data
+                        displayAllGamesTable(allgameHeaders, allgameData);
+                    }
+                })
+                .catch(error => {
+                    showMessage('Error loading All Games data: ' + error.message, 'error', messageArea);
+                });
+        }
+
+        // Sort All Games data by column
+        function sortAllGamesData(columnIndex, direction) {
+            const column = allgameHeaders[columnIndex];
+            
+            allgameData.sort((a, b) => {
+                let valueA = a[column] || '';
+                let valueB = b[column] || '';
+                
+                const numA = parseFloat(valueA);
+                const numB = parseFloat(valueB);
+                
+                if (!isNaN(numA) && !isNaN(numB)) {
+                    return direction === 'asc' ? numA - numB : numB - numA;
+                } else {
+                    valueA = valueA.toString().toLowerCase();
+                    valueB = valueB.toString().toLowerCase();
+                    
+                    if (direction === 'asc') {
+                        return valueA.localeCompare(valueB);
+                    } else {
+                        return valueB.localeCompare(valueA);
+                    }
+                }
+            });
+        }
+
+        // Handle header click for sorting (All Games)
+        function handleAllGamesHeaderClick(columnIndex) {
+            if (allgameSortColumn === columnIndex) {
+                allgameSortDirection = allgameSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                allgameSortDirection = 'asc';
+            }
+            
+            allgameSortColumn = columnIndex;
+            sortAllGamesData(columnIndex, allgameSortDirection);
+            displayAllGamesTable(allgameHeaders, allgameData);
+        }
+
         // Handle team cell click for highlighting
         function handleTeamCellClick(teamName, event) {
             event.stopPropagation();
@@ -829,6 +955,104 @@
             html += '</tbody></table>';
             tableContainer.innerHTML = html;
         }
+
+        // Filter function for All Games data
+        function filterAllGamesData() {
+            const teamFilter = document.getElementById('teamFilter').value.trim();
+            const weekFilter = document.getElementById('weekFilter').value;
+            
+            let filteredData = [...originalAllGameData];
+            
+            // Apply team filter - exact match on Team 1 column only
+            if (teamFilter) {
+                filteredData = filteredData.filter(row => {
+                    // Look specifically for "Team 1" column
+                    const team1Column = allgameHeaders.find(header => 
+                        header === 'Team 1' || header.toLowerCase() === 'team 1'
+                    );
+                    
+                    if (team1Column) {
+                        const value = (row[team1Column] || '').toString();
+                        return value === teamFilter;
+                    }
+                    return false;
+                });
+            }
+            
+            // Apply week filter
+            if (weekFilter) {
+                filteredData = filteredData.filter(row => {
+                    // Find week column (adjust column name as needed)
+                    const weekColumns = allgameHeaders.filter(header => 
+                        header.toLowerCase().includes('week')
+                    );
+                    
+                    if (weekColumns.length > 0) {
+                        const weekValue = (row[weekColumns[0]] || '').toString();
+                        return weekValue === weekFilter;
+                    }
+                    return true;
+                });
+            }
+            
+            // Update the displayed data
+            allgameData = filteredData;
+            displayAllGamesTable(allgameHeaders, allgameData);
+            
+            // Update the info message to show filter results
+            const tableInfo = document.getElementById('allgamesTableInfo');
+            const totalRows = originalAllGameData.length;
+            const filteredRows = filteredData.length;
+            
+            if (teamFilter || weekFilter) {
+                tableInfo.innerHTML = `Showing ${filteredRows} of ${totalRows} rows × ${allgameHeaders.length} columns (filtered)`;
+            } else {
+                tableInfo.innerHTML = `Showing ${filteredRows} rows × ${allgameHeaders.length} columns`;
+            }
+        }
+
+        // Clear all filters
+        function clearAllGamesFilter() {
+            document.getElementById('teamFilter').value = '';
+            document.getElementById('weekFilter').value = '';
+            
+            // Reset to original data
+            allgameData = [...originalAllGameData];
+            displayAllGamesTable(allgameHeaders, allgameData);
+            
+            // Update table info
+            const tableInfo = document.getElementById('allgamesTableInfo');
+            tableInfo.innerHTML = `Showing ${allgameData.length} rows × ${allgameHeaders.length} columns`;
+        }
+
+        function displayAllGamesTable(headers, data) {
+            const tableInfo = document.getElementById('allgamesTableInfo');
+            const tableContainer = document.getElementById('allgamesTableContainer');
+            
+            tableInfo.innerHTML = `Showing ${data.length} rows × ${headers.length} columns`;
+
+            let html = '<table><thead><tr>';
+            headers.forEach((header, index) => {
+                let headerClass = 'sortable';
+                if (allgameSortColumn === index) {
+                    headerClass += allgameSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
+                }
+                html += `<th class="${headerClass}" onclick="handleAllGamesHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                html += '<tr>';
+                headers.forEach(header => {
+                    html += `<td>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            tableContainer.innerHTML = html;
+        }
+
         function loadWeekData(weekNumber) {
             const messageArea = document.getElementById(`week${weekNumber}MessageArea`);
             showMessage(`Loading week ${weekNumber} data...`, 'loading', messageArea);

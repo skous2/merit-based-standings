@@ -14,6 +14,7 @@ let currentStandingsData = { headers: [], data: [] };
 let previousStandingsData = { headers: [], data: [] };
 let totalPointsData = { headers: [], data: [] };
 let comparisonData = { headers: [], data: [] };
+let allgameData = { headers: [], data: [] };
 let weekData = {};
 
 // Load CSV data function
@@ -85,6 +86,16 @@ function loadAllCSVData() {
     }
   });
 
+  // Load all games from all-games.csv
+  loadCSVFile('all-games.csv', (data) => {
+    allgameData = data;
+    if (data.headers.length > 0) {
+      console.log('Loaded all-games.csv successfully');
+    } else {
+      console.log('all-games.csv not found or empty');
+    }
+  });
+
   // Load week data (weeks 1-15)
   for (let week = 1; week <= 15; week++) {
     loadCSVFile(`week-${week}.csv`, (data) => {
@@ -119,6 +130,11 @@ app.get('/api/total-points', (req, res) => {
 // Get 2024 comparison data
 app.get('/api/2024-comparison', (req, res) => {
   res.json(comparisonData);
+});
+
+// Get all games data
+app.get('/api/all-games', (req, res) => {
+  res.json(allgameData);
 });
 
 // Get week data
