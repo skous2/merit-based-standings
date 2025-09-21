@@ -7,13 +7,13 @@ Standing,Team,Total Points,Initial Standing,Conference
 6,LSU,28,29,SEC
 7,Texas Tech,28,32,Big 12
 8,Vanderbilt,28,70,SEC
-9,Georgia Tech,27,52,ACC
-10,Mississippi State,27,129,SEC
-11,Oregon,26,1,Big 10
-12,North Texas,26,82,American
-13,Maryland,26,102,Big 10
-14,Iowa State,25,9,Big 12
-15,Miami,25,12,ACC
+9,Miami,27,12,ACC
+10,Georgia Tech,27,52,ACC
+11,Mississippi State,27,129,SEC
+12,Oregon,26,1,Big 10
+13,North Texas,26,82,American
+14,Maryland,26,102,Big 10
+15,Iowa State,25,9,Big 12
 16,Memphis,25,31,American
 17,TCU,23,34,Big 12
 18,Michigan,23,43,Big 10
@@ -30,34 +30,34 @@ Standing,Team,Total Points,Initial Standing,Conference
 29,Nebraska,21,67,Big 10
 30,NC State,21,74,ACC
 31,California,21,75,ACC
-32,Florida State,21,128,ACC
-33,Louisville,20,20,ACC
-34,Illinois,20,25,Big 10
-35,Tulane,20,28,American
-36,Fresno State,20,80,Mountain West
-37,Virginia,20,81,ACC
-38,Utah,20,83,Big 12
-39,Penn State,19,3,Big 10
-40,Ohio State,19,8,Big 10
-41,Navy,19,42,American
-42,Texas State,19,64,Sun Belt
-43,Washington,19,68,Big 10
-44,Arizona,19,100,Big 12
-45,Louisiana Tech,19,106,Conf USA
-46,Rice,19,109,American
-47,Texas,18,4,SEC
-48,Syracuse,18,22,ACC
-49,Western Kentucky,18,54,Conf USA
-50,Michigan State,18,92,Big 10
-51,UCF,18,95,Big 12
-52,Utah State,18,111,Mountain West
-53,Rutgers,17,50,Big 10
-54,Hawai'i,17,97,Mountain West
-55,Delaware,17,135,Conf USA
-56,Duke,16,38,ACC
-57,San Diego State,16,124,Mountain West
-58,Baylor,15,27,Big 12
-59,South Florida,15,85,American
+32,South Florida,21,85,American
+33,Florida State,21,128,ACC
+34,Louisville,20,20,ACC
+35,Illinois,20,25,Big 10
+36,Tulane,20,28,American
+37,Fresno State,20,80,Mountain West
+38,Virginia,20,81,ACC
+39,Utah,20,83,Big 12
+40,Penn State,19,3,Big 10
+41,Ohio State,19,8,Big 10
+42,Navy,19,42,American
+43,Texas State,19,64,Sun Belt
+44,Washington,19,68,Big 10
+45,Arizona,19,100,Big 12
+46,Louisiana Tech,19,106,Conf USA
+47,Rice,19,109,American
+48,Texas,18,4,SEC
+49,Syracuse,18,22,ACC
+50,Western Kentucky,18,54,Conf USA
+51,Michigan State,18,92,Big 10
+52,UCF,18,95,Big 12
+53,Utah State,18,111,Mountain West
+54,Rutgers,17,50,Big 10
+55,Hawai'i,17,97,Mountain West
+56,Delaware,17,135,Conf USA
+57,Duke,16,38,ACC
+58,San Diego State,16,124,Mountain West
+59,Baylor,15,27,Big 12
 60,Alabama,14,13,SEC
 61,Colorado,14,23,Big 12
 62,South Carolina,13,16,SEC

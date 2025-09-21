@@ -4,6 +4,7 @@ Vanderbilt,South Carolina,WIN,24,Road,4,2,2,1,9
 California,Minnesota,WIN,13,Home,4,2,2,1,9
 NC State,Wake Forest,WIN,10,Road,4,2,1,1,8
 Houston,Colorado,WIN,16,Home,4,2,1,1,8
+Miami,South Florida,WIN,37,Home,4,2,2,0,8
 Alabama,Wisconsin,WIN,24,Home,4,2,1,1,8
 USC,Purdue,WIN,16,Road,4,2,1,1,8
 New Mexico,UCLA,WIN,25,Road,4,2,0,1,7
@@ -25,7 +26,6 @@ Indiana,FCS,WIN,73,Home,4,2,0,0,6
 Syracuse,FCS,WIN,42,Home,4,2,0,0,6
 Penn State,FCS,WIN,46,Home,4,2,0,0,6
 LSU,Florida,WIN,10,Home,4,0,1,1,6
-Miami,FCS,WIN,37,Home,4,2,0,0,6
 Texas,UTEP,WIN,17,Home,4,2,0,0,6
 Illinois,Western Michigan,WIN,38,Home,4,2,0,0,6
 Georgia Tech,Clemson,WIN,3,Home,4,0,1,1,6
@@ -76,6 +76,7 @@ UCLA,New Mexico,LOSS,25,Home,0,0,0,0,0
 Ohio,Ohio State,LOSS,28,Road,0,0,0,0,0
 Florida,LSU,LOSS,10,Road,0,0,0,0,0
 Northwestern,Oregon,LOSS,20,Home,0,0,0,0,0
+South Florida,Miami,LOSS,37,Road,0,0,0,0,0
 Tennessee,Georgia,LOSS,3,Home,0,0,0,0,0
 UTEP,Texas,LOSS,17,Road,0,0,0,0,0
 Notre Dame,Texas A&M,LOSS,1,Home,0,0,0,0,0

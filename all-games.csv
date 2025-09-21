@@ -278,6 +278,7 @@ Week,Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Total
 4,California,Minnesota,WIN,13,Home,4,2,2,1,9
 4,NC State,Wake Forest,WIN,10,Road,4,2,1,1,8
 4,Houston,Colorado,WIN,16,Home,4,2,1,1,8
+4,Miami,South Florida,WIN,37,Home,4,2,2,0,8
 4,Alabama,Wisconsin,WIN,24,Home,4,2,1,1,8
 4,USC,Purdue,WIN,16,Road,4,2,1,1,8
 4,New Mexico,UCLA,WIN,25,Road,4,2,0,1,7
@@ -299,7 +300,6 @@ Week,Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Total
 4,Syracuse,FCS,WIN,42,Home,4,2,0,0,6
 4,Penn State,FCS,WIN,46,Home,4,2,0,0,6
 4,LSU,Florida,WIN,10,Home,4,0,1,1,6
-4,Miami,FCS,WIN,37,Home,4,2,0,0,6
 4,Texas,UTEP,WIN,17,Home,4,2,0,0,6
 4,Illinois,Western Michigan,WIN,38,Home,4,2,0,0,6
 4,Georgia Tech,Clemson,WIN,3,Home,4,0,1,1,6
@@ -350,6 +350,7 @@ Week,Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Total
 4,Ohio,Ohio State,LOSS,28,Road,0,0,0,0,0
 4,Florida,LSU,LOSS,10,Road,0,0,0,0,0
 4,Northwestern,Oregon,LOSS,20,Home,0,0,0,0,0
+4,South Florida,Miami,LOSS,37,Road,0,0,0,0,0
 4,Tennessee,Georgia,LOSS,3,Home,0,0,0,0,0
 4,UTEP,Texas,LOSS,17,Road,0,0,0,0,0
 4,Notre Dame,Texas A&M,LOSS,1,Home,0,0,0,0,0
@@ -445,6 +446,7 @@ Week,Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Total
 5,Texas State,FCS,WIN,32,Home,4,2,0,0,6
 5,UL Monroe,UTEP,WIN,6,Road,4,2,0,0,6
 5,UTSA,Colorado State,WIN,1,Road,4,2,0,0,6
+5,South Florida,FCS,WIN,49,Home,4,2,0,0,6
 5,Eastern Michigan,Louisiana,WIN,3,Home,4,0,1,0,5
 5,San José State,FCS,WIN,3,Home,4,0,0,0,4
 5,Kennesaw State,Arkansas State,WIN,7,Home,4,0,0,0,4
