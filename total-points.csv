@@ -1,137 +1,137 @@
-Standing,Team,Conference,Week 1,Week 2,Week 3,Week 4,Total Points
-1,Iowa State,Big 12,7,6,6,7,26
-2,Vanderbilt,SEC,0,6,7,10,23
-3,Oregon,Big 10,0,6,8,8,22
-4,Georgia,SEC,0,6,6,10,22
-5,Missouri,SEC,0,6,9,7,22
-6,USC,Big 10,0,7,6,9,22
-7,Oklahoma,SEC,0,6,8,8,22
-8,California,ACC,0,7,6,9,22
-9,Auburn,SEC,0,9,6,7,22
-10,Ole Miss,SEC,0,6,7,8,21
-11,Tulane,American,0,8,7,6,21
-12,LSU,SEC,0,8,7,6,21
-13,Nebraska,Big 10,0,9,6,6,21
-14,North Texas,American,0,6,6,9,21
-15,Utah,Big 12,0,7,6,8,21
-16,Houston,Big 12,0,6,7,8,21
-17,Illinois,Big 10,0,6,8,6,20
-18,Texas A&M,SEC,0,6,7,7,20
-19,Georgia Tech,ACC,0,8,6,6,20
-20,NC State,ACC,0,5,6,9,20
-21,Penn State,Big 10,0,6,7,6,19
-22,Indiana,Big 10,0,7,6,6,19
-23,Ohio State,Big 10,0,6,6,7,19
-24,Memphis,American,0,6,6,7,19
-25,Texas Tech,Big 12,0,6,6,7,19
-26,Arizona,Big 12,0,8,6,5,19
-27,Navy,American,0,6,6,6,18
-28,Michigan State,Big 10,0,6,6,6,18
-29,Maryland,Big 10,0,6,6,6,18
-30,Mississippi State,SEC,0,6,6,6,18
-31,Miami,ACC,0,5,6,6,17
-32,Rutgers,Big 10,0,5,6,6,17
-33,Hawai'i,Mountain West,5,0,6,6,17
-34,Alabama,SEC,0,0,6,9,15
-35,UNLV,Mountain West,4,6,5,0,15
-36,South Florida,American,0,7,8,0,15
-37,Arizona State,Big 12,0,6,0,8,14
-38,Baylor,Big 12,0,0,8,6,14
-39,TCU,Big 12,0,8,0,6,14
-40,Toledo,MAC,0,0,8,6,14
-41,Louisiana Tech,Conf USA,0,6,0,8,14
-42,Florida State,ACC,0,8,6,0,14
-43,Southern Miss,Sun Belt,0,0,6,8,14
-44,SMU,ACC,0,6,0,7,13
-45,BYU,Big 12,0,6,7,0,13
-46,Tennessee,SEC,0,7,6,0,13
-47,South Carolina,SEC,0,7,6,0,13
-48,Louisville,ACC,0,6,7,0,13
-49,Minnesota,Big 10,0,7,6,0,13
-50,Michigan,Big 10,0,6,0,7,13
-51,Pittsburgh,ACC,0,6,7,0,13
-52,East Carolina,American,0,0,6,7,13
-53,West Virginia,Big 12,0,6,0,7,13
-54,Kansas,Big 12,7,6,0,0,13
-55,Arkansas,SEC,0,6,7,0,13
-56,Cincinnati,Big 12,0,0,7,6,13
-57,Fresno State,Mountain West,0,0,7,6,13
-58,Virginia,ACC,0,7,0,6,13
-59,Old Dominion,Sun Belt,0,0,6,7,13
-60,Rice,American,0,7,0,6,13
-61,Utah State,Mountain West,0,6,0,7,13
-62,Texas,SEC,0,0,6,6,12
-63,Iowa,Big 10,0,6,0,6,12
-64,Western Kentucky,Conf USA,6,6,0,0,12
-65,Buffalo,MAC,0,0,6,6,12
-66,Texas State,Sun Belt,0,6,6,0,12
-67,Washington,Big 10,0,6,6,0,12
-68,North Carolina,ACC,0,0,6,6,12
-69,Wisconsin,Big 10,0,6,6,0,12
-70,Kentucky,SEC,0,6,0,6,12
-71,Wyoming,Mountain West,0,6,6,0,12
-72,Temple,American,0,6,6,0,12
-73,Purdue,Big 10,0,6,6,0,12
-74,Bowling Green,MAC,0,6,0,5,11
-75,UCF,Big 12,0,5,6,0,11
-76,New Mexico,Mountain West,0,0,4,7,11
-77,Syracuse,ACC,0,0,4,6,10
-78,Washington State,Pac 12,0,4,6,0,10
-79,App State,Sun Belt,0,6,4,0,10
-80,Wake Forest,ACC,0,4,6,0,10
-81,Florida International,Conf USA,0,6,0,4,10
-82,New Mexico State,Conf USA,0,6,4,0,10
-83,Delaware,Conf USA,0,6,0,4,10
-84,UAB,American,0,4,0,4,8
-85,Clemson,ACC,0,0,7,0,7
-86,Army,American,0,0,7,0,7
-87,Boise State,Mountain West,0,0,6,0,6
-88,Louisiana,Sun Belt,0,0,6,0,6
-89,Colorado,Big 12,0,0,6,0,6
-90,Ohio,MAC,0,0,6,0,6
-91,Marshall,Sun Belt,0,0,0,6,6
-92,Duke,ACC,0,6,0,0,6
-93,Florida,SEC,0,6,0,0,6
-94,Liberty,Conf USA,0,6,0,0,6
-95,James Madison,Sun Belt,0,6,0,0,6
-96,Boston College,ACC,0,6,0,0,6
-97,UConn,Independent,0,6,0,0,6
-98,South Alabama,Sun Belt,0,6,0,0,6
-99,Coastal Carolina,Sun Belt,0,0,6,0,6
-100,UTSA,American,0,0,0,6,6
-101,Arkansas State,Sun Belt,0,6,0,0,6
-102,Air Force,Mountain West,0,6,0,0,6
-103,Troy,Sun Belt,0,6,0,0,6
-104,Northwestern,Big 10,0,0,6,0,6
-105,Stanford,ACC,0,0,0,6,6
-106,Central Michigan,MAC,0,6,0,0,6
-107,Oklahoma State,Big 12,0,6,0,0,6
-108,Florida Atlantic,American,0,0,6,0,6
-109,Georgia State,Sun Belt,0,0,0,6,6
-110,Tulsa,American,0,6,0,0,6
-111,San Diego State,Mountain West,0,6,0,0,6
-112,Middle Tennessee,Conf USA,0,0,0,6,6
-113,UTEP,Conf USA,0,0,6,0,6
-114,Kennesaw State,Conf USA,0,0,0,6,6
-115,Missouri State,Conf USA,0,0,6,0,6
-116,Georgia Southern,Sun Belt,0,0,0,5,5
-117,Jacksonville State,Conf USA,0,0,5,0,5
-118,Kansas State,Big 12,0,4,0,0,4
-119,Northern Illinois,MAC,0,4,0,0,4
-120,Colorado State,Mountain West,0,0,4,0,4
-121,Charlotte,American,0,0,0,4,4
-122,Nevada,Mountain West,0,0,4,0,4
-123,Ball State,MAC,0,0,0,4,4
-124,Kent State,MAC,0,4,0,0,4
-125,Notre Dame,Independent,0,0,0,0,0
-126,Miami (OH),MAC,0,0,0,0,0
-127,Sam Houston,Conf USA,0,0,0,0,0
-128,Virginia Tech,ACC,0,0,0,0,0
-129,San José State,Mountain West,0,0,0,0,0
-130,Western Michigan,MAC,0,0,0,0,0
-131,UCLA,Big 10,0,0,0,0,0
-132,Oregon State,Pac 12,0,0,0,0,0
-133,ULM,Sun Belt,0,0,0,0,0
-134,Eastern Michigan,MAC,0,0,0,0,0
-135,Akron,MAC,0,0,0,0,0
-136,Massachusetts,MAC,0,0,0,0,0
+Standing,Team,Conference,Week 1,Week 2,Week 3,Week 4,Week 5,Total Points
+1,Indiana,Big 10,0,8,6,6,10,30
+2,Ole Miss,SEC,0,6,8,7,9,30
+3,USC,Big 10,0,6,6,8,10,30
+4,Oklahoma,SEC,0,6,9,7,8,30
+5,Missouri,SEC,0,6,9,7,7,29
+6,LSU,SEC,0,8,8,6,6,28
+7,Texas Tech,Big 12,0,6,6,6,10,28
+8,Vanderbilt,SEC,0,6,7,9,6,28
+9,Georgia Tech,ACC,0,8,6,6,7,27
+10,Mississippi State,SEC,0,8,7,6,6,27
+11,Oregon,Big 10,0,6,7,7,6,26
+12,North Texas,American,0,6,6,7,7,26
+13,Maryland,Big 10,0,6,6,6,8,26
+14,Iowa State,Big 12,7,6,6,6,0,25
+15,Miami,ACC,0,5,6,6,8,25
+16,Memphis,American,0,6,6,6,7,25
+17,TCU,Big 12,0,8,0,6,9,23
+18,Michigan,Big 10,0,7,0,6,10,23
+19,Kansas,Big 12,8,6,0,0,9,23
+20,Georgia,SEC,0,7,6,9,0,22
+21,Arizona State,Big 12,0,6,0,7,9,22
+22,Auburn,SEC,0,9,6,7,0,22
+23,Houston,Big 12,0,6,8,8,0,22
+24,BYU,Big 12,0,6,7,0,8,21
+25,Tennessee,SEC,0,8,6,0,7,21
+26,UNLV,Mountain West,4,6,5,0,6,21
+27,Iowa,Big 10,0,6,0,6,9,21
+28,Texas A&M,SEC,0,7,7,7,0,21
+29,Nebraska,Big 10,0,9,6,6,0,21
+30,NC State,ACC,0,6,7,8,0,21
+31,California,ACC,0,6,6,9,0,21
+32,Florida State,ACC,0,9,6,0,6,21
+33,Louisville,ACC,0,6,7,0,7,20
+34,Illinois,Big 10,0,6,8,6,0,20
+35,Tulane,American,0,7,7,6,0,20
+36,Fresno State,Mountain West,0,0,6,6,8,20
+37,Virginia,ACC,0,7,0,6,7,20
+38,Utah,Big 12,0,7,6,7,0,20
+39,Penn State,Big 10,0,6,7,6,0,19
+40,Ohio State,Big 10,0,6,6,7,0,19
+41,Navy,American,0,6,7,6,0,19
+42,Texas State,Sun Belt,0,6,7,0,6,19
+43,Washington,Big 10,0,6,6,0,7,19
+44,Arizona,Big 12,0,8,6,5,0,19
+45,Louisiana Tech,Conf USA,0,6,0,7,6,19
+46,Rice,American,0,7,0,6,6,19
+47,Texas,SEC,0,0,6,6,6,18
+48,Syracuse,ACC,0,0,4,6,8,18
+49,Western Kentucky,Conf USA,6,6,0,0,6,18
+50,Michigan State,Big 10,0,6,6,6,0,18
+51,UCF,Big 12,0,4,6,0,8,18
+52,Utah State,Mountain West,0,6,0,6,6,18
+53,Rutgers,Big 10,0,5,6,6,0,17
+54,Hawai'i,Mountain West,5,0,6,6,0,17
+55,Delaware,Conf USA,0,6,0,4,7,17
+56,Duke,ACC,0,6,0,0,10,16
+57,San Diego State,Mountain West,0,6,0,0,10,16
+58,Baylor,Big 12,0,0,9,6,0,15
+59,South Florida,American,0,7,8,0,0,15
+60,Alabama,SEC,0,0,6,8,0,14
+61,Colorado,Big 12,0,0,7,0,7,14
+62,South Carolina,SEC,0,7,6,0,0,13
+63,Ohio,MAC,0,0,7,0,6,13
+64,Minnesota,Big 10,0,7,6,0,0,13
+65,James Madison,Sun Belt,0,6,0,0,7,13
+66,Toledo,MAC,0,0,7,6,0,13
+67,East Carolina,American,0,0,6,7,0,13
+68,Cincinnati,Big 12,0,0,7,6,0,13
+69,Coastal Carolina,Sun Belt,0,0,6,0,7,13
+70,Old Dominion,Sun Belt,0,0,6,7,0,13
+71,Troy,Sun Belt,0,6,0,0,7,13
+72,Tulsa,American,0,6,0,0,7,13
+73,Southern Miss,Sun Belt,0,0,6,7,0,13
+74,Missouri State,Conf USA,0,0,7,0,6,13
+75,SMU,ACC,0,6,0,6,0,12
+76,Boise State,Mountain West,0,0,6,0,6,12
+77,Marshall,Sun Belt,0,0,0,6,6,12
+78,Pittsburgh,ACC,0,6,6,0,0,12
+79,Buffalo,MAC,0,0,6,6,0,12
+80,West Virginia,Big 12,0,6,0,6,0,12
+81,North Carolina,ACC,0,0,6,6,0,12
+82,Arkansas,SEC,0,6,6,0,0,12
+83,UTSA,American,0,0,0,6,6,12
+84,Wisconsin,Big 10,0,6,6,0,0,12
+85,Kentucky,SEC,0,6,0,6,0,12
+86,Wyoming,Mountain West,0,6,6,0,0,12
+87,Central Michigan,MAC,0,6,0,0,6,12
+88,Temple,American,0,6,6,0,0,12
+89,Purdue,Big 10,0,6,6,0,0,12
+90,Jacksonville State,Conf USA,0,0,5,0,6,11
+91,Bowling Green,MAC,0,6,0,5,0,11
+92,New Mexico,Mountain West,0,0,4,7,0,11
+93,Washington State,Pac 12,0,4,6,0,0,10
+94,Georgia Southern,Sun Belt,0,0,0,4,6,10
+95,App State,Sun Belt,0,6,4,0,0,10
+96,Wake Forest,ACC,0,4,6,0,0,10
+97,Florida International,Conf USA,0,6,0,4,0,10
+98,New Mexico State,Conf USA,0,6,4,0,0,10
+99,Kennesaw State,Conf USA,0,0,0,6,4,10
+100,Notre Dame,Independent,0,0,0,0,8,8
+101,UAB,American,0,4,0,4,0,8
+102,Army,American,0,0,7,0,0,7
+103,Clemson,ACC,0,0,6,0,0,6
+104,Louisiana,Sun Belt,0,0,6,0,0,6
+105,Florida,SEC,0,6,0,0,0,6
+106,Liberty,Conf USA,0,6,0,0,0,6
+107,Boston College,ACC,0,6,0,0,0,6
+108,Virginia Tech,ACC,0,0,0,0,6,6
+109,UConn,Independent,0,6,0,0,0,6
+110,South Alabama,Sun Belt,0,6,0,0,0,6
+111,Western Michigan,MAC,0,0,0,0,6,6
+112,Arkansas State,Sun Belt,0,6,0,0,0,6
+113,Air Force,Mountain West,0,6,0,0,0,6
+114,Northwestern,Big 10,0,0,6,0,0,6
+115,Stanford,ACC,0,0,0,6,0,6
+116,Akron,MAC,0,0,0,0,6,6
+117,Oklahoma State,Big 12,0,6,0,0,0,6
+118,Florida Atlantic,American,0,0,6,0,0,6
+119,Georgia State,Sun Belt,0,0,0,6,0,6
+120,Middle Tennessee,Conf USA,0,0,0,6,0,6
+121,UTEP,Conf USA,0,0,6,0,0,6
+122,Eastern Michigan,MAC,0,0,0,0,5,5
+123,Kansas State,Big 12,0,4,0,0,0,4
+124,Northern Illinois,MAC,0,4,0,0,0,4
+125,Colorado State,Mountain West,0,0,4,0,0,4
+126,San José State,Mountain West,0,0,0,0,4,4
+127,Charlotte,American,0,0,0,4,0,4
+128,Nevada,Mountain West,0,0,4,0,0,4
+129,Ball State,MAC,0,0,0,4,0,4
+130,Kent State,MAC,0,4,0,0,0,4
+131,Miami (OH),MAC,0,0,0,0,0,0
+132,Sam Houston,Conf USA,0,0,0,0,0,0
+133,UCLA,Big 10,0,0,0,0,0,0
+134,Oregon State,Pac 12,0,0,0,0,0,0
+135,ULM,Sun Belt,0,0,0,0,0,0
+136,Massachusetts,MAC,0,0,0,0,0,0
