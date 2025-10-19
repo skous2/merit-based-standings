@@ -3,26 +3,25 @@ Ohio State,Illinois,WIN,18,Road,4,2,3,1,10
 Indiana,Oregon,WIN,10,Road,4,2,3,1,10
 Texas,Oklahoma,WIN,17,Home,4,2,3,1,10
 Alabama,Missouri,WIN,3,Road,4,2,3,1,10
-Texas Tech,Kansas,WIN,25,Home,4,2,3,1,10
-USC,Michigan,WIN,18,Home,4,2,3,1,10
-Utah,Arizona State,WIN,32,Home,4,2,3,1,10
-Kansas State,TCU,WIN,13,Home,4,2,3,1,10
 South Florida,North Texas,WIN,27,Road,4,2,3,0,9
-Georgia,Auburn,WIN,10,Road,4,2,2,1,9
+Texas Tech,Kansas,WIN,25,Home,4,2,2,1,9
+USC,Michigan,WIN,18,Home,4,2,2,1,9
 Notre Dame,NC State,WIN,29,Home,4,2,2,1,9
 BYU,Arizona,WIN,6,Road,4,2,2,1,9
-Pittsburgh,Florida State,WIN,3,Road,4,2,2,1,9
+Utah,Arizona State,WIN,32,Home,4,2,2,1,9
 Nebraska,Maryland,WIN,3,Road,4,2,2,1,9
+Kansas State,TCU,WIN,13,Home,4,2,2,1,9
 Kennesaw State,Louisiana Tech,WIN,28,Home,4,2,2,0,8
 Washington,Rutgers,WIN,19,Home,4,2,1,1,8
 Colorado State,Fresno State,WIN,28,Home,4,2,2,0,8
-Texas A&M,Florida,WIN,17,Home,4,2,1,1,8
-Georgia Tech,Virginia Tech,WIN,15,Home,4,2,1,1,8
+Georgia,Auburn,WIN,10,Road,4,2,1,1,8
 Colorado,Iowa State,WIN,7,Home,4,0,3,1,8
+Pittsburgh,Florida State,WIN,3,Road,4,2,1,1,8
 UCLA,Michigan State,WIN,25,Road,4,2,1,1,8
 Northwestern,Penn State,WIN,1,Road,4,2,1,1,8
 Marshall,Old Dominion,WIN,24,Home,4,2,2,0,8
-LSU,South Carolina,WIN,10,Home,4,0,2,1,7
+Texas A&M,Florida,WIN,17,Home,4,2,0,1,7
+Georgia Tech,Virginia Tech,WIN,15,Home,4,2,0,1,7
 SMU,Stanford,WIN,24,Home,4,2,0,1,7
 Houston,Oklahoma State,WIN,22,Road,4,2,0,1,7
 Navy,Temple,WIN,1,Road,4,2,1,0,7
@@ -37,11 +36,10 @@ Missouri State,Middle Tennessee,WIN,2,Road,4,2,0,0,6
 Liberty,UTEP,WIN,11,Road,4,2,0,0,6
 Jacksonville State,Sam Houston,WIN,2,Road,4,2,0,0,6
 Southern Miss,Georgia Southern,WIN,3,Road,4,2,0,0,6
-Tennessee,Arkansas,WIN,3,Home,4,0,1,1,6
+LSU,South Carolina,WIN,10,Home,4,0,1,1,6
 Cincinnati,UCF,WIN,9,Home,4,0,1,1,6
 Army,Charlotte,WIN,17,Home,4,2,0,0,6
 Miami (OH),Akron,WIN,13,Road,4,2,0,0,6
-Bowling Green,Toledo,WIN,5,Home,4,0,2,0,6
 Kent State,Massachusetts,WIN,36,Home,4,2,0,0,6
 Wake Forest,Oregon State,WIN,25,Road,4,2,0,0,6
 App State,Georgia State,WIN,21,Road,4,2,0,0,6
@@ -50,6 +48,8 @@ Florida Atlantic,UAB,WIN,20,Home,4,2,0,0,6
 San Diego State,Nevada,WIN,34,Road,4,2,0,0,6
 Tulane,East Carolina,WIN,7,Home,4,0,1,0,5
 Ole Miss,Washington State,WIN,3,Home,4,0,1,0,5
+Tennessee,Arkansas,WIN,3,Home,4,0,0,1,5
+Bowling Green,Toledo,WIN,5,Home,4,0,1,0,5
 Minnesota,Purdue,WIN,7,Home,4,0,0,1,5
 James Madison,Louisiana,WIN,10,Home,4,0,0,0,4
 Eastern Michigan,Northern Illinois,WIN,6,Home,4,0,0,0,4
