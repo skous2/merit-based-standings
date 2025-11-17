@@ -1,23 +1,23 @@
 Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Total
 Oklahoma,Michigan,WIN,11,Home,4,2,3,1,10
+Baylor,SMU,WIN,3,Road,4,2,3,1,10
+Louisville,James Madison,WIN,14,Home,4,2,3,0,9
 Illinois,Duke,WIN,26,Road,4,2,2,1,9
-Baylor,SMU,WIN,3,Road,4,2,2,1,9
-Missouri,Kansas,WIN,11,Home,4,2,2,1,9
-Toledo,Western Kentucky,WIN,24,Home,4,2,3,0,9
-Washington State,San Diego State,WIN,23,Home,4,2,3,0,9
-Louisville,James Madison,WIN,14,Home,4,2,2,0,8
-Clemson,Troy,WIN,11,Home,4,2,2,0,8
-Mississippi State,Arizona State,WIN,4,Home,4,0,3,1,8
 South Florida,Florida,WIN,2,Road,4,2,1,1,8
+Ole Miss,Kentucky,WIN,7,Road,4,2,1,1,8
 Indiana,Kennesaw State,WIN,47,Home,4,2,2,0,8
 NC State,Virginia,WIN,4,Home,4,0,3,1,8
+Missouri,Kansas,WIN,11,Home,4,2,1,1,8
 Army,Kansas State,WIN,3,Road,4,2,1,1,8
-Vanderbilt,Virginia Tech,WIN,24,Road,4,2,1,1,8
+Toledo,Western Kentucky,WIN,24,Home,4,2,2,0,8
+Washington State,San Diego State,WIN,23,Home,4,2,2,0,8
+Penn State,Florida International,WIN,34,Home,4,2,1,0,7
 LSU,Louisiana Tech,WIN,16,Home,4,2,1,0,7
 Oregon,Oklahoma State,WIN,66,Home,4,2,0,1,7
+Clemson,Troy,WIN,11,Home,4,2,1,0,7
+Mississippi State,Arizona State,WIN,4,Home,4,0,2,1,7
 Iowa State,Iowa,WIN,3,Home,4,0,2,1,7
 Texas A&M,Utah State,WIN,22,Home,4,2,1,0,7
-Ole Miss,Kentucky,WIN,7,Road,4,2,0,1,7
 Pittsburgh,Central Michigan,WIN,28,Home,4,2,1,0,7
 Colorado,Delaware,WIN,24,Home,4,2,1,0,7
 Texas State,UTSA,WIN,7,Road,4,2,1,0,7
@@ -26,12 +26,14 @@ Rutgers,Miami (OH),WIN,28,Home,4,2,1,0,7
 Arkansas,Arkansas State,WIN,42,Home,4,2,1,0,7
 Missouri State,Marshall,WIN,1,Road,4,2,1,0,7
 Houston,Rice,WIN,26,Road,4,2,1,0,7
+Vanderbilt,Virginia Tech,WIN,24,Road,4,2,0,1,7
+Nebraska,Akron,WIN,68,Home,4,2,1,0,7
+USC,Georgia Southern,WIN,39,Home,4,2,1,0,7
 BYU,Stanford,WIN,24,Home,4,2,0,1,7
 Northwestern,FCS,WIN,35,Home,4,2,0,0,6
 Maryland,Northern Illinois,WIN,11,Home,4,2,0,0,6
 Boise State,FCS,WIN,37,Home,4,2,0,0,6
 Ohio State,FCS,WIN,70,Home,4,2,0,0,6
-Penn State,Florida International,WIN,34,Home,4,2,0,0,6
 Georgia,FCS,WIN,22,Home,4,2,0,0,6
 Miami,FCS,WIN,42,Home,4,2,0,0,6
 Texas,San José State,WIN,31,Home,4,2,0,0,6
@@ -63,8 +65,6 @@ UCF,FCS,WIN,61,Home,4,2,0,0,6
 Memphis,Georgia State,WIN,22,Road,4,2,0,0,6
 Tulane,South Alabama,WIN,2,Road,4,2,0,0,6
 Auburn,Ball State,WIN,39,Home,4,2,0,0,6
-Nebraska,Akron,WIN,68,Home,4,2,0,0,6
-USC,Georgia Southern,WIN,39,Home,4,2,0,0,6
 Purdue,FCS,WIN,17,Home,4,2,0,0,6
 Coastal Carolina,FCS,WIN,13,Home,4,2,0,0,6
 Louisiana,FCS,WIN,24,Home,4,2,0,0,6
