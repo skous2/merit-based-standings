@@ -3,25 +3,26 @@ Oklahoma,Michigan,WIN,11,Home,4,2,3,1,10
 Baylor,SMU,WIN,3,Road,4,2,3,1,10
 Louisville,James Madison,WIN,14,Home,4,2,3,0,9
 Illinois,Duke,WIN,26,Road,4,2,2,1,9
-Toledo,Western Kentucky,WIN,24,Home,4,2,3,0,9
-Washington State,San Diego State,WIN,23,Home,4,2,3,0,9
-Mississippi State,Arizona State,WIN,4,Home,4,0,3,1,8
+Clemson,Troy,WIN,11,Home,4,2,2,0,8
+South Florida,Florida,WIN,2,Road,4,2,1,1,8
 Ole Miss,Kentucky,WIN,7,Road,4,2,1,1,8
 Indiana,Kennesaw State,WIN,47,Home,4,2,2,0,8
 NC State,Virginia,WIN,4,Home,4,0,3,1,8
 Missouri,Kansas,WIN,11,Home,4,2,1,1,8
+North Texas,Western Michigan,WIN,3,Road,4,2,2,0,8
 Army,Kansas State,WIN,3,Road,4,2,1,1,8
+Toledo,Western Kentucky,WIN,24,Home,4,2,2,0,8
+Washington State,San Diego State,WIN,23,Home,4,2,2,0,8
 Penn State,Florida International,WIN,34,Home,4,2,1,0,7
 LSU,Louisiana Tech,WIN,16,Home,4,2,1,0,7
 Oregon,Oklahoma State,WIN,66,Home,4,2,0,1,7
-Clemson,Troy,WIN,11,Home,4,2,1,0,7
-South Florida,Florida,WIN,2,Road,4,2,0,1,7
+Mississippi State,Arizona State,WIN,4,Home,4,0,2,1,7
 Iowa State,Iowa,WIN,3,Home,4,0,2,1,7
 Texas A&M,Utah State,WIN,22,Home,4,2,1,0,7
+Texas Tech,Kent State,WIN,48,Home,4,2,1,0,7
 Pittsburgh,Central Michigan,WIN,28,Home,4,2,1,0,7
 Colorado,Delaware,WIN,24,Home,4,2,1,0,7
 Texas State,UTSA,WIN,7,Road,4,2,1,0,7
-North Texas,Western Michigan,WIN,3,Road,4,2,1,0,7
 Rutgers,Miami (OH),WIN,28,Home,4,2,1,0,7
 Arkansas,Arkansas State,WIN,42,Home,4,2,1,0,7
 Missouri State,Marshall,WIN,1,Road,4,2,1,0,7
@@ -41,7 +42,6 @@ South Carolina,FCS,WIN,28,Home,4,2,0,0,6
 Florida State,FCS,WIN,74,Home,4,2,0,0,6
 Alabama,UL Monroe,WIN,73,Home,4,2,0,0,6
 Tennessee,FCS,WIN,55,Home,4,2,0,0,6
-Texas Tech,Kent State,WIN,48,Home,4,2,0,0,6
 Utah,FCS,WIN,54,Home,4,2,0,0,6
 Minnesota,FCS,WIN,66,Home,4,2,0,0,6
 Syracuse,UConn,WIN,7,Home,4,0,2,0,6
@@ -72,9 +72,9 @@ UTEP,FCS,WIN,25,Home,4,2,0,0,6
 Arizona,FCS,WIN,45,Home,4,2,0,0,6
 Washington,FCS,WIN,60,Home,4,2,0,0,6
 Hawai'i,Sam Houston,WIN,17,Home,4,2,0,0,6
-Jacksonville State,Liberty,WIN,10,Home,4,0,1,0,5
 Michigan State,Boston College,WIN,2,Home,4,0,0,1,5
 UNLV,UCLA,WIN,7,Home,4,0,0,1,5
+Jacksonville State,Liberty,WIN,10,Home,4,0,0,0,4
 New Mexico,FCS,WIN,10,Home,4,0,0,0,4
 App State,FCS,WIN,7,Home,4,0,0,0,4
 Nevada,FCS,WIN,3,Home,4,0,0,0,4

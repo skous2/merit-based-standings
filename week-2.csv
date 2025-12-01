@@ -4,18 +4,19 @@ Nebraska,Cincinnati,WIN,3,Road,4,2,2,1,9
 LSU,Clemson,WIN,7,Road,4,2,2,1,9
 Auburn,Baylor,WIN,14,Road,4,2,1,1,8
 Arizona,Hawai'i,WIN,34,Home,4,2,2,0,8
-TCU,North Carolina,WIN,34,Road,4,2,1,1,8
 South Florida,Boise State,WIN,27,Home,4,2,2,0,8
 Tulane,Northwestern,WIN,20,Home,4,2,1,1,8
-Mississippi State,Southern Miss,WIN,17,Road,4,2,2,0,8
 Ohio State,Texas,WIN,7,Home,4,0,3,1,8
-USC,Missouri State,WIN,60,Home,4,2,2,0,8
 Indiana,Old Dominion,WIN,13,Home,4,2,2,0,8
 Michigan,New Mexico,WIN,17,Home,4,2,2,0,8
+Michigan State,Western Michigan,WIN,17,Home,4,2,2,0,8
 Miami,Notre Dame,WIN,3,Home,4,0,3,1,8
 Tennessee,Syracuse,WIN,19,Home,4,2,0,1,7
 Georgia Tech,Colorado,WIN,7,Road,4,2,0,1,7
+TCU,North Carolina,WIN,34,Road,4,2,0,1,7
 Minnesota,Buffalo,WIN,13,Home,4,2,1,0,7
+Mississippi State,Southern Miss,WIN,17,Road,4,2,1,0,7
+USC,Missouri State,WIN,60,Home,4,2,1,0,7
 Virginia,Coastal Carolina,WIN,41,Home,4,2,1,0,7
 Texas A&M,UTSA,WIN,18,Home,4,2,1,0,7
 Georgia,Marshall,WIN,38,Home,4,2,1,0,7
@@ -23,8 +24,7 @@ Utah,UCLA,WIN,33,Road,4,2,0,1,7
 South Carolina,Virginia Tech,WIN,13,Road,4,2,0,1,7
 Wyoming,Akron,WIN,10,Road,4,2,1,0,7
 Wisconsin,Miami (OH),WIN,17,Home,4,2,1,0,7
-Michigan State,Western Michigan,WIN,17,Home,4,2,1,0,7
-Maryland,Florida Atlantic,WIN,32,Home,4,2,1,0,7
+Rice,Louisiana,WIN,2,Road,4,2,1,0,7
 Houston,FCS,WIN,27,Home,4,2,0,0,6
 Oklahoma State,FCS,WIN,20,Home,4,2,0,0,6
 Duke,FCS,WIN,28,Home,4,2,0,0,6
@@ -42,10 +42,10 @@ UNLV,Sam Houston,WIN,17,Road,4,2,0,0,6
 Navy,FCS,WIN,45,Home,4,2,0,0,6
 Pittsburgh,FCS,WIN,52,Home,4,2,0,0,6
 Purdue,Ball State,WIN,31,Home,4,2,0,0,6
+Maryland,Florida Atlantic,WIN,32,Home,4,2,0,0,6
 Tulsa,FCS,WIN,28,Home,4,2,0,0,6
 North Texas,FCS,WIN,51,Home,4,2,0,0,6
 Texas State,Eastern Michigan,WIN,25,Home,4,2,0,0,6
-Rice,Louisiana,WIN,2,Road,4,2,0,0,6
 BYU,FCS,WIN,69,Home,4,2,0,0,6
 Utah State,UTEP,WIN,12,Home,4,2,0,0,6
 Louisiana Tech,FCS,WIN,24,Home,4,2,0,0,6
@@ -78,10 +78,10 @@ Arizona State,FCS,WIN,19,Home,4,2,0,0,6
 California,Oregon State,WIN,19,Road,4,2,0,0,6
 Washington,Colorado State,WIN,17,Home,4,2,0,0,6
 NC State,East Carolina,WIN,7,Home,4,0,2,0,6
+Rutgers,Ohio,WIN,3,Home,4,0,2,0,6
 UCF,Jacksonville State,WIN,7,Home,4,0,2,0,6
 Wake Forest,Kennesaw State,WIN,1,Home,4,0,2,0,6
 Kentucky,Toledo,WIN,8,Home,4,0,2,0,6
-Rutgers,Ohio,WIN,3,Home,4,0,1,0,5
 UAB,FCS,WIN,10,Home,4,0,0,0,4
 Kent State,FCS,WIN,4,Home,4,0,0,0,4
 Northern Illinois,FCS,WIN,2,Home,4,0,0,0,4

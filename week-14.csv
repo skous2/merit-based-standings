@@ -1,68 +1,68 @@
 ﻿Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Total
 Oregon,USC,WIN,15,Home,4,2,3,1,10
 Pittsburgh,Georgia Tech,WIN,14,Road,4,2,3,1,10
-Wisconsin,Illinois,WIN,17,Home,4,2,3,1,10
 TCU,Houston,WIN,3,Road,4,2,3,1,10
 SMU,Louisville,WIN,32,Home,4,2,3,1,10
 Oklahoma,Missouri,WIN,11,Home,4,2,2,1,9
 BYU,Cincinnati,WIN,12,Road,4,2,2,1,9
+Wisconsin,Illinois,WIN,17,Home,4,2,2,1,9
 Penn State,Nebraska,WIN,27,Home,4,2,2,1,9
 Stanford,California,WIN,21,Home,4,2,2,1,9
 UNLV,Hawai'i,WIN,28,Home,4,2,2,0,8
 Ohio State,Rutgers,WIN,33,Home,4,2,1,1,8
 Vanderbilt,Kentucky,WIN,28,Home,4,2,1,1,8
-Michigan,Maryland,WIN,25,Road,4,2,1,1,8
+Tennessee,Florida,WIN,20,Road,4,2,1,1,8
 Iowa State,Kansas,WIN,24,Home,4,2,1,1,8
 Arizona,Baylor,WIN,24,Home,4,2,1,1,8
-Duke,North Carolina,WIN,7,Road,4,2,1,1,8
 UTSA,East Carolina,WIN,34,Home,4,2,2,0,8
-Utah State,Fresno State,WIN,11,Road,4,2,2,0,8
 Miami (OH),Buffalo,WIN,17,Road,4,2,1,0,7
+Central Michigan,Kent State,WIN,12,Road,4,2,1,0,7
 Louisiana,Arkansas State,WIN,4,Road,4,2,1,0,7
 Notre Dame,Syracuse,WIN,63,Home,4,2,0,1,7
 Miami,Virginia Tech,WIN,17,Road,4,2,0,1,7
 Texas,Arkansas,WIN,15,Home,4,2,0,1,7
-Tennessee,Florida,WIN,20,Road,4,2,0,1,7
+Michigan,Maryland,WIN,25,Road,4,2,0,1,7
 Tulane,Temple,WIN,24,Road,4,2,1,0,7
 Arizona State,Colorado,WIN,25,Road,4,2,0,1,7
-Northwestern,Minnesota,WIN,3,Home,4,0,2,1,7
 Wake Forest,Delaware,WIN,38,Home,4,2,1,0,7
 Tulsa,Army,WIN,1,Road,4,2,1,0,7
 Old Dominion,Georgia Southern,WIN,35,Road,4,2,1,0,7
-Nevada,Wyoming,WIN,6,Road,4,2,1,0,7
-UConn,Florida Atlantic,WIN,3,Road,4,2,1,0,7
+Duke,North Carolina,WIN,7,Road,4,2,0,1,7
 South Carolina,Coastal Carolina,WIN,44,Home,4,2,1,0,7
 North Texas,Rice,WIN,32,Road,4,2,1,0,7
-LSU,Western Kentucky,WIN,3,Home,4,0,3,0,7
 Washington,UCLA,WIN,34,Road,4,2,0,1,7
+Utah State,Fresno State,WIN,11,Road,4,2,1,0,7
 Akron,Bowling Green,WIN,3,Road,4,2,0,0,6
 Western Michigan,Northern Illinois,WIN,16,Road,4,2,0,0,6
 Ohio,Massachusetts,WIN,28,Home,4,2,0,0,6
-Central Michigan,Kent State,WIN,12,Road,4,2,0,0,6
 NC State,Florida State,WIN,10,Home,4,0,1,1,6
 Texas A&M,FCS,WIN,48,Home,4,2,0,0,6
 Georgia,Charlotte,WIN,32,Home,4,2,0,0,6
 Alabama,FCS,WIN,56,Home,4,2,0,0,6
 Utah,Kansas State,WIN,4,Home,4,0,1,1,6
+Northwestern,Minnesota,WIN,3,Home,4,0,1,1,6
 Auburn,FCS,WIN,45,Home,4,2,0,0,6
-Kennesaw State,Missouri State,WIN,7,Home,4,0,2,0,6
+Nevada,Wyoming,WIN,6,Road,4,2,0,0,6
 Toledo,Ball State,WIN,29,Home,4,2,0,0,6
+UConn,Florida Atlantic,WIN,3,Road,4,2,0,0,6
 Middle Tennessee,Sam Houston,WIN,14,Home,4,2,0,0,6
 New Mexico State,UTEP,WIN,3,Road,4,2,0,0,6
 South Florida,UAB,WIN,30,Road,4,2,0,0,6
 Florida International,Jacksonville State,WIN,6,Home,4,0,2,0,6
-South Alabama,Southern Miss,WIN,7,Home,4,0,2,0,6
 Troy,Georgia State,WIN,12,Home,4,2,0,0,6
 Clemson,FCS,WIN,35,Home,4,2,0,0,6
 Texas State,UL Monroe,WIN,17,Home,4,2,0,0,6
 New Mexico,Air Force,WIN,17,Road,4,2,0,0,6
 Boise State,Colorado State,WIN,28,Home,4,2,0,0,6
+LSU,Western Kentucky,WIN,3,Home,4,0,2,0,6
 San Diego State,San José State,WIN,22,Home,4,2,0,0,6
 James Madison,Washington State,WIN,4,Home,4,0,1,0,5
+Kennesaw State,Missouri State,WIN,7,Home,4,0,1,0,5
 App State,Marshall,WIN,2,Home,4,0,1,0,5
-Louisiana Tech,Liberty,WIN,6,Home,4,0,1,0,5
 Iowa,Michigan State,WIN,3,Home,4,0,0,1,5
+South Alabama,Southern Miss,WIN,7,Home,4,0,1,0,5
 UCF,Oklahoma State,WIN,3,Home,4,0,0,1,5
+Louisiana Tech,Liberty,WIN,6,Home,4,0,0,0,4
 Bowling Green,Akron,LOSS,3,Home,0,0,0,0,0
 Northern Illinois,Western Michigan,LOSS,16,Home,0,0,0,0,0
 Massachusetts,Ohio,LOSS,28,Road,0,0,0,0,0
