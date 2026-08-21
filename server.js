@@ -13,9 +13,18 @@ app.use(express.static('public'));
 let currentStandingsData = { headers: [], data: [] };
 let previousStandingsData = { headers: [], data: [] };
 let totalPointsData = { headers: [], data: [] };
-let comparisonData = { headers: [], data: [] };
 let allgameData = { headers: [], data: [] };
 let weekData = {};
+
+// Season archive: { '2025': { standings: {headers,data}, 'total-points': {...}, 'all-games': {...} }, ... }
+// Populated by scanning archive/<year>/ subfolders, so adding a future season is just
+// `git mv ... archive/<year>/` per WEEKLY_UPDATE.md -- no server.js changes needed.
+const seasonArchiveData = {};
+const ARCHIVE_VIEWS = {
+  'standings': 'current-standings.csv',
+  'total-points': 'total-points.csv',
+  'all-games': 'all-games.csv',
+};
 
 // Load CSV data function
 function loadCSVFile(filename, callback) {
@@ -76,15 +85,8 @@ function loadAllCSVData() {
     }
   });
 
-  // Load 2024 comparison from 2024-comparison.csv
-  loadCSVFile('2024-comparison.csv', (data) => {
-    comparisonData = data;
-    if (data.headers.length > 0) {
-      console.log('Loaded 2024-comparison.csv successfully');
-    } else {
-      console.log('2024-comparison.csv not found or empty');
-    }
-  });
+  // Load every past season found under archive/<year>/
+  loadSeasonArchiveData();
 
   // Load all games from all-games.csv
   loadCSVFile('all-games.csv', (data) => {
@@ -107,6 +109,33 @@ function loadAllCSVData() {
   }
 }
 
+// Discover archive/<year>/ folders and load each season's standings/total-points/all-games CSVs
+function loadSeasonArchiveData() {
+  const archiveRoot = path.join(__dirname, 'archive');
+  if (!fs.existsSync(archiveRoot)) {
+    console.log('No archive/ directory found -- Season Archive page will be empty.');
+    return;
+  }
+
+  const years = fs.readdirSync(archiveRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
+
+  years.forEach((year) => {
+    seasonArchiveData[year] = {};
+    Object.entries(ARCHIVE_VIEWS).forEach(([view, filename]) => {
+      loadCSVFile(path.join('archive', year, filename), (data) => {
+        seasonArchiveData[year][view] = data;
+        if (data.headers.length > 0) {
+          console.log(`Loaded archive/${year}/${filename} successfully`);
+        } else {
+          console.log(`archive/${year}/${filename} not found or empty`);
+        }
+      });
+    });
+  });
+}
+
 // Routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -127,9 +156,19 @@ app.get('/api/total-points', (req, res) => {
   res.json(totalPointsData);
 });
 
-// Get 2024 comparison data
-app.get('/api/2024-comparison', (req, res) => {
-  res.json(comparisonData);
+// List seasons available in the archive, most recent first
+app.get('/api/archive/years', (req, res) => {
+  res.json(Object.keys(seasonArchiveData).sort().reverse());
+});
+
+// Get one archived season's standings / total-points / all-games
+app.get('/api/archive/:year/:view', (req, res) => {
+  const { year, view } = req.params;
+  if (!ARCHIVE_VIEWS[view] || !seasonArchiveData[year]) {
+    res.json({ headers: [], data: [] });
+    return;
+  }
+  res.json(seasonArchiveData[year][view] || { headers: [], data: [] });
 });
 
 // Get all games data
@@ -156,7 +195,7 @@ app.listen(PORT, () => {
   console.log('- current-standings.csv (for Current Standings page)');
   console.log('- previous-standings.csv (for Previous Standings page)');
   console.log('- total-points.csv (for Total Points page)');
-  console.log('- 2024-comparison.csv (for 2024 Standing Comparison page)');
+  console.log('- archive/<year>/{current-standings,total-points,all-games}.csv (for the Season Archive page)');
   console.log('- week-X.csv (for individual week pages, X = 1-15)');
   console.log('No fallback files will be used.');
 });

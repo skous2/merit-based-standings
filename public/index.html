@@ -13,13 +13,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Football - Merit Based Standings</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏈</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <h1>College Football - Merit Based Standings</h1>
+            <a href="#current-standings" class="brand">
+                <img src="cfbmerit-logo.svg" alt="CFBMerit" class="brand-logo">
+                <span class="brand-tagline">Merit-Based College Football Standings</span>
+            </a>
             <nav class="nav">
                     <div class="dropdown">
                         <a href="#" class="nav-item active">Standings ▼</a>
@@ -30,7 +37,7 @@
                     </div>
                     <a href="#about" class="nav-item">About the Standings</a>
                     <a href="#total-points" class="nav-item">Total Points</a>
-                    <a href="#2024-comparison" class="nav-item">2024 Standing Comparison</a>
+                    <a href="#archive" class="nav-item">Season Archive</a>
                     <a href="#all-games" class="nav-item">All Game Data</a>
                     <!--
                     <div class="dropdown">
@@ -63,7 +70,7 @@
         <!-- Current Standings Page -->
         <div id="current-standings" class="page active">
             <div class="container">
-                <h2>Final Standings (Updated 11/30)</h2>
+                <h2>Final Standings</h2>
                 <p>See the "About the Standings" page to see how points are allocated to each game and team.</p>
                 <p>The final merit-based standings shows where each team stands in the current season. Fully transparent, each team gets allocated points and then we simply order the teams by total points throughout the season.</p>
                 <p>Ties for total points are broken by the average points on the season (total points divided by number of games played) followed by the standing at the start of the year.</p>
@@ -98,19 +105,19 @@
                 <p>Like soccer, who give teams 3 points for a win, 1 for a tie, and 0 for a loss, we wondered if the same could apply to football. The challenge is not every team plays one another, so you must account for strength of schedule. We propose a method to do just that.</p>
                 
                 <h3>How It Works</h3>
-                <p>Every game can be worth up to 10 points for a total of 120 points possible in the season</p>
-                <p>Our merit-based system considers 4 factors:</p>
-                
-                <ul>
-                    <li><strong>Did you win?</strong> If you lose your game that week you get no points, if you won you get <strong>4</strong> points </li>
-                    <li><strong>How did you win?</strong> If you had a quality win (deemed as more than 10 points or a win on the road) you get <strong>2</strong> points</li>
-                    <li><strong>Who did you beat (part 1)?</strong> If you beat a team from a power 4 conference you get <strong>1</strong> point</li>
-                    <li><strong>Who did you beat (part 2)?</strong> If you beat a team who is <strong>currently (updated weekly)</strong> in the top 30 of total points you get <strong>3</strong> points; A team in the top 60 gets <strong>2</strong> points; And a team in the top 100 gets <strong>1</strong> point </li>
+                <p>A win can be worth up to 10 points; even a loss can be worth up to 3 points if it's a close one against a good team.</p>
+                <p>Our merit-based system considers 5 factors:</p>
 
+                <ul>
+                    <li><strong>Did you win?</strong> If you won, you get <strong>3</strong> points. If you lost, see the quality loss rule below.</li>
+                    <li><strong>How did you win?</strong> If you had a quality win (a win by <strong>14 or more points at home</strong>, or <strong>any win on the road</strong>) you get <strong>2</strong> points</li>
+                    <li><strong>Who did you beat (part 1)?</strong> If you beat a team from a power 4 conference you get <strong>2</strong> points</li>
+                    <li><strong>Who did you beat (part 2)?</strong> If you beat a team who is <strong>currently (updated weekly)</strong> in the top 30 of total points you get <strong>3</strong> points; a team in the top 60 gets <strong>2</strong> points; and a team in the top 100 gets <strong>1</strong> point</li>
+                    <li><strong>Quality loss.</strong> Even a loss counts for something if it's close: if you lose by <strong>7 points or fewer</strong> to a team <strong>currently (updated weekly)</strong> in the top 30, you get <strong>3</strong> points</li>
                 </ul>
-                
+
                 <h3>Point System</h3>
-                <p>Teams accumulate points each week based on if they win, how they won, and who they beat. The total points system provides a cumulative view of the entire season, while weekly details show how teams performed in specific weeks.</p>
+                <p>Teams accumulate points each week based on if they won or lost, how they won, and who they played. The total points system provides a cumulative view of the entire season, while weekly details show how teams performed in specific weeks.</p>
                 
                 <h3>Updates</h3>
                 <p>Standings are updated weekly after all games are completed and verified.</p>
@@ -130,16 +137,40 @@
             </div>
         </div>
 
-        <!-- 2024 Standing Comparison Page -->
-        <div id="2024-comparison" class="page">
+        <!-- Season Archive Page -->
+        <div id="archive" class="page">
             <div class="container">
-                <h2>2024 Standing Comparison</h2>
-                <p>Compare the current merit-based standings with traditional 2024 rankings and polls.</p>
-                <p>Strength of schedule reflects the team's standing from the week prior</p>
-                <div id="comparisonMessageArea"></div>
-                <div id="comparisonTableSection">
-                    <div id="comparisonTableInfo" class="table-info"></div>
-                    <div id="comparisonTableContainer"></div>
+                <h2>Season Archive</h2>
+                <p>Browse final standings, total points, and every game from past seasons.</p>
+                <div class="archive-controls">
+                    <div class="archive-tab-group" id="archiveYearTabs"></div>
+                    <div class="archive-tab-group" id="archiveViewTabs">
+                        <button type="button" class="archive-tab active" data-view="standings" onclick="selectArchiveView('standings')">Final Standings</button>
+                        <button type="button" class="archive-tab" data-view="total-points" onclick="selectArchiveView('total-points')">Total Points</button>
+                        <button type="button" class="archive-tab" data-view="all-games" onclick="selectArchiveView('all-games')">All Game Data</button>
+                    </div>
+                </div>
+                <div id="archiveFilterControls" class="filter-controls" style="display: none;">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="archiveTeamFilter">Filter by Team 1:</label>
+                            <input type="text" id="archiveTeamFilter" placeholder="Enter team name..." onkeyup="filterArchiveAllGames()">
+                        </div>
+                        <div class="filter-group">
+                            <label for="archiveWeekFilter">Filter by Week:</label>
+                            <select id="archiveWeekFilter" onchange="filterArchiveAllGames()">
+                                <option value="">All Weeks</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <button type="button" onclick="clearArchiveFilters()" class="clear-filter-btn">Clear Filters</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="archiveMessageArea"></div>
+                <div id="archiveTableSection">
+                    <div id="archiveTableInfo" class="table-info"></div>
+                    <div id="archiveTableContainer"></div>
                 </div>
             </div>
         </div>
@@ -397,12 +428,20 @@
         let totalSortColumn = null;
         let totalSortDirection = 'asc';
 
-        // Global variables for 2024 comparison
-        let comparisonData = [];
-        let comparisonHeaders = [];
-        let comparisonSortColumn = null;
-        let comparisonSortDirection = 'asc';
-        let highlightedTeam = null;
+        // Global variables for the Season Archive page
+        let archiveYears = [];
+        let archiveCurrentYear = null;
+        let archiveCurrentView = 'standings';
+        let archiveData = [];
+        let archiveHeaders = [];
+        let archiveSortColumn = null;
+        let archiveSortDirection = 'asc';
+        let archiveAllGamesOriginal = []; // unfiltered all-games rows, for Clear Filters
+        const ARCHIVE_VIEW_LABELS = {
+            'standings': 'final standings',
+            'total-points': 'total points',
+            'all-games': 'all game data',
+        };
 
          // Global variables for All games data
         let allgameData = [];
@@ -494,9 +533,9 @@
             } else if (pageId === 'total-points') {
                 document.querySelector('.nav-item[href="#total-points"]').classList.add('active');
                 loadTotalPointsData();
-            } else if (pageId === '2024-comparison') {
-                document.querySelector('.nav-item[href="#2024-comparison"]').classList.add('active');
-                load2024ComparisonData();
+            } else if (pageId === 'archive') {
+                document.querySelector('.nav-item[href="#archive"]').classList.add('active');
+                initArchivePage();
             } else if (pageId === 'all-games') {
                 document.querySelector('.nav-item[href="#all-games"]').classList.add('active');
                 loadAllGamesData();
@@ -512,8 +551,8 @@
                 document.title = 'About the Standings - College Football Merit Based Standings';
             } else if (pageId === 'total-points') {
                 document.title = 'Total Points - College Football Merit Based Standings';
-            } else if (pageId === '2024-comparison') {
-                document.title = '2024 Standing Comparison - College Football Merit Based Standings';
+            } else if (pageId === 'archive') {
+                document.title = 'Season Archive - College Football Merit Based Standings';
             } else if (pageId === 'all-games') {
                 document.title = 'All Game Data - College Football Merit Based Standings';
             } else if (pageId.startsWith('week-')) {
@@ -533,7 +572,7 @@
                     messageArea.innerHTML = '';
                     
                     if (data.headers.length === 0 || data.data.length === 0) {
-                        showNoData('currentTableContainer', 'currentTableInfo', 'current-standings.csv');
+                        showNoData('currentTableContainer', 'currentTableInfo');
                     } else {
                         currentStandingsHeaders = data.headers;
                         currentStandingsData = [...data.data];
@@ -556,7 +595,7 @@
             messageArea.innerHTML = '';
             
             if (data.headers.length === 0 || data.data.length === 0) {
-                showNoData('previousTableContainer', 'previousTableInfo', 'previous-standings.csv');
+                showNoData('previousTableContainer', 'previousTableInfo');
             } else {
                 previousStandingsHeaders = data.headers;
                 previousStandingsData = [...data.data];
@@ -578,7 +617,7 @@
                     messageArea.innerHTML = '';
                     
                     if (data.headers.length === 0 || data.data.length === 0) {
-                        showNoData('totalTableContainer', 'totalTableInfo', 'total-points.csv');
+                        showNoData('totalTableContainer', 'totalTableInfo');
                     } else {
                         totalPointsHeaders = data.headers;
                         totalPointsData = [...data.data];
@@ -805,15 +844,15 @@
         }
 
         // Show no data message
-        function showNoData(containerId, infoId, filename) {
+        function showNoData(containerId, infoId) {
             const tableInfo = document.getElementById(infoId);
             const tableContainer = document.getElementById(containerId);
-            
+
             tableInfo.innerHTML = '';
             tableContainer.innerHTML = `
                 <div class="no-data">
-                    <h3>No Data Available</h3>
-                    <p>Please add your <strong>${filename}</strong> file in the project root directory and restart the server.</p>
+                    <h3>No Data Yet</h3>
+                    <p>Data will become available after the first games are played.</p>
                 </div>
             `;
         }
@@ -823,46 +862,170 @@
             messageArea.innerHTML = `<div class="message ${type}">${message}</div>`;
         }
 
-        // Load 2024 comparison data
-        function load2024ComparisonData() {
-            const messageArea = document.getElementById('comparisonMessageArea');
-            showMessage('Loading 2024 comparison data...', 'loading', messageArea);
-            
-            fetch('/api/2024-comparison')
+        // Season Archive: discover available years, then load the selected year/view
+        function initArchivePage() {
+            if (archiveYears.length > 0) {
+                loadArchiveData();
+                return;
+            }
+
+            const messageArea = document.getElementById('archiveMessageArea');
+            showMessage('Loading season archive...', 'loading', messageArea);
+
+            fetch('/api/archive/years')
                 .then(response => response.json())
-                .then(data => {
+                .then(years => {
                     messageArea.innerHTML = '';
-                    
-                    if (data.headers.length === 0 || data.data.length === 0) {
-                        showNoData('comparisonTableContainer', 'comparisonTableInfo', '2024-comparison.csv');
-                    } else {
-                        comparisonHeaders = data.headers;
-                        comparisonData = [...data.data];
-                        display2024ComparisonTable(comparisonHeaders, comparisonData);
+                    archiveYears = years;
+
+                    if (archiveYears.length === 0) {
+                        document.getElementById('archiveYearTabs').innerHTML = '';
+                        showNoData('archiveTableContainer', 'archiveTableInfo');
+                        return;
                     }
+
+                    archiveCurrentYear = archiveYears[0];
+                    renderArchiveYearTabs();
+                    loadArchiveData();
                 })
                 .catch(error => {
-                    showMessage('Error loading 2024 comparison data: ' + error.message, 'error', messageArea);
+                    showMessage('Error loading season archive: ' + error.message, 'error', messageArea);
                 });
         }
 
-        // Sort 2024 comparison data by column
-        function sort2024ComparisonData(columnIndex, direction) {
-            const column = comparisonHeaders[columnIndex];
-            
-            comparisonData.sort((a, b) => {
+        function renderArchiveYearTabs() {
+            const container = document.getElementById('archiveYearTabs');
+            container.innerHTML = archiveYears.map(year =>
+                `<button type="button" class="archive-tab ${year === archiveCurrentYear ? 'active' : ''}" onclick="selectArchiveYear('${year}')">${year}</button>`
+            ).join('');
+        }
+
+        function selectArchiveYear(year) {
+            if (year === archiveCurrentYear) return;
+            archiveCurrentYear = year;
+            archiveSortColumn = null;
+            renderArchiveYearTabs();
+            loadArchiveData();
+        }
+
+        function selectArchiveView(view) {
+            if (view === archiveCurrentView) return;
+            archiveCurrentView = view;
+            document.querySelectorAll('#archiveViewTabs .archive-tab').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.view === view);
+            });
+            archiveSortColumn = null;
+            loadArchiveData();
+        }
+
+        function loadArchiveData() {
+            const messageArea = document.getElementById('archiveMessageArea');
+            const filterControls = document.getElementById('archiveFilterControls');
+            const viewLabel = ARCHIVE_VIEW_LABELS[archiveCurrentView];
+            showMessage(`Loading ${archiveCurrentYear} ${viewLabel}...`, 'loading', messageArea);
+            filterControls.style.display = 'none';
+
+            fetch(`/api/archive/${archiveCurrentYear}/${archiveCurrentView}`)
+                .then(response => response.json())
+                .then(data => {
+                    messageArea.innerHTML = '';
+
+                    if (data.headers.length === 0 || data.data.length === 0) {
+                        showNoData('archiveTableContainer', 'archiveTableInfo');
+                    } else {
+                        archiveHeaders = data.headers;
+                        archiveData = [...data.data];
+
+                        if (archiveCurrentView === 'all-games') {
+                            archiveAllGamesOriginal = [...data.data];
+                            document.getElementById('archiveTeamFilter').value = '';
+                            populateArchiveWeekOptions();
+                            filterControls.style.display = '';
+                        }
+
+                        displayArchiveTable();
+                    }
+                })
+                .catch(error => {
+                    showMessage(`Error loading ${archiveCurrentYear} ${viewLabel}: ` + error.message, 'error', messageArea);
+                });
+        }
+
+        // Filter Archive "All Game Data" by Team 1 (exact match) and/or Week
+        function populateArchiveWeekOptions() {
+            const select = document.getElementById('archiveWeekFilter');
+            const weekColumn = archiveHeaders.find(h => String(h).toLowerCase().includes('week'));
+            const weeks = weekColumn
+                ? [...new Set(archiveAllGamesOriginal.map(r => (r[weekColumn] || '').toString()))]
+                    .filter(w => w !== '')
+                    .sort((a, b) => parseInt(a, 10) - parseInt(b, 10))
+                : [];
+            select.innerHTML = '<option value="">All Weeks</option>' +
+                weeks.map(w => `<option value="${w}">Week ${w}</option>`).join('');
+        }
+
+        function filterArchiveAllGames() {
+            const teamFilter = document.getElementById('archiveTeamFilter').value.trim();
+            const weekFilter = document.getElementById('archiveWeekFilter').value;
+
+            let filtered = [...archiveAllGamesOriginal];
+
+            if (teamFilter) {
+                const needle = teamFilter.toLowerCase();
+                const team1Column = archiveHeaders.find(h => /team\s*1/i.test(String(h)));
+                if (team1Column) {
+                    filtered = filtered.filter(row =>
+                        (row[team1Column] || '').toString().trim().toLowerCase() === needle
+                    );
+                }
+            }
+
+            if (weekFilter) {
+                const weekColumn = archiveHeaders.find(h => String(h).toLowerCase().includes('week'));
+                if (weekColumn) {
+                    filtered = filtered.filter(row => (row[weekColumn] || '').toString() === weekFilter);
+                }
+            }
+
+            archiveData = filtered;
+            displayArchiveTable();
+
+            const tableInfo = document.getElementById('archiveTableInfo');
+            const totalRows = archiveAllGamesOriginal.length;
+            if (teamFilter || weekFilter) {
+                tableInfo.innerHTML = `Showing ${filtered.length} of ${totalRows} rows × ${archiveHeaders.length} columns (filtered)`;
+            } else {
+                tableInfo.innerHTML = `Showing ${filtered.length} rows × ${archiveHeaders.length} columns`;
+            }
+        }
+
+        function clearArchiveFilters() {
+            document.getElementById('archiveTeamFilter').value = '';
+            document.getElementById('archiveWeekFilter').value = '';
+            archiveData = [...archiveAllGamesOriginal];
+            displayArchiveTable();
+
+            const tableInfo = document.getElementById('archiveTableInfo');
+            tableInfo.innerHTML = `Showing ${archiveData.length} rows × ${archiveHeaders.length} columns`;
+        }
+
+        // Sort the archive table by column
+        function sortArchiveData(columnIndex, direction) {
+            const column = archiveHeaders[columnIndex];
+
+            archiveData.sort((a, b) => {
                 let valueA = a[column] || '';
                 let valueB = b[column] || '';
-                
+
                 const numA = parseFloat(valueA);
                 const numB = parseFloat(valueB);
-                
+
                 if (!isNaN(numA) && !isNaN(numB)) {
                     return direction === 'asc' ? numA - numB : numB - numA;
                 } else {
                     valueA = valueA.toString().toLowerCase();
                     valueB = valueB.toString().toLowerCase();
-                    
+
                     if (direction === 'asc') {
                         return valueA.localeCompare(valueB);
                     } else {
@@ -872,17 +1035,48 @@
             });
         }
 
-        // Handle header click for sorting (2024 Comparison)
-        function handle2024ComparisonHeaderClick(columnIndex) {
-            if (comparisonSortColumn === columnIndex) {
-                comparisonSortDirection = comparisonSortDirection === 'asc' ? 'desc' : 'asc';
+        // Handle header click for sorting (Season Archive)
+        function handleArchiveHeaderClick(columnIndex) {
+            if (archiveSortColumn === columnIndex) {
+                archiveSortDirection = archiveSortDirection === 'asc' ? 'desc' : 'asc';
             } else {
-                comparisonSortDirection = 'asc';
+                archiveSortDirection = 'asc';
             }
-            
-            comparisonSortColumn = columnIndex;
-            sort2024ComparisonData(columnIndex, comparisonSortDirection);
-            display2024ComparisonTable(comparisonHeaders, comparisonData);
+
+            archiveSortColumn = columnIndex;
+            sortArchiveData(columnIndex, archiveSortDirection);
+            displayArchiveTable();
+        }
+
+        // Display the Season Archive table
+        function displayArchiveTable() {
+            const tableInfo = document.getElementById('archiveTableInfo');
+            const tableContainer = document.getElementById('archiveTableContainer');
+
+            tableInfo.innerHTML = `Showing ${archiveData.length} rows × ${archiveHeaders.length} columns`;
+
+            let html = '<table><thead><tr>';
+            archiveHeaders.forEach((header, index) => {
+                let headerClass = 'sortable';
+                if (archiveSortColumn === index) {
+                    headerClass += archiveSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
+                }
+                if (header === 'Total') headerClass += ' col-total';
+                html += `<th class="${headerClass}" onclick="handleArchiveHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            archiveData.forEach(row => {
+                html += '<tr>';
+                archiveHeaders.forEach(header => {
+                    const cellClass = header === 'Total' ? ' class="col-total"' : '';
+                    html += `<td${cellClass}>${row[header] || ''}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            tableContainer.innerHTML = html;
         }
 
         // Load all games data
@@ -896,7 +1090,7 @@
             messageArea.innerHTML = '';
 
             if (data.headers.length === 0 || data.data.length === 0) {
-                showNoData('allgamesTableContainer', 'allgamesTableInfo', 'all-games.csv');
+                showNoData('allgamesTableContainer', 'allgamesTableInfo');
             } else {
                 allgameHeaders = data.headers;
                 allgameData = [...data.data];
@@ -967,77 +1161,6 @@
             allgameSortColumn = columnIndex;
             sortAllGamesData(columnIndex, allgameSortDirection);
             displayAllGamesTable(allgameHeaders, allgameData);
-        }
-
-        // Handle team cell click for highlighting
-        function handleTeamCellClick(teamName, event) {
-            event.stopPropagation();
-            console.log('Cell clicked:', teamName); // Debug log
-            
-            // Clear previous highlights
-            document.querySelectorAll('.highlighted-team').forEach(cell => {
-                cell.classList.remove('highlighted-team');
-                console.log('Removed highlight from:', cell.textContent); // Debug log
-            });
-            
-            if (highlightedTeam === teamName) {
-                // If clicking the same team, unhighlight
-                highlightedTeam = null;
-                console.log('Unhighlighted team:', teamName); // Debug log
-            } else {
-                // Highlight all cells with matching team name
-                highlightedTeam = teamName;
-                console.log('Highlighting team:', teamName); // Debug log
-                highlightTeamCells(teamName);
-            }
-        }
-
-        // Highlight all cells containing the specified team name
-        function highlightTeamCells(teamName) {
-            if (!teamName) return;
-            
-            const cells = document.querySelectorAll('#comparisonTableContainer td');
-            console.log('Found cells to check:', cells.length); // Debug log
-            
-            let highlightCount = 0;
-            cells.forEach(cell => {
-                const cellText = cell.textContent.trim();
-                // Check for exact match or if team name is contained in the cell
-                if (cellText === teamName || cellText.toLowerCase().includes(teamName.toLowerCase())) {
-                    cell.classList.add('highlighted-team');
-                    highlightCount++;
-                    console.log('Highlighted cell:', cellText); // Debug log
-                }
-            });
-            
-            console.log('Total cells highlighted:', highlightCount); // Debug log
-        }
-        function display2024ComparisonTable(headers, data) {
-            const tableInfo = document.getElementById('comparisonTableInfo');
-            const tableContainer = document.getElementById('comparisonTableContainer');
-            
-            tableInfo.innerHTML = `Showing ${data.length} rows × ${headers.length} columns`;
-
-            let html = '<table><thead><tr>';
-            headers.forEach((header, index) => {
-                let headerClass = 'sortable';
-                if (comparisonSortColumn === index) {
-                    headerClass += comparisonSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
-                }
-                html += `<th class="${headerClass}" onclick="handle2024ComparisonHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
-            });
-            html += '</tr></thead><tbody>';
-
-            data.forEach(row => {
-                html += '<tr>';
-                headers.forEach(header => {
-                    html += `<td>${row[header] || ''}</td>`;
-                });
-                html += '</tr>';
-            });
-
-            html += '</tbody></table>';
-            tableContainer.innerHTML = html;
         }
 
         // Filter function for All Games data
@@ -1144,7 +1267,7 @@
                     messageArea.innerHTML = '';
                     
                     if (data.headers.length === 0 || data.data.length === 0) {
-                        showNoData(`week${weekNumber}TableContainer`, `week${weekNumber}TableInfo`, `week-${weekNumber}.csv`);
+                        showNoData(`week${weekNumber}TableContainer`, `week${weekNumber}TableInfo`);
                     } else {
                         weekHeaders[weekNumber] = data.headers;
                         weekDataCache[weekNumber] = [...data.data];
