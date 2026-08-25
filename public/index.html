@@ -27,7 +27,12 @@
                 <img src="cfbmerit-logo.svg" alt="CFBMerit" class="brand-logo">
                 <span class="brand-tagline">Merit-Based College Football Standings</span>
             </a>
-            <nav class="nav">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
                     <div class="dropdown">
                         <a href="#" class="nav-item active">Standings ▼</a>
                         <div class="dropdown-content">
@@ -457,10 +462,41 @@
         let weekSortColumns = {};
         let weekSortDirections = {};
 
+        // Handle mobile hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = mainNav.classList.toggle('open');
+                navToggle.classList.toggle('open', isOpen);
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            // Close the menu after picking a plain nav link (not a dropdown toggle)
+            mainNav.querySelectorAll('.nav > .nav-item, .dropdown-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    mainNav.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Close the menu when tapping outside the header
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.header')) {
+                    mainNav.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
         // Handle mobile dropdown behavior
         document.addEventListener('DOMContentLoaded', function() {
             const dropdowns = document.querySelectorAll('.dropdown');
-            
+
             dropdowns.forEach(dropdown => {
                 const dropdownToggle = dropdown.querySelector('.nav-item');
                 const dropdownContent = dropdown.querySelector('.dropdown-content');
@@ -769,11 +805,15 @@
             });
             html += '</tr></thead><tbody>';
 
+            const tierBoundaries = { '30': 'top-30', '60': 'top-60', '100': 'top-100' };
+
             data.forEach(row => {
-                html += '<tr>';
+                const standing = String(row['Standing'] || '').trim();
+                const tierClass = tierBoundaries[standing] ? ` class="tier-boundary" data-tier="Top ${standing}"` : '';
+                html += `<tr${tierClass}>`;
                 headers.forEach((header, index) => {
                     const cellValue = row[header] || '';
-                    
+
                     // Only make the second column (index 1) clickable as team names
                     if (index === 1 && cellValue) {
                         // Make team names clickable links
