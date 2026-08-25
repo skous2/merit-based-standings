@@ -79,7 +79,7 @@ Standing,Team,Total Points,AVG Points,Initial Standing,Conference
 78,West Virginia,0,0.00,78,Big 12
 79,Mississippi State,0,0.00,79,SEC
 80,Central Michigan,0,0.00,80,MAC
-81,Louisiana Tech,0,0.00,81,Conf USA
+81,Louisiana Tech,0,0.00,81,Sun Belt
 82,UCF,0,0.00,82,Big 12
 83,South Carolina,0,0.00,83,SEC
 84,Texas State,0,0.00,84,Pac 12
@@ -124,14 +124,16 @@ Standing,Team,Total Points,AVG Points,Initial Standing,Conference
 123,Middle Tennessee,0,0.00,123,Conf USA
 124,UL Monroe,0,0.00,124,Sun Belt
 125,Nevada,0,0.00,125,Mountain West
-126,Northern Illinois,0,0.00,126,MAC
+126,Northern Illinois,0,0.00,126,Mountain West
 127,Purdue,0,0.00,127,Big 10
 128,San José State,0,0.00,128,Mountain West
 129,Oregon State,0,0.00,129,Pac 12
-130,UTEP,0,0.00,130,Conf USA
+130,UTEP,0,0.00,130,Mountain West
 131,Colorado State,0,0.00,131,Pac 12
 132,Sam Houston,0,0.00,132,Conf USA
 133,Oklahoma State,0,0.00,133,Big 12
 134,Georgia State,0,0.00,134,Sun Belt
 135,Charlotte,0,0.00,135,American
 136,Massachusetts,0,0.00,136,MAC
+137,North Dakota State,0,0.00,,Mountain West
+138,Sacramento State,0,0.00,,MAC
