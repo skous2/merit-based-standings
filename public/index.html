@@ -37,8 +37,9 @@
                     </div>
                     <a href="#about" class="nav-item">About the Standings</a>
                     <a href="#total-points" class="nav-item">Total Points</a>
-                    <a href="#archive" class="nav-item">Season Archive</a>
                     <a href="#all-games" class="nav-item">All Game Data</a>
+                    <a href="#archive" class="nav-item">Season Archive</a>
+                    
                     <!--
                     <div class="dropdown">
                         <a href="#" class="nav-item">Week Details ▼</a>
@@ -70,7 +71,7 @@
         <!-- Current Standings Page -->
         <div id="current-standings" class="page active">
             <div class="container">
-                <h2>Final Standings</h2>
+                <h2>Current Standings (Pre-season)</h2>
                 <p>See the "About the Standings" page to see how points are allocated to each game and team.</p>
                 <p>The final merit-based standings shows where each team stands in the current season. Fully transparent, each team gets allocated points and then we simply order the teams by total points throughout the season.</p>
                 <p>Ties for total points are broken by the average points on the season (total points divided by number of games played) followed by the standing at the start of the year.</p>
@@ -87,8 +88,8 @@
         <!-- Previous Standings Page -->
         <div id="previous-standings" class="page">
             <div class="container">
-                <h2>Previous Standings</h2>
-                <p>The previous merit-based rankings from an earlier period in the season.</p>
+                <h2>Previous Week Standings</h2>
+                <p>The previous merit-based standings from prior weeks in the season.</p>
                 <div id="previousMessageArea"></div>
                 <div id="previousTableSection">
                     <div id="previousTableInfo" class="table-info"></div>
@@ -576,6 +577,10 @@
                     } else {
                         currentStandingsHeaders = data.headers;
                         currentStandingsData = [...data.data];
+                        const isPreseason = currentStandingsData.every(row => parseFloat(row['Total Points']) === 0);
+                        if (isPreseason) {
+                            showMessage('Preseason ranking — no games played yet this season. These standings reflect the final 2025 results scored under the 2026 rules, and will update automatically once Week 1 games are played.', 'loading', messageArea);
+                        }
                         displayCurrentStandingsTable(currentStandingsHeaders, currentStandingsData);
                     }
                 })
