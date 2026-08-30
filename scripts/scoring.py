@@ -88,10 +88,13 @@ def compute_standings(
     seed_order: list[str],
 ) -> list[dict]:
     """Aggregates every team's cumulative Total Points across all scored weeks and
-    returns standings rows sorted by Total Points descending (ties broken
-    alphabetically by team name -- simple and deterministic). Every roster team is
+    returns standings rows sorted by Total Points descending, ties broken by AVG
+    Points descending, further ties broken by Initial Standing ascending (a team
+    with no Initial Standing -- e.g. newly promoted from FCS with no prior-year
+    merit history -- sorts after every team that has one), and any remaining tie
+    broken alphabetically by team name for determinism. Every roster team is
     included, even ones with zero games played so far (Total Points/AVG Points = 0),
-    so weekly snapshots always have the same 136 rows.
+    so weekly snapshots always have the same number of rows.
     """
     initial_standing = {team: i + 1 for i, team in enumerate(seed_order)}
 
@@ -120,7 +123,13 @@ def compute_standings(
             "_gp": gp,
         })
 
-    standings.sort(key=lambda r: (-r["Total Points"], r["Team"]))
+    no_initial_standing = len(seed_order) + 1
+    standings.sort(key=lambda r: (
+        -r["Total Points"],
+        -r["AVG Points"],
+        r["Initial Standing"] if isinstance(r["Initial Standing"], int) else no_initial_standing,
+        r["Team"],
+    ))
     for i, row in enumerate(standings):
         row["Standing"] = i + 1
         del row["_gp"]
