@@ -167,20 +167,25 @@ def fetch_week_games(week: int, year: int, attempts: int = 2) -> list[dict]:
             browser.close()
 
 
-def build_rows(games: list[dict], config: Config) -> tuple[list[dict], list[str]]:
-    """Returns (raw_rows, unmatched_names). games is one dict per game card, as
-    returned by fetch_week_games. raw_rows have keys matching the week-N.csv
-    columns A-E: 'Team 1', 'Team 2', 'Result', 'Margin', 'Road?'. unmatched_names is
-    every scraped name that didn't match the roster (and so was recorded as FCS) --
-    print/review these each run to catch normalization gaps early.
+def build_rows(games: list[dict], config: Config) -> tuple[list[dict], list[str], int]:
+    """Returns (raw_rows, unmatched_names, pending_count). games is one dict per
+    game card, as returned by fetch_week_games. raw_rows have keys matching the
+    week-N.csv columns A-E: 'Team 1', 'Team 2', 'Result', 'Margin', 'Road?'.
+    unmatched_names is every scraped name that didn't match the roster (and so was
+    recorded as FCS) -- print/review these each run to catch normalization gaps
+    early. pending_count is how many of this week's scheduled games haven't kicked
+    off (or finished) yet -- the caller should surface this so a week doesn't get
+    silently treated as "done" while games are still left to play.
     """
     lookup = build_lookup(config)
     unmatched: list[str] = []
     rows: list[dict] = []
+    pending = 0
 
     for g in games:
         away_score_raw, home_score_raw = g["away_score"], g["home_score"]
         if away_score_raw is None or home_score_raw is None:
+            pending += 1
             continue  # game hasn't kicked off (or is in progress) -- not final yet
         try:
             away_score, home_score = int(away_score_raw.strip()), int(home_score_raw.strip())
@@ -217,10 +222,10 @@ def build_rows(games: list[dict], config: Config) -> tuple[list[dict], list[str]
     # Mirror the original notebook: only keep rows where Team 1 is an actual FBS
     # roster team (an FCS-team-as-Team-1 row is redundant with its FBS opponent's row).
     rows = [r for r in rows if r["Team 1"] != FCS_LABEL]
-    return rows, sorted(set(unmatched))
+    return rows, sorted(set(unmatched)), pending
 
 
-def scrape_week(week: int, year: int, config: Config) -> tuple[list[dict], list[str]]:
+def scrape_week(week: int, year: int, config: Config) -> tuple[list[dict], list[str], int]:
     games = fetch_week_games(week, year)
     return build_rows(games, config)
 
@@ -235,8 +240,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     cfg = Config()
-    game_rows, unmatched_names = scrape_week(args.week, args.year, cfg)
-    print(f"Parsed {len(game_rows)} rows ({len(game_rows) // 2} games).")
+    game_rows, unmatched_names, pending_count = scrape_week(args.week, args.year, cfg)
+    print(f"Parsed {len(game_rows)} rows ({len(game_rows) // 2} games). {pending_count} game(s) not yet final.")
     if unmatched_names:
         print("Unmatched -> treated as FCS (review for normalization gaps):")
         for n in unmatched_names:

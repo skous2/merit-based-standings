@@ -158,7 +158,10 @@ def append_previous_standings_column(target_week: int, standings: list[dict]) ->
     df.to_csv(path, index=False, encoding="utf-8")
 
 
-def print_summary(standings: list[dict], previous_standings: list[dict] | None, unmatched: list[str]) -> None:
+def print_summary(
+    standings: list[dict], previous_standings: list[dict] | None, unmatched: list[str],
+    target_week: int, pending: int,
+) -> None:
     print("\n=== Top 10 ===")
     for r in standings[:10]:
         print(f"  {r['Standing']:>3}. {r['Team']:<22} {r['Total Points']:>4} pts  ({r['AVG Points']:.2f} avg)")
@@ -186,13 +189,21 @@ def print_summary(standings: list[dict], previous_standings: list[dict] | None, 
         for n in unmatched:
             print(f"  - {n}")
 
+    if pending:
+        print(
+            f"\n=== {pending} week {target_week} game(s) not yet final ===\n"
+            f"  Re-run `python scripts/update_week.py --week {target_week}` once they finish, "
+            f"BEFORE running week {target_week + 1} -- once you move on, week {target_week} "
+            "won't be revisited and these games will be silently missed."
+        )
+
 
 def run(target_week: int, year: int, dry_run: bool) -> None:
     config = Config()
 
     print(f"Scraping week {target_week}, {year} season...")
-    raw_rows, unmatched = scrape_week(target_week, year, config)
-    print(f"  {len(raw_rows) // 2} games parsed.")
+    raw_rows, unmatched, pending = scrape_week(target_week, year, config)
+    print(f"  {len(raw_rows) // 2} games parsed, {pending} not yet final.")
 
     raw_by_week: dict[int, list[dict]] = {}
     for w in range(1, target_week):
@@ -213,7 +224,7 @@ def run(target_week: int, year: int, dry_run: bool) -> None:
         prev_df = pd.read_csv(current_path)
         previous_standings = prev_df.rename(columns={"Standing": "Standing"}).to_dict("records")
 
-    print_summary(standings, previous_standings, unmatched)
+    print_summary(standings, previous_standings, unmatched, target_week, pending)
 
     if dry_run:
         print("\n[dry run] No files were written.")

@@ -1,5 +1,60 @@
 # Updating the Site Each Week
 
+## Session log
+
+### 2026-08-30
+
+Ran the real Week 1 update and found two scraper bugs in the process (both
+fixed, see `scripts/scrape.py`):
+
+- **Wrong ESPN page.** `espn_week_param()` used to unconditionally subtract 1
+  from our week number, because 2025 had a real, separately-numbered ESPN
+  "Week 0" exempt slate ahead of our week-1.csv. That's gone for 2026 — ESPN's
+  `week=0` page is now a near-empty stub — so the offset is now year-aware:
+  `-1` through 2025, `0` for 2026+. **If a future season's numbers look
+  wrong, re-verify against the live scoreboard's page `<title>` before
+  assuming last season's offset still applies** — don't just flip it blind.
+- **Name/score misalignment on a mixed week.** The scraper used to read all
+  team names and all scores as two separate flat lists and zip them together
+  by position. A pregame card (not started yet) doesn't render a score
+  element at all, so on a week with a mix of finished and not-yet-played
+  games, the two lists could fall out of sync. Rewrote it to read each game's
+  own name/score from within that game's own card
+  (`section.Scoreboard`) — this also incidentally eliminated a "featured
+  games rail" double-counting risk from the old code.
+- Also added a **pending-games count**: `update_week.py`'s summary now warns
+  when N games in the target week haven't finished yet, since `--week`
+  reruns are the only way to pick up stragglers — the auto-detect logic
+  moves on once a week has *any* rows, regardless of whether it's complete.
+  Different weeks (`--week 1` vs `--week 2`) already pull from genuinely
+  distinct ESPN pages with no overlap (verified by diffing full game grids,
+  not just checking page titles), so this isn't a duplication risk — it's a
+  "don't move on before the week is actually done" risk.
+
+### 2026-08-25
+
+Four commits, all same session:
+
+- **Preseason standings** — `week0_seed_2026.csv` was still in old Baseline
+  rank order even though 2026 scores under the Combined_All rule set;
+  reordered it to match, and published that order as `current-standings.csv`
+  so Current Standings shows real preseason content instead of sitting empty
+  until Week 1 is scraped.
+- **Mobile nav + SOS tiers** — mobile nav now collapses behind a 3-bar
+  hamburger toggle below 768px instead of stacking every link; added a bold
+  rule after ranks 30/60/100 on Current Standings marking where each SOS
+  bonus tier cuts off.
+- **Trimmed Current Standings intro** — cut four paragraphs of explanation
+  down to one line linking to About the Standings; folded the moved content
+  (ordering rule, tie-break rule) into the existing Point System section
+  there.
+- **Fixed 2026 conference realignment** — UTEP and Northern Illinois were
+  still tagged to their old conferences (Conf USA / MAC) instead of Mountain
+  West; Louisiana Tech was still Conf USA instead of Sun Belt; North Dakota
+  State and Sacramento State (newly up from FCS) were missing from the
+  roster entirely. Roster is now 138 teams, matching the real 2026 FBS
+  count. Regenerated `current-standings.csv` to reflect the corrections.
+
 ## One-time setup (new machine only)
 
 ```
@@ -23,6 +78,7 @@ python -m playwright install chromium
 2. **Review the printed summary.**
    - Check the Top 10 and biggest movers for anything that looks obviously wrong.
    - Check the "Scraped names treated as FCS" list. If a real FBS team shows up there, its name didn't match the roster — see Troubleshooting below.
+   - Check the "N game(s) not yet final" note. If it's non-zero (common if you run this before a week's whole slate has finished — e.g. Sunday/Monday games still to come), **re-run `--week N` again once those finish, before moving on to next week** — the script never automatically revisits an earlier week, so any games still pending when you move on get silently missed forever.
 
 3. **(Optional) Preview locally before publishing:**
    ```
@@ -59,3 +115,4 @@ Do the archive step and the first week's update together in **one** push+deploy,
 - **A team's name shows up as "FCS" but it's actually FBS:** add an alias to the `"aliases"` section of `scripts/teams.json` mapping the scraped spelling to the canonical roster name, then rerun the week.
 - **Conference realignment / new FBS members:** edit the `"conferences"` section of `scripts/teams.json` before the season starts.
 - **Want to double-check the scoring engine or scraper are still working correctly:** `python scripts/regression_test_2025.py` (replays the whole archived 2025 season through the engine) or `python scripts/verify_scraper_2025.py` (scrapes a real past week and diffs it against archived data).
+- **Worried a team's game might get double-counted or missed because a week's games span multiple days:** it won't be double-counted — each `--week N` pulls from ESPN's own distinct week=N page, and different weeks don't share games. It *can* be missed if you don't redo a week with pending games before moving to the next one — see the "not yet final" note in step 2 above.

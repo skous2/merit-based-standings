@@ -26,8 +26,8 @@ ARCHIVE_2025 = REPO_ROOT / "archive" / "2025"
 def main() -> None:
     config = Config()
     print("Scraping ESPN for 2025 week 15 (a real, completed week)...")
-    rows, unmatched = scrape_week(15, 2025, config)
-    print(f"Parsed {len(rows)} rows ({len(rows)//2} games). Unmatched (-> FCS): {unmatched}")
+    rows, unmatched, pending = scrape_week(15, 2025, config)
+    print(f"Parsed {len(rows)} rows ({len(rows)//2} games, {pending} not final). Unmatched (-> FCS): {unmatched}")
 
     try:
         known = pd.read_csv(ARCHIVE_2025 / "week-15.csv", encoding="utf-8")
