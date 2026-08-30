@@ -376,11 +376,14 @@ tr:nth-child(even) {
 }
 
 #archiveTableContainer th.col-total,
-#archiveTableContainer td.col-total {
+#archiveTableContainer td.col-total,
+#totalTableContainer th.col-total,
+#totalTableContainer td.col-total {
     border-left: 2px solid var(--accent);
 }
 
-#archiveTableContainer td.col-total {
+#archiveTableContainer td.col-total,
+#totalTableContainer td.col-total {
     font-weight: 700;
 }
 

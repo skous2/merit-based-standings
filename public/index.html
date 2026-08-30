@@ -870,6 +870,7 @@
                 if (totalSortColumn === index) {
                     headerClass += totalSortDirection === 'asc' ? ' sort-asc' : ' sort-desc';
                 }
+                if (header === 'Total Points') headerClass += ' col-total';
                 html += `<th class="${headerClass}" onclick="handleTotalPointsHeaderClick(${index})" title="Click to sort by ${header}">${header}</th>`;
             });
             html += '</tr></thead><tbody>';
@@ -877,7 +878,8 @@
             data.forEach(row => {
                 html += '<tr>';
                 headers.forEach(header => {
-                    html += `<td>${row[header] || ''}</td>`;
+                    const cellClass = header === 'Total Points' ? ' class="col-total"' : '';
+                    html += `<td${cellClass}>${row[header] || ''}</td>`;
                 });
                 html += '</tr>';
             });
