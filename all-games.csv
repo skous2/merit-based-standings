@@ -1,3 +1,17 @@
 Week,Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Qual Loss,Total
 1,San José State,USC,LOSS,16,Road,0,0,0,0,0,0
 1,USC,San José State,WIN,16,Home,3,2,0,0,0,5
+1,North Carolina,TCU,WIN,5,Road,3,2,3,2,0,10
+1,TCU,North Carolina,LOSS,5,Home,0,0,0,0,0,0
+1,NC State,Virginia,LOSS,26,Road,0,0,0,0,0,0
+1,Virginia,NC State,WIN,26,Home,3,2,2,2,0,9
+1,Jacksonville State,North Dakota State,LOSS,26,Road,0,0,0,0,0,0
+1,North Dakota State,Jacksonville State,WIN,26,Home,3,2,1,0,0,6
+1,Sacramento State,Eastern Michigan,LOSS,11,Road,0,0,0,0,0,0
+1,Eastern Michigan,Sacramento State,WIN,11,Home,3,0,0,0,0,3
+1,Hawai'i,Stanford,LOSS,10,Road,0,0,0,0,0,0
+1,Stanford,Hawai'i,WIN,10,Home,3,0,2,0,0,5
+1,New Mexico State,Florida State,LOSS,17,Road,0,0,0,0,0,0
+1,Florida State,New Mexico State,WIN,17,Home,3,2,0,0,0,5
+1,Memphis,UNLV,WIN,6,Road,3,2,2,0,0,7
+1,UNLV,Memphis,LOSS,6,Home,0,0,0,0,0,0

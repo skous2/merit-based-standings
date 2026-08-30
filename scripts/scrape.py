@@ -33,19 +33,35 @@ ESPN_URL_TEMPLATE = (
 )
 
 
-def espn_week_param(week: int) -> int:
-    """Our week-N.csv numbering is offset by one from ESPN's own week parameter,
-    because ESPN's real 'Week 0' (the preseason exempt slate) occupies week-1.csv:
-    week-1.csv = ESPN's real Week 0, week-2.csv = real Week 1, ..., week-15.csv =
-    real Week 14 (rivalry week). Confirmed against the original notebook (which
-    fetched url week=14 to populate its 'Week 15' sheet) and a live scrape."""
-    return week - 1
+def espn_week_param(week: int, year: int) -> int:
+    """Maps our week-N.csv numbering to ESPN's own week URL parameter. This is
+    season-dependent, not a fixed offset:
+
+    Through the 2025 season, ESPN's site had a genuine, separately-numbered
+    "Week 0" exempt slate before the main season, which pushed our week-N.csv
+    numbering one behind ESPN's own week parameter -- week-15.csv = ESPN's real
+    Week 14 (rivalry week). Confirmed against archived 2025 data (see
+    verify_scraper_2025.py) and the original notebook this pipeline replaced.
+
+    Starting with the 2026 season, ESPN dropped that separate Week 0 grouping --
+    requesting its week=0 page now returns a near-empty stub, not a real slate of
+    exempt games -- so our week-N.csv maps directly to ESPN's own week=N. Verified
+    2026-08-30: the live week=1 page's own <title> tag reads "Week 1", and its game
+    grid includes North Dakota State and Sacramento State, this season's two
+    newly-promoted FBS teams, playing their debut games.
+
+    If this breaks again in a future season, re-verify against the live
+    scoreboard's page title and roster names before adjusting the offset -- don't
+    assume last season's mapping still holds.
+    """
+    return week if year >= 2026 else week - 1
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 
+GAME_CARD_SELECTOR = "section.Scoreboard"
 NAME_SELECTOR = "div.ScoreCell__TeamName"
 SCORE_SELECTOR = "div.ScoreCell__Score"
 
@@ -78,27 +94,38 @@ def canonicalize(name: str, lookup: dict) -> str | None:
 
 def _wait_for_all_games_loaded(page, settle_ms: int = 9000, confirm_checks: int = 3, confirm_interval_ms: int = 1500) -> int:
     """The scoreboard finishes populating asynchronously in bursts after the first
-    score cell appears -- wait a fixed, generous settle period first (confirmed
+    game card appears -- wait a fixed, generous settle period first (confirmed
     empirically: ~4s to fully populate, so 9s is a safe margin), then confirm the
     count really is done growing with a few widely-spaced checks.
     """
     page.wait_for_timeout(settle_ms)
-    last_count = page.locator(NAME_SELECTOR).count()
+    last_count = page.locator(GAME_CARD_SELECTOR).count()
     for _ in range(confirm_checks):
         page.wait_for_timeout(confirm_interval_ms)
-        count = page.locator(NAME_SELECTOR).count()
+        count = page.locator(GAME_CARD_SELECTOR).count()
         if count > last_count:
             last_count = count  # still growing -- keep confirming
     return last_count
 
 
-def fetch_week_names_and_scores(week: int, year: int, attempts: int = 2) -> tuple[list[str], list[str]]:
+def fetch_week_games(week: int, year: int, attempts: int = 2) -> list[dict]:
     """Loads the scoreboard page with a real headless browser (so ESPN's bot-
-    challenge JS actually executes) and returns the raw (team_names, scores) text
-    lists, read straight from the live DOM via Playwright locators. Retries once
-    (with a fresh page load) if content doesn't show up in time.
+    challenge JS actually executes) and returns one dict per game card:
+    {'away': str, 'home': str, 'away_score': str|None, 'home_score': str|None}.
+    Scores are None for a game that hasn't kicked off yet -- ESPN's pregame cards
+    show a kickoff time instead of a score element, so there's nothing to read.
+
+    Reads names/scores from *within* each game card (via a per-card locator)
+    rather than two flat page-wide lists: a finished game's card and a pregame
+    card have different DOM shapes (the latter has no score element at all), so
+    two flat lists collected separately can silently fall out of positional sync
+    with each other once the page has a mix of both -- reading each card's own
+    children keeps every score correctly paired with its own game no matter what
+    mix of finished/in-progress/pregame games the week has. This also happens to
+    sidestep ESPN's "featured games" rail, which uses a different wrapper (not
+    matched by GAME_CARD_SELECTOR) and was previously a double-counting risk.
     """
-    url = ESPN_URL_TEMPLATE.format(espn_week=espn_week_param(week), year=year)
+    url = ESPN_URL_TEMPLATE.format(espn_week=espn_week_param(week, year), year=year)
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -109,63 +136,58 @@ def fetch_week_names_and_scores(week: int, year: int, attempts: int = 2) -> tupl
             for attempt in range(1, attempts + 1):
                 try:
                     page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                    page.wait_for_selector(NAME_SELECTOR, timeout=30000)
+                    page.wait_for_selector(GAME_CARD_SELECTOR, timeout=30000)
                     count = _wait_for_all_games_loaded(page)
                     if count <= 0:
-                        raise PlaywrightTimeoutError("no score cells found after waiting")
-                    names = page.locator(NAME_SELECTOR).all_text_contents()
-                    scores = page.locator(SCORE_SELECTOR).all_text_contents()
-                    return names, scores
+                        raise PlaywrightTimeoutError("no game cards found after waiting")
+                    cards = page.locator(GAME_CARD_SELECTOR)
+                    games = []
+                    for i in range(count):
+                        card = cards.nth(i)
+                        names = card.locator(NAME_SELECTOR).all_text_contents()
+                        if len(names) != 2:
+                            continue  # unexpected card shape -- skip defensively
+                        scores = card.locator(SCORE_SELECTOR).all_text_contents()
+                        away_score = scores[0] if len(scores) == 2 else None
+                        home_score = scores[1] if len(scores) == 2 else None
+                        games.append({
+                            "away": names[0], "home": names[1],
+                            "away_score": away_score, "home_score": home_score,
+                        })
+                    return games
                 except PlaywrightTimeoutError as e:
                     last_error = e
             raise ScrapeBlockedError(
                 f"Timed out waiting for scoreboard content at {url} after {attempts} "
                 f"attempt(s). ESPN's bot-challenge page may not have resolved, or "
                 "their markup changed (expected selector: "
-                f"'{NAME_SELECTOR}'). Original error: {last_error}"
+                f"'{GAME_CARD_SELECTOR}'). Original error: {last_error}"
             )
         finally:
             browser.close()
 
 
-def build_rows(names: list[str], scores: list[str], config: Config) -> tuple[list[dict], list[str]]:
-    """Returns (raw_rows, unmatched_names). raw_rows have keys matching the week-N.csv
+def build_rows(games: list[dict], config: Config) -> tuple[list[dict], list[str]]:
+    """Returns (raw_rows, unmatched_names). games is one dict per game card, as
+    returned by fetch_week_games. raw_rows have keys matching the week-N.csv
     columns A-E: 'Team 1', 'Team 2', 'Result', 'Margin', 'Road?'. unmatched_names is
     every scraped name that didn't match the roster (and so was recorded as FCS) --
     print/review these each run to catch normalization gaps early.
     """
-    names = [n.strip() for n in names]
-    scores = [s.strip() for s in scores]
-
-    if len(names) != len(scores):
-        raise ValueError(
-            f"Scrape mismatch: {len(names)} team names vs {len(scores)} scores -- "
-            "ESPN's page structure may have changed."
-        )
-    if len(names) % 2 != 0:
-        raise ValueError(f"Odd number of teams scraped ({len(names)}) -- expected pairs of two.")
-
     lookup = build_lookup(config)
     unmatched: list[str] = []
     rows: list[dict] = []
-    seen_games: set[tuple] = set()
 
-    for i in range(0, len(names), 2):
-        away_raw, home_raw = names[i], names[i + 1]
-        away_score_raw, home_score_raw = scores[i], scores[i + 1]
+    for g in games:
+        away_score_raw, home_score_raw = g["away_score"], g["home_score"]
+        if away_score_raw is None or home_score_raw is None:
+            continue  # game hasn't kicked off (or is in progress) -- not final yet
         try:
-            away_score, home_score = int(away_score_raw), int(home_score_raw)
+            away_score, home_score = int(away_score_raw.strip()), int(home_score_raw.strip())
         except ValueError:
-            continue  # not yet final (postponed/future game) -- skip
+            continue  # e.g. postponed game showing non-numeric text -- skip
 
-        # ESPN repeats some games in a "featured games" rail in addition to the main
-        # grid, which would otherwise double-count them -- keep only the first
-        # occurrence of each unique matchup+score.
-        game_key = (away_raw, home_raw, away_score, home_score)
-        if game_key in seen_games:
-            continue
-        seen_games.add(game_key)
-
+        away_raw, home_raw = g["away"].strip(), g["home"].strip()
         away_canon = canonicalize(away_raw, lookup)
         home_canon = canonicalize(home_raw, lookup)
         if away_canon is None:
@@ -199,8 +221,8 @@ def build_rows(names: list[str], scores: list[str], config: Config) -> tuple[lis
 
 
 def scrape_week(week: int, year: int, config: Config) -> tuple[list[dict], list[str]]:
-    names, scores = fetch_week_names_and_scores(week, year)
-    return build_rows(names, scores, config)
+    games = fetch_week_games(week, year)
+    return build_rows(games, config)
 
 
 if __name__ == "__main__":

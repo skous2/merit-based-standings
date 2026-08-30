@@ -1,133 +1,133 @@
 Standing,Team,Conference,Week 1,Total Points
-1,USC,Big 10,5,5
-2,Air Force,Mountain West,0,0
-3,Akron,MAC,0,0
-4,Alabama,SEC,0,0
-5,App State,Sun Belt,0,0
-6,Arizona,Big 12,0,0
-7,Arizona State,Big 12,0,0
-8,Arkansas,SEC,0,0
-9,Arkansas State,Sun Belt,0,0
-10,Army,American,0,0
-11,Auburn,SEC,0,0
-12,BYU,Big 12,0,0
-13,Ball State,MAC,0,0
-14,Baylor,Big 12,0,0
-15,Boise State,Pac 12,0,0
-16,Boston College,ACC,0,0
-17,Bowling Green,MAC,0,0
-18,Buffalo,MAC,0,0
-19,California,ACC,0,0
-20,Central Michigan,MAC,0,0
-21,Charlotte,American,0,0
-22,Cincinnati,Big 12,0,0
-23,Clemson,ACC,0,0
-24,Coastal Carolina,Sun Belt,0,0
-25,Colorado,Big 12,0,0
-26,Colorado State,Pac 12,0,0
-27,Delaware,Conf USA,0,0
-28,Duke,ACC,0,0
-29,East Carolina,American,0,0
-30,Eastern Michigan,MAC,0,0
-31,Florida,SEC,0,0
-32,Florida Atlantic,American,0,0
-33,Florida International,Conf USA,0,0
-34,Florida State,ACC,0,0
-35,Fresno State,Pac 12,0,0
-36,Georgia,SEC,0,0
-37,Georgia Southern,Sun Belt,0,0
-38,Georgia State,Sun Belt,0,0
-39,Georgia Tech,ACC,0,0
-40,Hawai'i,Mountain West,0,0
-41,Houston,Big 12,0,0
-42,Illinois,Big 10,0,0
-43,Indiana,Big 10,0,0
-44,Iowa,Big 10,0,0
-45,Iowa State,Big 12,0,0
-46,Jacksonville State,Conf USA,0,0
-47,James Madison,Sun Belt,0,0
-48,Kansas,Big 12,0,0
-49,Kansas State,Big 12,0,0
-50,Kennesaw State,Conf USA,0,0
-51,Kent State,MAC,0,0
-52,Kentucky,SEC,0,0
-53,LSU,SEC,0,0
-54,Liberty,Conf USA,0,0
-55,Louisiana,Sun Belt,0,0
-56,Louisiana Tech,Sun Belt,0,0
-57,Louisville,ACC,0,0
-58,Marshall,Sun Belt,0,0
-59,Maryland,Big 10,0,0
-60,Massachusetts,MAC,0,0
-61,Memphis,American,0,0
-62,Miami,ACC,0,0
-63,Miami (OH),MAC,0,0
-64,Michigan,Big 10,0,0
-65,Michigan State,Big 10,0,0
-66,Middle Tennessee,Conf USA,0,0
-67,Minnesota,Big 10,0,0
-68,Mississippi State,SEC,0,0
-69,Missouri,SEC,0,0
-70,Missouri State,Conf USA,0,0
-71,NC State,ACC,0,0
-72,Navy,American,0,0
-73,Nebraska,Big 10,0,0
-74,Nevada,Mountain West,0,0
-75,New Mexico,Mountain West,0,0
-76,New Mexico State,Conf USA,0,0
-77,North Carolina,ACC,0,0
-78,North Dakota State,Mountain West,0,0
-79,North Texas,American,0,0
-80,Northern Illinois,Mountain West,0,0
-81,Northwestern,Big 10,0,0
-82,Notre Dame,Independent,0,0
-83,Ohio,MAC,0,0
-84,Ohio State,Big 10,0,0
-85,Oklahoma,SEC,0,0
-86,Oklahoma State,Big 12,0,0
-87,Old Dominion,Sun Belt,0,0
-88,Ole Miss,SEC,0,0
-89,Oregon,Big 10,0,0
-90,Oregon State,Pac 12,0,0
-91,Penn State,Big 10,0,0
-92,Pittsburgh,ACC,0,0
-93,Purdue,Big 10,0,0
-94,Rice,American,0,0
-95,Rutgers,Big 10,0,0
-96,SMU,ACC,0,0
-97,Sacramento State,MAC,0,0
-98,Sam Houston,Conf USA,0,0
-99,San Diego State,Pac 12,0,0
-100,San José State,Mountain West,0,0
-101,South Alabama,Sun Belt,0,0
-102,South Carolina,SEC,0,0
-103,South Florida,American,0,0
-104,Southern Miss,Sun Belt,0,0
-105,Stanford,ACC,0,0
-106,Syracuse,ACC,0,0
-107,TCU,Big 12,0,0
-108,Temple,American,0,0
-109,Tennessee,SEC,0,0
-110,Texas,SEC,0,0
-111,Texas A&M,SEC,0,0
-112,Texas State,Pac 12,0,0
-113,Texas Tech,Big 12,0,0
-114,Toledo,MAC,0,0
-115,Troy,Sun Belt,0,0
-116,Tulane,American,0,0
-117,Tulsa,American,0,0
-118,UAB,American,0,0
-119,UCF,Big 12,0,0
-120,UCLA,Big 10,0,0
-121,UConn,Independent,0,0
-122,UL Monroe,Sun Belt,0,0
-123,UNLV,Mountain West,0,0
-124,UTEP,Mountain West,0,0
-125,UTSA,American,0,0
-126,Utah,Big 12,0,0
-127,Utah State,Pac 12,0,0
-128,Vanderbilt,SEC,0,0
-129,Virginia,ACC,0,0
+1,North Carolina,ACC,10,10
+2,Virginia,ACC,9,9
+3,Memphis,American,7,7
+4,North Dakota State,Mountain West,6,6
+5,Florida State,ACC,5,5
+6,Stanford,ACC,5,5
+7,USC,Big 10,5,5
+8,Eastern Michigan,MAC,3,3
+9,Air Force,Mountain West,0,0
+10,Akron,MAC,0,0
+11,Alabama,SEC,0,0
+12,App State,Sun Belt,0,0
+13,Arizona,Big 12,0,0
+14,Arizona State,Big 12,0,0
+15,Arkansas,SEC,0,0
+16,Arkansas State,Sun Belt,0,0
+17,Army,American,0,0
+18,Auburn,SEC,0,0
+19,BYU,Big 12,0,0
+20,Ball State,MAC,0,0
+21,Baylor,Big 12,0,0
+22,Boise State,Pac 12,0,0
+23,Boston College,ACC,0,0
+24,Bowling Green,MAC,0,0
+25,Buffalo,MAC,0,0
+26,California,ACC,0,0
+27,Central Michigan,MAC,0,0
+28,Charlotte,American,0,0
+29,Cincinnati,Big 12,0,0
+30,Clemson,ACC,0,0
+31,Coastal Carolina,Sun Belt,0,0
+32,Colorado,Big 12,0,0
+33,Colorado State,Pac 12,0,0
+34,Delaware,Conf USA,0,0
+35,Duke,ACC,0,0
+36,East Carolina,American,0,0
+37,Florida,SEC,0,0
+38,Florida Atlantic,American,0,0
+39,Florida International,Conf USA,0,0
+40,Fresno State,Pac 12,0,0
+41,Georgia,SEC,0,0
+42,Georgia Southern,Sun Belt,0,0
+43,Georgia State,Sun Belt,0,0
+44,Georgia Tech,ACC,0,0
+45,Hawai'i,Mountain West,0,0
+46,Houston,Big 12,0,0
+47,Illinois,Big 10,0,0
+48,Indiana,Big 10,0,0
+49,Iowa,Big 10,0,0
+50,Iowa State,Big 12,0,0
+51,Jacksonville State,Conf USA,0,0
+52,James Madison,Sun Belt,0,0
+53,Kansas,Big 12,0,0
+54,Kansas State,Big 12,0,0
+55,Kennesaw State,Conf USA,0,0
+56,Kent State,MAC,0,0
+57,Kentucky,SEC,0,0
+58,LSU,SEC,0,0
+59,Liberty,Conf USA,0,0
+60,Louisiana,Sun Belt,0,0
+61,Louisiana Tech,Sun Belt,0,0
+62,Louisville,ACC,0,0
+63,Marshall,Sun Belt,0,0
+64,Maryland,Big 10,0,0
+65,Massachusetts,MAC,0,0
+66,Miami,ACC,0,0
+67,Miami (OH),MAC,0,0
+68,Michigan,Big 10,0,0
+69,Michigan State,Big 10,0,0
+70,Middle Tennessee,Conf USA,0,0
+71,Minnesota,Big 10,0,0
+72,Mississippi State,SEC,0,0
+73,Missouri,SEC,0,0
+74,Missouri State,Conf USA,0,0
+75,NC State,ACC,0,0
+76,Navy,American,0,0
+77,Nebraska,Big 10,0,0
+78,Nevada,Mountain West,0,0
+79,New Mexico,Mountain West,0,0
+80,New Mexico State,Conf USA,0,0
+81,North Texas,American,0,0
+82,Northern Illinois,Mountain West,0,0
+83,Northwestern,Big 10,0,0
+84,Notre Dame,Independent,0,0
+85,Ohio,MAC,0,0
+86,Ohio State,Big 10,0,0
+87,Oklahoma,SEC,0,0
+88,Oklahoma State,Big 12,0,0
+89,Old Dominion,Sun Belt,0,0
+90,Ole Miss,SEC,0,0
+91,Oregon,Big 10,0,0
+92,Oregon State,Pac 12,0,0
+93,Penn State,Big 10,0,0
+94,Pittsburgh,ACC,0,0
+95,Purdue,Big 10,0,0
+96,Rice,American,0,0
+97,Rutgers,Big 10,0,0
+98,SMU,ACC,0,0
+99,Sacramento State,MAC,0,0
+100,Sam Houston,Conf USA,0,0
+101,San Diego State,Pac 12,0,0
+102,San José State,Mountain West,0,0
+103,South Alabama,Sun Belt,0,0
+104,South Carolina,SEC,0,0
+105,South Florida,American,0,0
+106,Southern Miss,Sun Belt,0,0
+107,Syracuse,ACC,0,0
+108,TCU,Big 12,0,0
+109,Temple,American,0,0
+110,Tennessee,SEC,0,0
+111,Texas,SEC,0,0
+112,Texas A&M,SEC,0,0
+113,Texas State,Pac 12,0,0
+114,Texas Tech,Big 12,0,0
+115,Toledo,MAC,0,0
+116,Troy,Sun Belt,0,0
+117,Tulane,American,0,0
+118,Tulsa,American,0,0
+119,UAB,American,0,0
+120,UCF,Big 12,0,0
+121,UCLA,Big 10,0,0
+122,UConn,Independent,0,0
+123,UL Monroe,Sun Belt,0,0
+124,UNLV,Mountain West,0,0
+125,UTEP,Mountain West,0,0
+126,UTSA,American,0,0
+127,Utah,Big 12,0,0
+128,Utah State,Pac 12,0,0
+129,Vanderbilt,SEC,0,0
 130,Virginia Tech,ACC,0,0
 131,Wake Forest,ACC,0,0
 132,Washington,Big 10,0,0
