@@ -25,7 +25,7 @@ from pathlib import Path
 import pandas as pd
 
 from config import Config, REPO_ROOT
-from scoring import build_rank_map, compute_standings, score_all_weeks
+from scoring import build_rank_map, compute_standings, score_all_weeks, score_row
 from scrape import scrape_week
 
 RAW_COLUMNS = ["Team 1", "Team 2", "Result", "Margin", "Road?"]
@@ -260,13 +260,40 @@ def run(target_week: int, year: int, dry_run: bool) -> None:
     for w in range(0, target_week):
         if week_csv_path(w).exists():
             raw_by_week[w] = load_raw_week(w)
-    raw_by_week.update(split_by_date_gap(raw_rows, target_week))
 
-    reference_order = load_reference_ranking(target_week, config)
-    rank_map = build_rank_map(reference_order)
-
-    scored_by_week = score_all_weeks(raw_by_week, rank_map, config)
+    split_rows = split_by_date_gap(raw_rows, target_week)
     seed_order = load_seed_order()
+    reference_order = load_reference_ranking(target_week, config)
+
+    if len(split_rows) > 1:
+        # This one scrape bundled multiple real rounds together (see
+        # split_by_date_gap). Score them sequentially rather than grading all
+        # of them off one shared reference: each round should see the PRIOR
+        # round's own resulting standings as its SOS reference, exactly like
+        # two separate weekly runs would -- not get treated as part of "the
+        # season's first run" just because it happened to be scraped in the
+        # same request as an earlier round.
+        earliest_split = min(split_rows)
+        historical = {w: rows for w, rows in raw_by_week.items() if w < earliest_split}
+        historical_rank_map = build_rank_map(reference_order)
+        scored_by_week = {
+            w: [score_row(row, historical_rank_map, config) for row in rows]
+            for w, rows in historical.items()
+        }
+        for w in sorted(split_rows):
+            if scored_by_week:
+                ref = [r["Team"] for r in compute_standings(scored_by_week, config, seed_order)]
+            else:
+                ref = reference_order
+            rank_map = build_rank_map(ref)
+            scored_by_week[w] = [score_row(row, rank_map, config) for row in split_rows[w]]
+        print(f"  Scored weeks {sorted(split_rows)} sequentially -- each round's SOS "
+              "bonuses reference the standings as of right before it, not one shared reference.")
+    else:
+        raw_by_week.update(split_rows)
+        rank_map = build_rank_map(reference_order)
+        scored_by_week = score_all_weeks(raw_by_week, rank_map, config)
+
     standings = compute_standings(scored_by_week, config, seed_order)
 
     previous_standings = None
