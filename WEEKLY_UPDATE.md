@@ -2,6 +2,33 @@
 
 ## Session log
 
+### 2026-09-07
+
+Rerunning `--week 1` to pick up the games that were still pending on 2026-08-30
+surfaced a real data bug: the 8 games that finished in time for that first run
+turned out to all be a week-early "Week 0" slate (San Jose State/USC, Jax
+State/North Dakota State, Sacramento State/Eastern Michigan, Hawai'i/Stanford,
+New Mexico State/Florida State, Memphis/UNLV, North Carolina/TCU, NC
+State/Virginia), not real Week 1 games -- ESPN's week=1 page for 2026 spans a
+9-day window (confirmed via each game's own date header) and silently bundles
+both rounds together since ESPN's week=0 page is an empty stub this year. That
+made it look, after this run added the real Week 1 games, like 6 of those 12
+teams had "played twice" in one week.
+
+Fixed properly rather than one-off relabeled:
+
+- `scrape.py` now reads each game's actual date off ESPN's page (it wasn't
+  captured at all before).
+- `update_week.py` clusters a scraped week's games by date and splits off any
+  cluster more than 3 days older than the rest into `target_week - 1` (general
+  gap-detection, not hardcoded to this one occurrence -- so it'll self-correct
+  if this ESPN quirk recurs).
+- Confirmed point totals/standings are byte-identical before and after the
+  split -- this only fixes which week's column/file each game's points land
+  in, never the scoring itself.
+- Renamed the old preseason-seed "Week 0" column in `previous-standings.csv`
+  to `Preseason`, since a real Week 0 (with actual games) now exists there too.
+
 ### 2026-08-30
 
 Ran the real Week 1 update and found two scraper bugs in the process (both

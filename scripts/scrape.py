@@ -19,6 +19,7 @@ One-time setup:
 """
 from __future__ import annotations
 
+import datetime as dt
 import re
 import unicodedata
 
@@ -64,6 +65,8 @@ USER_AGENT = (
 GAME_CARD_SELECTOR = "section.Scoreboard"
 NAME_SELECTOR = "div.ScoreCell__TeamName"
 SCORE_SELECTOR = "div.ScoreCell__Score"
+DATE_HEADER_SELECTOR = ".Card__Header"
+DATE_HEADER_PATTERN = r"^[A-Za-z]+, [A-Za-z]+ \d{1,2}, \d{4}$"  # e.g. "Saturday, August 29, 2026"
 
 
 class ScrapeBlockedError(RuntimeError):
@@ -108,12 +111,49 @@ def _wait_for_all_games_loaded(page, settle_ms: int = 9000, confirm_checks: int 
     return last_count
 
 
+def _card_dates(page) -> list[str | None]:
+    """Returns the date-header text (e.g. "Saturday, August 29, 2026") that each
+    game card falls under, in the same document order as GAME_CARD_SELECTOR --
+    ESPN groups a week's page into per-date sections, and a requested week's page
+    can span multiple real calendar rounds (see split logic in update_week.py), so
+    callers need each game's actual date, not just the week we asked for.
+    """
+    return page.evaluate(
+        """([cardSelector, headerSelector, headerPattern]) => {
+            const headerRe = new RegExp(headerPattern);
+            const headers = Array.from(document.querySelectorAll(headerSelector))
+                .filter(h => headerRe.test(h.innerText.trim()));
+            const cards = Array.from(document.querySelectorAll(cardSelector));
+            return cards.map(card => {
+                let best = null;
+                for (const h of headers) {
+                    if (h.compareDocumentPosition(card) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                        best = h.innerText.trim();
+                    }
+                }
+                return best;
+            });
+        }""",
+        [GAME_CARD_SELECTOR, DATE_HEADER_SELECTOR, DATE_HEADER_PATTERN],
+    )
+
+
+def _parse_date_header(text: str | None) -> dt.date | None:
+    if not text:
+        return None
+    try:
+        return dt.datetime.strptime(text, "%A, %B %d, %Y").date()
+    except ValueError:
+        return None
+
+
 def fetch_week_games(week: int, year: int, attempts: int = 2) -> list[dict]:
     """Loads the scoreboard page with a real headless browser (so ESPN's bot-
     challenge JS actually executes) and returns one dict per game card:
-    {'away': str, 'home': str, 'away_score': str|None, 'home_score': str|None}.
-    Scores are None for a game that hasn't kicked off yet -- ESPN's pregame cards
-    show a kickoff time instead of a score element, so there's nothing to read.
+    {'away': str, 'home': str, 'away_score': str|None, 'home_score': str|None,
+    'date': datetime.date|None}. Scores are None for a game that hasn't kicked
+    off yet -- ESPN's pregame cards show a kickoff time instead of a score
+    element, so there's nothing to read.
 
     Reads names/scores from *within* each game card (via a per-card locator)
     rather than two flat page-wide lists: a finished game's card and a pregame
@@ -141,6 +181,7 @@ def fetch_week_games(week: int, year: int, attempts: int = 2) -> list[dict]:
                     if count <= 0:
                         raise PlaywrightTimeoutError("no game cards found after waiting")
                     cards = page.locator(GAME_CARD_SELECTOR)
+                    card_dates = _card_dates(page)
                     games = []
                     for i in range(count):
                         card = cards.nth(i)
@@ -150,9 +191,11 @@ def fetch_week_games(week: int, year: int, attempts: int = 2) -> list[dict]:
                         scores = card.locator(SCORE_SELECTOR).all_text_contents()
                         away_score = scores[0] if len(scores) == 2 else None
                         home_score = scores[1] if len(scores) == 2 else None
+                        game_date = _parse_date_header(card_dates[i] if i < len(card_dates) else None)
                         games.append({
                             "away": names[0], "home": names[1],
                             "away_score": away_score, "home_score": home_score,
+                            "date": game_date,
                         })
                     return games
                 except PlaywrightTimeoutError as e:
@@ -170,7 +213,9 @@ def fetch_week_games(week: int, year: int, attempts: int = 2) -> list[dict]:
 def build_rows(games: list[dict], config: Config) -> tuple[list[dict], list[str], int]:
     """Returns (raw_rows, unmatched_names, pending_count). games is one dict per
     game card, as returned by fetch_week_games. raw_rows have keys matching the
-    week-N.csv columns A-E: 'Team 1', 'Team 2', 'Result', 'Margin', 'Road?'.
+    week-N.csv columns A-E ('Team 1', 'Team 2', 'Result', 'Margin', 'Road?') plus
+    a 'Date' (datetime.date|None) the caller can use to detect whether a
+    requested week's page actually spans more than one real calendar round.
     unmatched_names is every scraped name that didn't match the roster (and so was
     recorded as FCS) -- print/review these each run to catch normalization gaps
     early. pending_count is how many of this week's scheduled games haven't kicked
@@ -211,12 +256,12 @@ def build_rows(games: list[dict], config: Config) -> tuple[list[dict], list[str]
         rows.append({
             "Team 1": away_team, "Team 2": home_team,
             "Result": "WIN" if away_won else "LOSS",
-            "Margin": margin, "Road?": "Road",
+            "Margin": margin, "Road?": "Road", "Date": g["date"],
         })
         rows.append({
             "Team 1": home_team, "Team 2": away_team,
             "Result": "LOSS" if away_won else "WIN",
-            "Margin": margin, "Road?": "Home",
+            "Margin": margin, "Road?": "Home", "Date": g["date"],
         })
 
     # Mirror the original notebook: only keep rows where Team 1 is an actual FBS
@@ -246,4 +291,4 @@ if __name__ == "__main__":
         print("Unmatched -> treated as FCS (review for normalization gaps):")
         for n in unmatched_names:
             print(f"  - {n}")
-    print(_json.dumps(game_rows[:6], indent=2, ensure_ascii=False))
+    print(_json.dumps(game_rows[:6], indent=2, ensure_ascii=False, default=str))

@@ -31,6 +31,7 @@ from scrape import scrape_week
 RAW_COLUMNS = ["Team 1", "Team 2", "Result", "Margin", "Road?"]
 FULL_COLUMNS = RAW_COLUMNS + ["Win", "Qual Win", "SOS", "Conf", "Qual Loss", "Total"]
 MAX_WEEK_SCAN = 25
+ROUND_GAP_DAYS = 3  # a bigger date gap than this between two games on the same scraped page means they're different real rounds
 
 WEEK0_SEED_PATH = Path(__file__).resolve().parent / "week0_seed_2026.csv"
 
@@ -64,6 +65,57 @@ def load_raw_week(week: int) -> list[dict]:
     df = pd.read_csv(week_csv_path(week))
     df = df.dropna(subset=["Team 1"])
     return df[RAW_COLUMNS].to_dict("records")
+
+
+def split_by_date_gap(rows: list[dict], target_week: int) -> dict[int, list[dict]]:
+    """ESPN can bundle an earlier real round into the week we asked for -- e.g.
+    2026's actual Week 0 openers, since ESPN's own week=0 page is now an empty
+    stub (see espn_week_param's docstring in scrape.py), so those games show up
+    on the week=1 page instead. Detect that by clustering games by their actual
+    date: a gap bigger than ROUND_GAP_DAYS between two dates means they're
+    different rounds, and older clusters get assigned target_week - 1,
+    target_week - 2, etc. A normal single-round week (games a day or two apart,
+    Thu-Mon) never trips this.
+    """
+    dated = [r["Date"] for r in rows if r.get("Date") is not None]
+    if not dated:
+        return {target_week: rows}
+
+    dates = sorted(set(dated))
+    clusters = [[dates[0]]]
+    for d in dates[1:]:
+        if (d - clusters[-1][-1]).days > ROUND_GAP_DAYS:
+            clusters.append([d])
+        else:
+            clusters[-1].append(d)
+
+    if len(clusters) == 1:
+        return {target_week: rows}
+
+    n = len(clusters)
+    week_for_date = {
+        d: target_week - (n - 1 - i)
+        for i, cluster in enumerate(clusters)
+        for d in cluster
+    }
+
+    if min(week_for_date.values()) < 0:
+        print(
+            f"  WARNING: date clustering found {n} rounds on this page but that "
+            f"would push a week number below 0 -- keeping everything under week "
+            f"{target_week} instead of splitting (verify manually)."
+        )
+        return {target_week: rows}
+
+    result: dict[int, list[dict]] = {}
+    for r in rows:
+        w = week_for_date.get(r.get("Date"), target_week)
+        result.setdefault(w, []).append(r)
+
+    if len(result) > 1:
+        print(f"  Detected {n} distinct rounds by date on this page -- "
+              f"splitting into weeks {sorted(result)} instead of lumping everything into week {target_week}.")
+    return result
 
 
 def load_reference_ranking(target_week: int, config: Config) -> list[str]:
@@ -136,26 +188,25 @@ def write_total_points_csv(
     df.to_csv(REPO_ROOT / "total-points.csv", index=False, encoding="utf-8")
 
 
-def append_previous_standings_column(target_week: int, standings: list[dict]) -> None:
-    path = REPO_ROOT / "previous-standings.csv"
-    new_col_name = f"Week {target_week}"
-    new_col_values = [r["Team"] for r in standings]  # row i => team at rank i+1
+def write_previous_standings_csv(scored_by_week: dict[int, list[dict]], config: Config) -> None:
+    """Rewrites previous-standings.csv from scratch: a 'Preseason' column (the
+    Week 0 seed order) followed by one column per week showing that week's
+    cumulative standings order (team names, rank 1 first). Recomputed in full
+    every run, rather than just appending the latest week, so a week that gets
+    backfilled after the fact -- e.g. real Week 0 games discovered bundled into
+    what we'd scraped as Week 1 -- still gets its own correct snapshot column.
+    """
+    seed_order = load_seed_order()
+    weeks_present = sorted(scored_by_week)
 
-    if path.exists():
-        df = pd.read_csv(path)
-        if new_col_name in df.columns:
-            df[new_col_name] = new_col_values
-        else:
-            df[new_col_name] = new_col_values
-    else:
-        seed_order = load_seed_order()
-        df = pd.DataFrame({
-            "Standings": list(range(1, len(seed_order) + 1)),
-            "Week 0": seed_order,
-            new_col_name: new_col_values,
-        })
+    out = {"Standings": list(range(1, len(seed_order) + 1)), "Preseason": seed_order}
+    for through_week in weeks_present:
+        cumulative = {w: rows for w, rows in scored_by_week.items() if w <= through_week}
+        standings = compute_standings(cumulative, config, seed_order)
+        out[f"Week {through_week}"] = [r["Team"] for r in standings]
 
-    df.to_csv(path, index=False, encoding="utf-8")
+    df = pd.DataFrame(out, columns=["Standings", "Preseason"] + [f"Week {w}" for w in weeks_present])
+    df.to_csv(REPO_ROOT / "previous-standings.csv", index=False, encoding="utf-8")
 
 
 def print_summary(
@@ -206,10 +257,10 @@ def run(target_week: int, year: int, dry_run: bool) -> None:
     print(f"  {len(raw_rows) // 2} games parsed, {pending} not yet final.")
 
     raw_by_week: dict[int, list[dict]] = {}
-    for w in range(1, target_week):
+    for w in range(0, target_week):
         if week_csv_path(w).exists():
             raw_by_week[w] = load_raw_week(w)
-    raw_by_week[target_week] = raw_rows
+    raw_by_week.update(split_by_date_gap(raw_rows, target_week))
 
     reference_order = load_reference_ranking(target_week, config)
     rank_map = build_rank_map(reference_order)
@@ -235,10 +286,11 @@ def run(target_week: int, year: int, dry_run: bool) -> None:
     write_all_games_csv(scored_by_week)
     write_current_standings_csv(standings)
     write_total_points_csv(scored_by_week, standings, config)
-    append_previous_standings_column(target_week, standings)
+    write_previous_standings_csv(scored_by_week, config)
 
-    print(f"\nWrote week-{target_week}.csv, all-games.csv, current-standings.csv, "
-          f"total-points.csv, and appended 'Week {target_week}' to previous-standings.csv.")
+    written_weeks = ", ".join(f"week-{w}.csv" for w in sorted(scored_by_week))
+    print(f"\nWrote {written_weeks}, all-games.csv, current-standings.csv, "
+          f"total-points.csv, and previous-standings.csv.")
     print("Next: review the numbers above, then `git add -A && git commit && git push`, "
           "then your usual `gcloud run deploy`.")
 
