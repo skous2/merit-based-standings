@@ -2,32 +2,32 @@ Standing,Team,Conference,Week 0,Week 1,Total Points
 1,Memphis,American,7,6,13
 2,USC,Big 10,5,6,11
 3,North Dakota State,Mountain West,6,5,11
-4,Colorado,Big 12,0,10,10
-5,North Carolina,ACC,10,0,10
-6,Virginia,ACC,9,0,9
-7,SMU,ACC,0,9,9
-8,LSU,SEC,0,9,9
-9,UCLA,Big 10,0,9,9
-10,Indiana,Big 10,0,8,8
+4,Miami,ACC,0,10,10
+5,SMU,ACC,0,10,10
+6,Colorado,Big 12,0,10,10
+7,North Carolina,ACC,10,0,10
+8,Virginia,ACC,9,0,9
+9,LSU,SEC,0,9,9
+10,UCLA,Big 10,0,9,9
 11,Notre Dame,Independent,0,8,8
-12,Ole Miss,SEC,0,8,8
-13,Massachusetts,MAC,0,8,8
-14,Miami,ACC,0,7,7
-15,Duke,ACC,0,7,7
-16,Cincinnati,Big 12,0,7,7
-17,Auburn,SEC,0,7,7
-18,Tulsa,American,0,7,7
-19,Nevada,Mountain West,0,7,7
-20,UNLV,Mountain West,0,7,7
-21,Alabama,SEC,0,6,6
-22,Texas A&M,SEC,0,6,6
-23,Texas,SEC,0,6,6
-24,Pittsburgh,ACC,0,6,6
-25,Wake Forest,ACC,0,6,6
-26,Washington,Big 10,0,6,6
-27,Nebraska,Big 10,0,6,6
-28,Penn State,Big 10,0,6,6
-29,New Mexico,Mountain West,0,6,6
+12,Massachusetts,MAC,0,8,8
+13,San José State,Mountain West,0,8,8
+14,Indiana,Big 10,0,7,7
+15,Ole Miss,SEC,0,7,7
+16,Duke,ACC,0,7,7
+17,Cincinnati,Big 12,0,7,7
+18,Auburn,SEC,0,7,7
+19,Tulsa,American,0,7,7
+20,Alabama,SEC,0,6,6
+21,Texas A&M,SEC,0,6,6
+22,Texas,SEC,0,6,6
+23,Pittsburgh,ACC,0,6,6
+24,Washington,Big 10,0,6,6
+25,Nebraska,Big 10,0,6,6
+26,Penn State,Big 10,0,6,6
+27,New Mexico,Mountain West,0,6,6
+28,Nevada,Mountain West,0,6,6
+29,UNLV,Mountain West,0,6,6
 30,Ohio State,Big 10,0,5,5
 31,BYU,Big 12,0,5,5
 32,Georgia,SEC,0,5,5
@@ -42,47 +42,47 @@ Standing,Team,Conference,Week 0,Week 1,Total Points
 41,Arizona State,Big 12,0,5,5
 42,Missouri,SEC,0,5,5
 43,Tennessee,SEC,0,5,5
-44,Illinois,Big 10,0,5,5
-45,San Diego State,Pac 12,0,5,5
-46,Kansas State,Big 12,0,5,5
-47,Old Dominion,Sun Belt,0,5,5
-48,UConn,Independent,0,5,5
-49,Northwestern,Big 10,0,5,5
-50,Kennesaw State,Conf USA,0,5,5
-51,Navy,American,0,5,5
-52,Minnesota,Big 10,0,5,5
-53,Southern Miss,Sun Belt,0,5,5
-54,Kentucky,SEC,0,5,5
-55,Kansas,Big 12,0,5,5
-56,Army,American,0,5,5
-57,UTSA,American,0,5,5
-58,Mississippi State,SEC,0,5,5
-59,Louisiana Tech,Sun Belt,0,5,5
-60,UCF,Big 12,0,5,5
-61,South Carolina,SEC,0,5,5
-62,Florida,SEC,0,5,5
-63,Georgia Southern,Sun Belt,0,5,5
-64,Delaware,Conf USA,0,5,5
-65,Louisiana,Sun Belt,0,5,5
-66,Michigan State,Big 10,0,5,5
-67,Rice,American,0,5,5
-68,Temple,American,0,5,5
-69,Maryland,Big 10,0,5,5
-70,Virginia Tech,ACC,0,5,5
-71,App State,Sun Belt,0,5,5
-72,South Alabama,Sun Belt,0,5,5
-73,Syracuse,ACC,0,5,5
-74,Air Force,Mountain West,0,5,5
-75,Arkansas,SEC,0,5,5
-76,Middle Tennessee,Conf USA,0,5,5
-77,Purdue,Big 10,0,5,5
-78,Colorado State,Pac 12,0,5,5
-79,Georgia State,Sun Belt,0,5,5
-80,Florida State,ACC,5,0,5
-81,Jacksonville State,Conf USA,0,5,5
-82,Stanford,ACC,5,0,5
-83,New Mexico State,Conf USA,0,5,5
-84,San José State,Mountain West,0,5,5
+44,Wake Forest,ACC,0,5,5
+45,Illinois,Big 10,0,5,5
+46,San Diego State,Pac 12,0,5,5
+47,Kansas State,Big 12,0,5,5
+48,Old Dominion,Sun Belt,0,5,5
+49,UConn,Independent,0,5,5
+50,Northwestern,Big 10,0,5,5
+51,Kennesaw State,Conf USA,0,5,5
+52,Navy,American,0,5,5
+53,Minnesota,Big 10,0,5,5
+54,Southern Miss,Sun Belt,0,5,5
+55,Kentucky,SEC,0,5,5
+56,Kansas,Big 12,0,5,5
+57,Army,American,0,5,5
+58,UTSA,American,0,5,5
+59,Mississippi State,SEC,0,5,5
+60,Louisiana Tech,Sun Belt,0,5,5
+61,UCF,Big 12,0,5,5
+62,South Carolina,SEC,0,5,5
+63,Florida,SEC,0,5,5
+64,Georgia Southern,Sun Belt,0,5,5
+65,Delaware,Conf USA,0,5,5
+66,Louisiana,Sun Belt,0,5,5
+67,Michigan State,Big 10,0,5,5
+68,Rice,American,0,5,5
+69,Temple,American,0,5,5
+70,Maryland,Big 10,0,5,5
+71,Virginia Tech,ACC,0,5,5
+72,App State,Sun Belt,0,5,5
+73,South Alabama,Sun Belt,0,5,5
+74,Syracuse,ACC,0,5,5
+75,Air Force,Mountain West,0,5,5
+76,Arkansas,SEC,0,5,5
+77,Middle Tennessee,Conf USA,0,5,5
+78,Purdue,Big 10,0,5,5
+79,Colorado State,Pac 12,0,5,5
+80,Georgia State,Sun Belt,0,5,5
+81,Florida State,ACC,5,0,5
+82,Jacksonville State,Conf USA,0,5,5
+83,Stanford,ACC,5,0,5
+84,New Mexico State,Conf USA,0,5,5
 85,Sacramento State,MAC,0,5,5
 86,Michigan,Big 10,0,4,4
 87,South Florida,American,0,4,4
@@ -94,37 +94,37 @@ Standing,Team,Conference,Week 0,Week 1,Total Points
 93,Western Michigan,MAC,0,3,3
 94,Troy,Sun Belt,0,3,3
 95,Buffalo,MAC,0,3,3
-96,Liberty,Conf USA,0,3,3
-97,Eastern Michigan,MAC,3,0,3
-98,TCU,Big 12,0,0,0
-99,Georgia Tech,ACC,0,0,0
-100,North Texas,American,0,0,0
-101,Clemson,ACC,0,0,0
-102,Tulane,American,0,0,0
-103,NC State,ACC,0,0,0
-104,California,ACC,0,0,0
-105,Baylor,Big 12,0,0,0
-106,Toledo,MAC,0,0,0
-107,Hawai'i,Mountain West,0,0,0
-108,Western Kentucky,Conf USA,0,0,0
-109,East Carolina,American,0,0,0
-110,Ohio,MAC,0,0,0
-111,Washington State,Pac 12,0,0,0
-112,Fresno State,Pac 12,0,0,0
-113,Miami (OH),MAC,0,0,0
-114,Missouri State,Conf USA,0,0,0
-115,Central Michigan,MAC,0,0,0
-116,Texas State,Pac 12,0,0,0
-117,Florida International,Conf USA,0,0,0
-118,Arkansas State,Sun Belt,0,0,0
-119,Rutgers,Big 10,0,0,0
-120,Wisconsin,Big 10,0,0,0
-121,Coastal Carolina,Sun Belt,0,0,0
-122,Utah State,Pac 12,0,0,0
-123,Marshall,Sun Belt,0,0,0
-124,Akron,MAC,0,0,0
-125,Kent State,MAC,0,0,0
-126,Florida Atlantic,American,0,0,0
+96,Eastern Michigan,MAC,3,0,3
+97,TCU,Big 12,0,0,0
+98,Georgia Tech,ACC,0,0,0
+99,North Texas,American,0,0,0
+100,Clemson,ACC,0,0,0
+101,Tulane,American,0,0,0
+102,NC State,ACC,0,0,0
+103,California,ACC,0,0,0
+104,Baylor,Big 12,0,0,0
+105,Toledo,MAC,0,0,0
+106,Hawai'i,Mountain West,0,0,0
+107,Western Kentucky,Conf USA,0,0,0
+108,East Carolina,American,0,0,0
+109,Ohio,MAC,0,0,0
+110,Washington State,Pac 12,0,0,0
+111,Fresno State,Pac 12,0,0,0
+112,Miami (OH),MAC,0,0,0
+113,Missouri State,Conf USA,0,0,0
+114,Central Michigan,MAC,0,0,0
+115,Texas State,Pac 12,0,0,0
+116,Florida International,Conf USA,0,0,0
+117,Arkansas State,Sun Belt,0,0,0
+118,Rutgers,Big 10,0,0,0
+119,Wisconsin,Big 10,0,0,0
+120,Coastal Carolina,Sun Belt,0,0,0
+121,Utah State,Pac 12,0,0,0
+122,Marshall,Sun Belt,0,0,0
+123,Akron,MAC,0,0,0
+124,Kent State,MAC,0,0,0
+125,Florida Atlantic,American,0,0,0
+126,Liberty,Conf USA,0,0,0
 127,Wyoming,Mountain West,0,0,0
 128,Bowling Green,MAC,0,0,0
 129,Ball State,MAC,0,0,0
