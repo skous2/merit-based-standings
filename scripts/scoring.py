@@ -2,10 +2,22 @@
 """Pure scoring functions -- no file I/O, so these are directly unit-testable and
 reused by both the live pipeline (update_week.py) and the 2025 regression test.
 
-Design (confirmed with the site owner): the SOS bonus is retroactive by design.
-Every weekly run grades every game played so far using a single reference ranking
-(last week's finalized standings, or the Week 0 preseason seed for the season's
-first run) -- one pass, not iterated to a fixed point.
+Design (confirmed with the site owner): the SOS bonus is retroactive by design,
+and graded in two passes so it's always based on a number the site actually
+displays for "last week," never a hidden intermediate value:
+
+  Pass 1: grade every game played so far using last week's finalized standings
+  (or the Week 0 preseason seed for the season's first run) -- this is the old
+  single-pass behavior.
+
+  Pass 2: recompute the cumulative standings through the week *before* the
+  target week from Pass 1's own results, and re-grade every game a second time
+  using THAT as the reference. This is the number that ends up in
+  previous-standings.csv's "Week N-1" column, so the SOS bonus for grading week
+  N always matches what the site shows for week N-1 -- not a snapshot from two
+  weeks ago that never got published anywhere.
+
+Two passes only -- not iterated further to a fixed point.
 """
 from __future__ import annotations
 
@@ -80,6 +92,37 @@ def score_all_weeks(
         week: [score_row(row, rank_map, config) for row in rows]
         for week, rows in raw_by_week.items()
     }
+
+
+def score_season_two_pass(
+    raw_by_week: dict[int, list[dict]],
+    reference_order: list[str],
+    config: Config,
+    seed_order: list[str],
+    target_week: int,
+) -> tuple[dict[int, list[dict]], list[str]]:
+    """The two-pass grading described in this module's docstring. `reference_order`
+    is last week's finalized standings (or the preseason seed), same as before --
+    it's used only to bootstrap Pass 1. The reference actually used for grading
+    is Pass 2's: the cumulative standings through `target_week - 1`, recomputed
+    from Pass 1's own results.
+
+    Returns (scored_by_week, refined_order). `refined_order` is also the exact
+    ranking that must be published as previous-standings.csv's "Week
+    (target_week - 1)" column -- if that column were instead re-derived from
+    the Pass 2 output (which re-grades weeks < target_week a second time using
+    refined_order), it would drift slightly from the number actually used to
+    grade target_week's games, breaking the "SOS bonus matches what the site
+    shows for last week" guarantee this whole scheme exists for.
+    """
+    rank_map_pass1 = build_rank_map(reference_order)
+    scored_pass1 = score_all_weeks(raw_by_week, rank_map_pass1, config)
+
+    prior_weeks = {w: rows for w, rows in scored_pass1.items() if w < target_week}
+    refined_order = [r["Team"] for r in compute_standings(prior_weeks, config, seed_order)]
+
+    rank_map_pass2 = build_rank_map(refined_order)
+    return score_all_weeks(raw_by_week, rank_map_pass2, config), refined_order
 
 
 def compute_standings(

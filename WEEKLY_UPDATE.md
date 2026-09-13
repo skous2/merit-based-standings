@@ -2,6 +2,40 @@
 
 ## Session log
 
+### 2026-09-13
+
+Week 2 update surfaced a real inconsistency in the SOS/Quality-Loss grading,
+found while explaining an Ohio State quality-loss bonus to the site owner:
+
+- Ohio State's 1-point road loss to Texas earned a 3-pt Quality Loss bonus
+  because Texas was ranked #22 in the reference used to grade the game --
+  but `previous-standings.csv`'s own "Week 1" column (the number the site
+  actually publishes) showed Texas at #32 for the same week. The #22 was a
+  hidden intermediate value that never appeared anywhere on the site.
+- Root cause: grading used `current-standings.csv` as the SOS reference
+  (last run's fully-settled ranking, several weeks of retroactive recompute
+  deep), while the *displayed* "Week N-1" column was computed fresh from
+  that week's own games only -- two different, both-legitimate rankings that
+  happened to diverge.
+- Fixed by adding `scoring.score_season_two_pass()`: Pass 1 grades every
+  game with the old reference (as before); Pass 2 recomputes the cumulative
+  standings through `target_week - 1` from Pass 1's results and re-grades
+  everything with *that*. The Pass 2 reference is now also pinned as the
+  literal "Week N-1" column in `previous-standings.csv` (`write_previous_standings_csv`'s
+  new `pinned_week`/`pinned_order` params) instead of being re-derived from
+  the final scored data a second time, which used to drift it by a rank or
+  two -- so the number used to grade a week's games is now always identical
+  to the number the site publishes for the week before it.
+- Net effect on this specific case: Texas's real Week 1 rank (#32) is above
+  the Quality Loss cutoff (top 30), so Ohio State's bonus for that loss went
+  away -- confirmed correct, not a regression.
+- The multi-round-bundle path (`split_by_date_gap`, see 2026-09-07 below)
+  wasn't touched -- it already chains each round off the standings right
+  before it, sequentially, so it doesn't have this hidden-reference problem.
+- Redid the Week 2 update from the pre-Week-2 snapshot with the fixed code
+  rather than layering a correction on top of the already-pushed (buggy)
+  Week 2 commit.
+
 ### 2026-09-07
 
 Rerunning `--week 1` to pick up the games that were still pending on 2026-08-30

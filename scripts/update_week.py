@@ -25,7 +25,7 @@ from pathlib import Path
 import pandas as pd
 
 from config import Config, REPO_ROOT
-from scoring import build_rank_map, compute_standings, score_all_weeks, score_row
+from scoring import build_rank_map, compute_standings, score_row, score_season_two_pass
 from scrape import scrape_week
 
 RAW_COLUMNS = ["Team 1", "Team 2", "Result", "Margin", "Road?"]
@@ -188,19 +188,33 @@ def write_total_points_csv(
     df.to_csv(REPO_ROOT / "total-points.csv", index=False, encoding="utf-8")
 
 
-def write_previous_standings_csv(scored_by_week: dict[int, list[dict]], config: Config) -> None:
+def write_previous_standings_csv(
+    scored_by_week: dict[int, list[dict]],
+    config: Config,
+    pinned_week: int | None = None,
+    pinned_order: list[str] | None = None,
+) -> None:
     """Rewrites previous-standings.csv from scratch: a 'Preseason' column (the
     Week 0 seed order) followed by one column per week showing that week's
     cumulative standings order (team names, rank 1 first). Recomputed in full
     every run, rather than just appending the latest week, so a week that gets
     backfilled after the fact -- e.g. real Week 0 games discovered bundled into
     what we'd scraped as Week 1 -- still gets its own correct snapshot column.
+
+    `pinned_week`/`pinned_order`: the two-pass scorer's `refined_order` (see
+    scoring.score_season_two_pass) must be published verbatim for that one
+    week, rather than re-derived from `scored_by_week` here -- re-deriving it
+    would re-grade that week's games a second time and drift slightly from the
+    reference actually used to score the target week's games.
     """
     seed_order = load_seed_order()
     weeks_present = sorted(scored_by_week)
 
     out = {"Standings": list(range(1, len(seed_order) + 1)), "Preseason": seed_order}
     for through_week in weeks_present:
+        if through_week == pinned_week:
+            out[f"Week {through_week}"] = pinned_order
+            continue
         cumulative = {w: rows for w, rows in scored_by_week.items() if w <= through_week}
         standings = compute_standings(cumulative, config, seed_order)
         out[f"Week {through_week}"] = [r["Team"] for r in standings]
@@ -289,10 +303,13 @@ def run(target_week: int, year: int, dry_run: bool) -> None:
             scored_by_week[w] = [score_row(row, rank_map, config) for row in split_rows[w]]
         print(f"  Scored weeks {sorted(split_rows)} sequentially -- each round's SOS "
               "bonuses reference the standings as of right before it, not one shared reference.")
+        pinned_week, pinned_order = None, None
     else:
         raw_by_week.update(split_rows)
-        rank_map = build_rank_map(reference_order)
-        scored_by_week = score_all_weeks(raw_by_week, rank_map, config)
+        scored_by_week, pinned_order = score_season_two_pass(
+            raw_by_week, reference_order, config, seed_order, target_week
+        )
+        pinned_week = target_week - 1
 
     standings = compute_standings(scored_by_week, config, seed_order)
 
@@ -313,7 +330,7 @@ def run(target_week: int, year: int, dry_run: bool) -> None:
     write_all_games_csv(scored_by_week)
     write_current_standings_csv(standings)
     write_total_points_csv(scored_by_week, standings, config)
-    write_previous_standings_csv(scored_by_week, config)
+    write_previous_standings_csv(scored_by_week, config, pinned_week, pinned_order)
 
     written_weeks = ", ".join(f"week-{w}.csv" for w in sorted(scored_by_week))
     print(f"\nWrote {written_weeks}, all-games.csv, current-standings.csv, "

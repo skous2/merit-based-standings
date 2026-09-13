@@ -20,7 +20,7 @@ UTEP,Oklahoma,LOSS,51,Road,0,0,0,0,0,0
 Oklahoma,UTEP,WIN,51,Home,3,2,0,0,0,5
 Fresno State,USC,LOSS,39,Road,0,0,0,0,0,0
 USC,Fresno State,WIN,39,Home,3,2,0,0,0,5
-San José State,Eastern Michigan,WIN,6,Road,3,2,1,0,0,6
+San José State,Eastern Michigan,WIN,6,Road,3,2,3,0,0,8
 Eastern Michigan,San José State,LOSS,6,Home,0,0,0,0,3,3
 Purdue,FCS,WIN,25,Home,3,2,0,0,0,5
 Georgia State,FCS,WIN,49,Home,3,2,0,0,0,5
@@ -30,7 +30,7 @@ Michigan State,Toledo,WIN,10,Home,3,0,0,0,0,3
 Ball State,Ohio State,LOSS,53,Road,0,0,0,0,0,0
 Ohio State,Ball State,WIN,53,Home,3,2,0,0,0,5
 Boise State,Oregon,LOSS,7,Road,0,0,0,0,0,0
-Oregon,Boise State,WIN,7,Home,3,0,1,0,0,4
+Oregon,Boise State,WIN,7,Home,3,0,0,0,0,3
 Georgia,FCS,WIN,60,Home,3,2,0,0,0,5
 Texas State,Texas,LOSS,52,Road,0,0,0,0,0,0
 Texas,Texas State,WIN,52,Home,3,2,0,0,0,5
@@ -45,7 +45,7 @@ East Carolina,Alabama,LOSS,38,Road,0,0,0,0,0,0
 Alabama,East Carolina,WIN,38,Home,3,2,0,0,0,5
 BYU,FCS,WIN,56,Home,3,2,0,0,0,5
 Western Michigan,Michigan,LOSS,1,Road,0,0,0,0,0,0
-Michigan,Western Michigan,WIN,1,Home,3,0,1,0,0,4
+Michigan,Western Michigan,WIN,1,Home,3,0,0,0,0,3
 Marshall,Penn State,LOSS,45,Road,0,0,0,0,0,0
 Penn State,Marshall,WIN,45,Home,3,2,0,0,0,5
 Tennessee,FCS,WIN,47,Home,3,2,0,0,0,5
@@ -71,12 +71,12 @@ Kentucky,FCS,WIN,32,Home,3,2,0,0,0,5
 Iowa State,FCS,WIN,28,Home,3,2,0,0,0,5
 Air Force,FCS,WIN,34,Home,3,2,0,0,0,5
 Temple,FCS,WIN,24,Home,3,2,0,0,0,5
-Baylor,Auburn,LOSS,1,Road,0,0,0,0,3,3
-Auburn,Baylor,WIN,1,Home,3,0,0,2,0,5
+Baylor,Auburn,LOSS,1,Road,0,0,0,0,0,0
+Auburn,Baylor,WIN,1,Home,3,0,1,2,0,6
 Boston College,Cincinnati,LOSS,19,Road,0,0,0,0,0,0
 Cincinnati,Boston College,WIN,19,Home,3,2,0,2,0,7
 Tulane,Duke,LOSS,14,Road,0,0,0,0,0,0
-Duke,Tulane,WIN,14,Home,3,2,0,0,0,5
+Duke,Tulane,WIN,14,Home,3,2,1,0,0,6
 Charlotte,FCS,LOSS,2,Home,0,0,0,0,0,0
 Navy,FCS,WIN,27,Home,3,2,0,0,0,5
 UTSA,FCS,WIN,29,Home,3,2,0,0,0,5
@@ -131,5 +131,5 @@ Louisville,Ole Miss,LOSS,3,Road,0,0,0,0,3,3
 Ole Miss,Louisville,WIN,3,Home,3,0,1,2,0,6
 Washington State,Washington,LOSS,14,Road,0,0,0,0,0,0
 Washington,Washington State,WIN,14,Home,3,2,0,0,0,5
-SMU,Florida State,WIN,3,Road,3,2,1,2,0,8
+SMU,Florida State,WIN,3,Road,3,2,3,2,0,10
 Florida State,SMU,LOSS,3,Home,0,0,0,0,3,3
