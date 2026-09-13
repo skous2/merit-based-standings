@@ -141,20 +141,24 @@ python -m playwright install chromium
    - Check the "Scraped names treated as FCS" list. If a real FBS team shows up there, its name didn't match the roster — see Troubleshooting below.
    - Check the "N game(s) not yet final" note. If it's non-zero (common if you run this before a week's whole slate has finished — e.g. Sunday/Monday games still to come), **re-run `--week N` again once those finish, before moving on to next week** — the script never automatically revisits an earlier week, so any games still pending when you move on get silently missed forever.
 
-3. **(Optional) Preview locally before publishing:**
+3. **Update the "Current Standings (Week N)" header** in `public/index.html`
+   (search for `Current Standings (Week` — it's a hardcoded string, not
+   generated from the CSVs, so it doesn't update itself).
+
+4. **(Optional) Preview locally before publishing:**
    ```
    npm start
    ```
    Open `http://localhost:3000`, click around, `Ctrl+C` to stop when done.
 
-4. **Commit and push:**
+5. **Commit and push:**
    ```
    git add -A
    git commit -m "Week N update"
    git push
    ```
 
-5. **Deploy** — your usual manual `gcloud run deploy` (unchanged).
+6. **Deploy** — your usual manual `gcloud run deploy` (unchanged).
 
 ## Kicking off a new season (Week 1)
 
