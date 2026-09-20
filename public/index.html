@@ -879,7 +879,10 @@
             data.forEach(row => {
                 html += '<tr>';
                 headers.forEach(header => {
-                    const cellClass = header === 'Total Points' ? ' class="col-total"' : '';
+                    const isWeekColumn = /^Week \d+$/.test(header);
+                    let cellClass = '';
+                    if (header === 'Total Points') cellClass = ' class="col-total"';
+                    else if (isWeekColumn && parseFloat(row[header]) === 10) cellClass = ' class="max-win"';
                     html += `<td${cellClass}>${row[header] || ''}</td>`;
                 });
                 html += '</tr>';
