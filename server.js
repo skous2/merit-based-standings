@@ -6,8 +6,17 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from public directory
-app.use(express.static('public'));
+// Serve static files from public directory.
+// HTML gets no-cache so browsers always revalidate with the server instead of
+// silently reusing a stale page after a deploy (heuristic caching otherwise
+// lets Chrome/etc. serve old HTML with no explicit freshness signal).
+app.use(express.static('public', {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache');
+    }
+  }
+}));
 
 // Store table data for different sections
 let currentStandingsData = { headers: [], data: [] };
@@ -138,6 +147,7 @@ function loadSeasonArchiveData() {
 
 // Routes
 app.get('/', (req, res) => {
+  res.set('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
