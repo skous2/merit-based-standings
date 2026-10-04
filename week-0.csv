@@ -1,6 +1,6 @@
 Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Qual Loss,Total
 San José State,USC,LOSS,16,Road,0,0,0,0,0,0
-USC,San José State,WIN,16,Home,3,2,1,0,0,6
+USC,San José State,WIN,16,Home,3,2,0,0,0,5
 North Carolina,TCU,WIN,5,Road,3,2,1,2,0,8
 TCU,North Carolina,LOSS,5,Home,0,0,0,0,0,0
 NC State,Virginia,LOSS,26,Road,0,0,0,0,0,0
@@ -14,4 +14,4 @@ Stanford,Hawai'i,WIN,10,Home,3,0,0,0,0,3
 New Mexico State,Florida State,LOSS,17,Road,0,0,0,0,0,0
 Florida State,New Mexico State,WIN,17,Home,3,2,0,0,0,5
 Memphis,UNLV,WIN,6,Road,3,2,1,0,0,6
-UNLV,Memphis,LOSS,6,Home,0,0,0,0,3,3
+UNLV,Memphis,LOSS,6,Home,0,0,0,0,0,0
