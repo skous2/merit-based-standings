@@ -1,139 +1,139 @@
-Standings,Preseason,Week 0,Week 1,Week 2,Week 3,Week 4,Week 5
-1,Ohio State,Virginia,USC,USC,USC,Alabama,Alabama
-2,Indiana,North Carolina,Memphis,North Dakota State,Alabama,Texas,Miami
-3,BYU,Memphis,North Dakota State,Alabama,Miami,Florida,Notre Dame
-4,Georgia,North Dakota State,Tulsa,Tulsa,North Dakota State,Miami,Pittsburgh
-5,Texas Tech,USC,Notre Dame,Notre Dame,Notre Dame,Notre Dame,Georgia
-6,Oregon,Florida State,LSU,Texas,Mississippi State,Mississippi State,Nebraska
-7,Alabama,Stanford,Miami,Pittsburgh,Texas,UCLA,USC
-8,Miami,Eastern Michigan,Virginia,LSU,Pittsburgh,Georgia,Ohio State
-9,Notre Dame,Ohio State,SMU,Mississippi State,Duke,Utah,Indiana
-10,Texas A&M,Indiana,Cincinnati,Miami,Florida,Duke,Texas Tech
-11,Utah,BYU,North Carolina,Texas A&M,Ole Miss,Virginia Tech,Florida
-12,Arizona,Georgia,UCLA,Utah,Tulsa,USC,Texas
-13,Ole Miss,Texas Tech,Massachusetts,Virginia,UCLA,Iowa,Missouri
-14,USC,Oregon,Ole Miss,SMU,BYU,Pittsburgh,Wake Forest
-15,Vanderbilt,Alabama,Auburn,Duke,Georgia,Nebraska,Mississippi State
-16,Virginia,Miami,Colorado,Cincinnati,Texas Tech,Cincinnati,Virginia Tech
-17,Oklahoma,Notre Dame,Indiana,North Carolina,Utah,LSU,UCLA
-18,Houston,Texas A&M,Oregon,UCLA,Virginia Tech,Indiana,Tennessee
-19,TCU,Utah,Alabama,Massachusetts,Massachusetts,Texas Tech,North Dakota State
-20,Iowa,Arizona,Texas,BYU,Tennessee,Massachusetts,LSU
-21,Georgia Tech,Ole Miss,Pittsburgh,Ole Miss,Cincinnati,Auburn,Baylor
-22,Michigan,Vanderbilt,Nebraska,Missouri,West Virginia,Oklahoma State,Kentucky
-23,Texas,Oklahoma,Penn State,Tennessee,Memphis,North Dakota State,Wisconsin
-24,Iowa State,Houston,New Mexico,Wake Forest,Indiana,Ohio State,BYU
-25,Pittsburgh,TCU,Florida,Auburn,Iowa,Wake Forest,Utah
-26,Louisville,Iowa,Ohio State,Colorado,Missouri,Boise State,Duke
-27,North Texas,Georgia Tech,BYU,Memphis,Nebraska,UCF,James Madison
-28,Arizona State,Michigan,Georgia,Indiana,Penn State,Oregon,Boise State
-29,James Madison,Texas,Texas Tech,Texas Tech,Vanderbilt,Ole Miss,Northwestern
-30,Missouri,Iowa State,Texas A&M,Iowa,Michigan,James Madison,Arizona
-31,SMU,Pittsburgh,Utah,Nebraska,Louisville,Tennessee,Houston
-32,Tennessee,Louisville,Arizona,Penn State,James Madison,South Florida,Iowa
-33,Wake Forest,North Texas,Vanderbilt,New Mexico,South Florida,Clemson,Minnesota
-34,Illinois,Arizona State,Oklahoma,UTSA,Boise State,Tulsa,Cincinnati
-35,South Florida,James Madison,Iowa,Florida,Auburn,Virginia,Massachusetts
-36,Washington,Missouri,Iowa State,Maryland,UCF,Missouri,Oklahoma State
-37,Clemson,SMU,Arizona State,App State,LSU,Baylor,SMU
-38,Duke,Tennessee,James Madison,Georgia,App State,Kentucky,Auburn
-39,Tulane,Wake Forest,Missouri,Michigan,Northwestern,Wisconsin,Memphis
-40,Nebraska,Illinois,Tennessee,James Madison,Ohio State,BYU,UTSA
-41,Cincinnati,South Florida,Wake Forest,South Florida,Texas A&M,Vanderbilt,Liberty
-42,LSU,Washington,Illinois,Kansas State,Virginia,Michigan,Oregon
-43,NC State,Clemson,Washington,Boise State,Iowa State,Louisville,Texas A&M
-44,Penn State,Duke,Duke,South Carolina,SMU,Minnesota,New Mexico
-45,San Diego State,Tulane,San Diego State,Virginia Tech,Illinois,West Virginia,UCF
-46,Kansas State,Nebraska,Kansas State,Colorado State,Washington,Houston,Ole Miss
-47,Old Dominion,Cincinnati,Old Dominion,Georgia State,Kansas State,Memphis,Iowa State
-48,UNLV,LSU,UConn,Vanderbilt,Baylor,UTSA,South Florida
-49,California,NC State,Northwestern,Houston,Kentucky,Liberty,Clemson
-50,Baylor,Penn State,Kennesaw State,Michigan State,South Carolina,Northwestern,Fresno State
-51,UConn,San Diego State,Navy,Ohio State,North Carolina,SMU,Tulsa
-52,Boise State,Kansas State,Minnesota,Iowa State,Oklahoma State,Penn State,Georgia State
-53,New Mexico,Old Dominion,Southern Miss,Louisville,Houston,Kansas State,Virginia
-54,Toledo,UNLV,Kentucky,Illinois,Arizona State,New Mexico,Florida State
-55,Auburn,California,Kansas,Washington,Wake Forest,Arizona,Vanderbilt
-56,Hawai'i,Baylor,Army,Baylor,Clemson,Fresno State,Michigan
-57,Northwestern,UConn,UTSA,Troy,California,Georgia State,Louisville
-58,Western Kentucky,Boise State,Mississippi State,West Virginia,Colorado,App State,North Texas
-59,Florida State,New Mexico,Louisiana Tech,UCF,Oregon,North Carolina,Toledo
-60,Memphis,Toledo,UCF,Air Force,TCU,Air Force,NC State
-61,East Carolina,Auburn,South Carolina,Purdue,New Mexico,Texas A&M,West Virginia
-62,Kennesaw State,Hawai'i,Georgia Southern,Oklahoma State,UTSA,Iowa State,Louisiana
-63,Navy,Northwestern,Delaware,San José State,Maryland,Illinois,Florida Atlantic
-64,Western Michigan,Western Kentucky,Louisiana,California,Liberty,Washington,Kansas State
-65,Minnesota,East Carolina,Rice,Oregon,Arizona,Toledo,Air Force
-66,Ohio,Kennesaw State,Temple,North Texas,Oklahoma,South Carolina,Washington
-67,Southern Miss,Navy,Maryland,Liberty,UConn,Louisiana,Penn State
-68,Washington State,Western Michigan,Virginia Tech,Boston College,Western Michigan,Arizona State,UNLV
-69,Kentucky,Minnesota,App State,Northwestern,Minnesota,California,Purdue
-70,Fresno State,Ohio,South Alabama,Arizona,Fresno State,Miami (OH),Oregon State
-71,Kansas,Southern Miss,Syracuse,Oklahoma,Wisconsin,Colorado,Eastern Michigan
-72,Troy,Washington State,Air Force,TCU,Colorado State,Florida Atlantic,Western Michigan
-73,Army,Kentucky,Arkansas,Arizona State,Georgia State,Arkansas,App State
-74,Jacksonville State,Fresno State,Middle Tennessee,Clemson,Michigan State,Boston College,Ohio
-75,Miami (OH),Kansas,Nevada,NC State,South Alabama,TCU,South Alabama
-76,Missouri State,Troy,Purdue,San Diego State,Boston College,North Texas,North Carolina
-77,UTSA,Army,Colorado State,Old Dominion,Air Force,Texas State,Illinois
-78,West Virginia,Jacksonville State,Georgia State,UConn,Toledo,Marshall,Central Michigan
-79,Mississippi State,Miami (OH),UNLV,Toledo,Troy,Maryland,South Carolina
-80,Central Michigan,Missouri State,Florida State,Florida State,Miami (OH),Jacksonville State,San José State
-81,Louisiana Tech,UTSA,Jacksonville State,Kennesaw State,Central Michigan,Army,Arizona State
-82,UCF,West Virginia,New Mexico State,Navy,Delaware,Oklahoma,California
-83,South Carolina,Mississippi State,San José State,Western Michigan,Louisiana,UNLV,Miami (OH)
-84,Texas State,Central Michigan,Sacramento State,Minnesota,Marshall,UConn,Colorado
-85,Florida,Louisiana Tech,Houston,Southern Miss,Middle Tennessee,Florida State,Temple
-86,Florida International,UCF,Michigan,Kentucky,Purdue,East Carolina,Arkansas
-87,Arkansas State,South Carolina,South Florida,Fresno State,Jacksonville State,Western Michigan,Boston College
-88,Georgia Southern,Texas State,Michigan State,Kansas,San José State,Michigan State,Syracuse
-89,Rutgers,Florida,Louisville,Army,Florida Atlantic,Oregon State,TCU
-90,Delaware,Florida International,Baylor,Miami (OH),North Texas,Colorado State,Jacksonville State
-91,Wisconsin,Arkansas State,Boise State,Missouri State,Texas State,NC State,Texas State
-92,Coastal Carolina,Georgia Southern,Troy,Louisiana Tech,Navy,Ohio,Marshall
-93,Louisiana,Rutgers,West Virginia,Arkansas State,Army,Delaware,Maryland
-94,Utah State,Delaware,Buffalo,Georgia Southern,Georgia Tech,South Alabama,UAB
-95,Marshall,Wisconsin,Liberty,Delaware,NC State,Troy,Oklahoma
-96,Colorado,Coastal Carolina,Stanford,Wisconsin,San Diego State,Central Michigan,East Carolina
-97,North Carolina,Louisiana,Eastern Michigan,Coastal Carolina,Old Dominion,Florida International,Kansas
-98,Akron,Utah State,TCU,Louisiana,UNLV,Arkansas State,Army
-99,Michigan State,Marshall,Georgia Tech,Akron,Florida State,Rutgers,UConn
-100,Rice,Colorado,North Texas,Rice,East Carolina,Stanford,Georgia Southern
-101,Stanford,Akron,Clemson,Temple,Kennesaw State,Kent State,New Mexico State
-102,Temple,Michigan State,Tulane,Kent State,Southern Miss,Wyoming,Colorado State
-103,Buffalo,Rice,NC State,South Alabama,Washington State,Middle Tennessee,Louisiana Tech
-104,Tulsa,Temple,California,Syracuse,Kansas,Purdue,San Diego State
-105,Kent State,Buffalo,Toledo,Arkansas,Missouri State,San José State,Michigan State
-106,Florida Atlantic,Tulsa,Hawai'i,Ball State,Louisiana Tech,Eastern Michigan,Troy
-107,Maryland,Kent State,Western Kentucky,Middle Tennessee,Arkansas State,Tulane,Florida International
-108,Virginia Tech,Florida Atlantic,East Carolina,Nevada,Georgia Southern,Buffalo,Arkansas State
-109,App State,Maryland,Western Michigan,UTEP,Coastal Carolina,UAB,Rutgers
-110,UCLA,Virginia Tech,Ohio,UNLV,Akron,Navy,Delaware
-111,Liberty,App State,Washington State,Jacksonville State,Rice,Kansas,Stanford
-112,South Alabama,UCLA,Fresno State,New Mexico State,Temple,Louisiana Tech,Kent State
-113,Syracuse,Liberty,Miami (OH),Sacramento State,Kent State,Syracuse,Wyoming
-114,Wyoming,South Alabama,Missouri State,Tulane,Syracuse,Georgia Tech,Middle Tennessee
-115,Air Force,Syracuse,Central Michigan,Ohio,New Mexico State,San Diego State,Tulane
-116,Bowling Green,Wyoming,Texas State,Central Michigan,Arkansas,Old Dominion,Buffalo
-117,New Mexico State,Air Force,Florida International,Florida International,Ball State,Western Kentucky,Bowling Green
-118,Arkansas,Bowling Green,Arkansas State,Marshall,Nevada,Kennesaw State,Georgia Tech
-119,Ball State,New Mexico State,Rutgers,Stanford,Oregon State,Southern Miss,Kennesaw State
-120,UAB,Arkansas,Wisconsin,Buffalo,UTEP,Washington State,Navy
-121,Boston College,Ball State,Coastal Carolina,Florida Atlantic,Sam Houston,Missouri State,Southern Miss
-122,Eastern Michigan,UAB,Utah State,Wyoming,Sacramento State,Georgia Southern,Missouri State
-123,Middle Tennessee,Boston College,Marshall,UAB,Tulane,Coastal Carolina,Nevada
-124,UL Monroe,Middle Tennessee,Akron,Hawai'i,Ohio,Akron,Sam Houston
-125,Nevada,UL Monroe,Kent State,Eastern Michigan,Hawai'i,Rice,Old Dominion
-126,Northern Illinois,Nevada,Florida Atlantic,Georgia Tech,Florida International,Temple,Western Kentucky
-127,Purdue,Northern Illinois,Wyoming,Western Kentucky,Rutgers,New Mexico State,Washington State
-128,San José State,Purdue,Bowling Green,East Carolina,Stanford,Ball State,Coastal Carolina
-129,Oregon State,San José State,Ball State,Washington State,Buffalo,Nevada,Akron
-130,UTEP,Oregon State,UAB,Texas State,Wyoming,UTEP,Rice
-131,Colorado State,UTEP,Boston College,Rutgers,UAB,Sam Houston,Ball State
-132,Sam Houston,Colorado State,UL Monroe,Utah State,Eastern Michigan,Sacramento State,UTEP
-133,Oklahoma State,Sam Houston,Northern Illinois,Bowling Green,Western Kentucky,Utah State,Sacramento State
-134,Georgia State,Oklahoma State,Oregon State,UL Monroe,Utah State,Hawai'i,Utah State
-135,Charlotte,Georgia State,UTEP,Northern Illinois,Bowling Green,Bowling Green,Hawai'i
-136,Massachusetts,Charlotte,Sam Houston,Oregon State,UL Monroe,UL Monroe,UL Monroe
-137,North Dakota State,Massachusetts,Oklahoma State,Sam Houston,Northern Illinois,Northern Illinois,Northern Illinois
-138,Sacramento State,Sacramento State,Charlotte,Charlotte,Charlotte,Charlotte,Charlotte
+Standings,Preseason,Week 0,Week 1,Week 2,Week 3,Week 4,Week 5,Week 6
+1,Ohio State,Virginia,USC,USC,USC,Alabama,Alabama,Alabama
+2,Indiana,North Carolina,Memphis,North Dakota State,Alabama,Notre Dame,Notre Dame,Notre Dame
+3,BYU,USC,North Dakota State,Alabama,Notre Dame,Texas,Miami,Georgia
+4,Georgia,Memphis,Notre Dame,Notre Dame,Mississippi State,Mississippi State,Pittsburgh,Indiana
+5,Texas Tech,North Dakota State,SMU,Mississippi State,North Dakota State,Florida,Georgia,USC
+6,Oregon,Florida State,LSU,Texas,Miami,UCLA,Indiana,Ohio State
+7,Alabama,Stanford,Tulsa,SMU,Texas,Miami,USC,UCLA
+8,Miami,Eastern Michigan,Virginia,LSU,UCLA,Utah,Texas,Missouri
+9,Notre Dame,Ohio State,Cincinnati,Tulsa,Pittsburgh,USC,Texas Tech,Miami
+10,Texas A&M,Indiana,North Carolina,Texas A&M,Duke,Georgia,Nebraska,Wake Forest
+11,Utah,BYU,UCLA,Utah,Florida,Virginia Tech,Ohio State,Kentucky
+12,Arizona,Georgia,Indiana,Virginia,Texas Tech,Indiana,Mississippi State,Utah
+13,Ole Miss,Texas Tech,Miami,Missouri,Ole Miss,Iowa,UCLA,Pittsburgh
+14,USC,Oregon,Auburn,Wake Forest,Tulsa,Pittsburgh,Missouri,Tennessee
+15,Vanderbilt,Alabama,Colorado,Duke,Georgia,Duke,Wake Forest,Nebraska
+16,Virginia,Miami,Massachusetts,Cincinnati,Utah,Texas Tech,Florida,BYU
+17,Oklahoma,Notre Dame,Alabama,North Carolina,Virginia Tech,Nebraska,Virginia Tech,Arizona
+18,Houston,Texas A&M,Ole Miss,UCLA,Indiana,LSU,LSU,Houston
+19,TCU,Utah,Texas,Indiana,BYU,North Dakota State,Kentucky,Iowa
+20,Iowa,Arizona,Illinois,BYU,Iowa,Cincinnati,Utah,Texas Tech
+21,Georgia Tech,Ole Miss,Nebraska,Miami,Tennessee,Massachusetts,Tennessee,James Madison
+22,Michigan,Vanderbilt,Penn State,Iowa,Penn State,Ohio State,North Dakota State,Texas
+23,Texas,Oklahoma,New Mexico,Pittsburgh,West Virginia,Wake Forest,BYU,Mississippi State
+24,Iowa State,Houston,Florida,Tennessee,Massachusetts,Auburn,Iowa,LSU
+25,Pittsburgh,TCU,San José State,Penn State,Missouri,UCF,James Madison,Northwestern
+26,Louisville,Iowa,Ohio State,Auburn,Nebraska,Oklahoma State,Wisconsin,Oklahoma State
+27,North Texas,Georgia Tech,BYU,Colorado,Cincinnati,Oregon,Duke,Boise State
+28,Arizona State,Michigan,Georgia,Massachusetts,Memphis,James Madison,Houston,Florida
+29,James Madison,Texas,Texas Tech,Texas Tech,Michigan,Tennessee,Minnesota,Virginia Tech
+30,Missouri,Iowa State,Oregon,Ole Miss,James Madison,Clemson,Northwestern,Wisconsin
+31,SMU,Pittsburgh,Texas A&M,Nebraska,Auburn,Penn State,Arizona,North Dakota State
+32,Tennessee,Louisville,Utah,New Mexico,UCF,Kentucky,Baylor,Ole Miss
+33,Wake Forest,North Texas,Arizona,UTSA,Vanderbilt,Wisconsin,SMU,Memphis
+34,Illinois,Arizona State,Vanderbilt,Florida,SMU,Ole Miss,Cincinnati,UTSA
+35,South Florida,James Madison,Oklahoma,Michigan State,Illinois,Missouri,Boise State,South Carolina
+36,Washington,Missouri,Iowa,Maryland,South Florida,South Florida,Auburn,Liberty
+37,Clemson,SMU,Iowa State,App State,LSU,Tulsa,Massachusetts,Purdue
+38,Duke,Tennessee,Pittsburgh,Memphis,Kentucky,Virginia,Oregon,Duke
+39,Tulane,Wake Forest,Arizona State,Georgia,App State,Houston,Texas A&M,Baylor
+40,Nebraska,Illinois,James Madison,Michigan,Northwestern,Michigan,New Mexico,Virginia
+41,Cincinnati,South Florida,Missouri,James Madison,Ohio State,Boise State,Memphis,Louisville
+42,LSU,Washington,Tennessee,Kansas State,Texas A&M,Minnesota,Fresno State,Minnesota
+43,NC State,Clemson,Wake Forest,South Carolina,Virginia,BYU,UTSA,Oregon
+44,Penn State,Duke,Washington,Virginia Tech,Iowa State,SMU,UCF,SMU
+45,San Diego State,Tulane,Duke,Colorado State,Arizona State,West Virginia,Liberty,North Carolina
+46,Kansas State,Nebraska,San Diego State,Georgia State,Wake Forest,Northwestern,Ole Miss,North Texas
+47,Old Dominion,Cincinnati,Kansas State,Houston,Washington,Washington,Oklahoma State,Cincinnati
+48,UNLV,LSU,Old Dominion,Illinois,Kansas State,Baylor,Clemson,Illinois
+49,California,NC State,UConn,South Florida,California,New Mexico,Penn State,UNLV
+50,Baylor,Penn State,Northwestern,San José State,South Carolina,Memphis,Georgia State,Massachusetts
+51,UConn,San Diego State,Kennesaw State,Ohio State,North Carolina,Fresno State,Virginia,Michigan
+52,Boise State,Kansas State,Navy,Vanderbilt,Houston,UTSA,South Florida,New Mexico
+53,New Mexico,Old Dominion,Minnesota,Iowa State,Louisville,Liberty,Toledo,Auburn
+54,Toledo,UNLV,Southern Miss,Washington,Clemson,Arizona,Florida State,Air Force
+55,Auburn,California,Kentucky,California,Boise State,Louisville,Tulsa,Texas A&M
+56,Hawai'i,Baylor,Kansas,Troy,Colorado,Georgia State,North Texas,California
+57,Northwestern,UConn,Army,West Virginia,Oklahoma State,Vanderbilt,West Virginia,Fresno State
+58,Western Kentucky,Boise State,UTSA,UCF,New Mexico,Illinois,Louisiana,UCF
+59,Florida State,New Mexico,Mississippi State,Air Force,Fresno State,Toledo,Air Force,Clemson
+60,Memphis,Toledo,Louisiana Tech,Purdue,UTSA,Louisiana,Iowa State,Georgia State
+61,East Carolina,Auburn,UCF,Boise State,Wisconsin,App State,Washington,Iowa State
+62,Kennesaw State,Hawai'i,South Carolina,Oklahoma State,Michigan State,Arizona State,NC State,Penn State
+63,Navy,Northwestern,Georgia Southern,North Texas,Maryland,North Carolina,UNLV,Western Michigan
+64,Western Michigan,Western Kentucky,Delaware,Clemson,Liberty,Air Force,South Carolina,Ohio
+65,Minnesota,East Carolina,Louisiana,Liberty,Oregon,Texas A&M,Florida Atlantic,Oregon State
+66,Ohio,Kennesaw State,Michigan State,Northwestern,Arizona,Iowa State,Purdue,Eastern Michigan
+67,Southern Miss,Navy,Rice,Oregon,Oklahoma,Kansas State,Vanderbilt,South Florida
+68,Washington State,Western Michigan,Temple,Arizona,TCU,California,Michigan,Washington
+69,Kentucky,Minnesota,Maryland,Oklahoma,Baylor,South Carolina,Louisville,Toledo
+70,Fresno State,Ohio,Virginia Tech,TCU,UConn,Texas State,Western Michigan,Florida State
+71,Kansas,Southern Miss,App State,Louisville,Western Michigan,Colorado,Oregon State,Tulsa
+72,Troy,Washington State,South Alabama,Arizona State,Minnesota,Arkansas,Eastern Michigan,South Alabama
+73,Army,Kentucky,Syracuse,NC State,Colorado State,Jacksonville State,App State,Oklahoma
+74,Jacksonville State,Fresno State,Air Force,San Diego State,Georgia State,Army,Illinois,Arizona State
+75,Miami (OH),Kansas,Arkansas,Old Dominion,Toledo,North Texas,Ohio,Jacksonville State
+76,Missouri State,Troy,Middle Tennessee,Baylor,Louisiana,Marshall,South Alabama,West Virginia
+77,UTSA,Army,Nevada,UConn,South Alabama,Michigan State,San José State,Louisiana
+78,West Virginia,Jacksonville State,Purdue,Toledo,Jacksonville State,Florida Atlantic,Arizona State,Florida Atlantic
+79,Mississippi State,Miami (OH),Colorado State,Florida State,San José State,Maryland,Kansas State,UConn
+80,Central Michigan,Missouri State,Georgia State,Kennesaw State,Air Force,Boston College,North Carolina,Miami (OH)
+81,Louisiana Tech,UTSA,UNLV,Navy,Troy,Oklahoma,TCU,East Carolina
+82,UCF,West Virginia,Florida State,Western Michigan,Central Michigan,TCU,California,NC State
+83,South Carolina,Mississippi State,Jacksonville State,Minnesota,Delaware,UNLV,Central Michigan,Arkansas
+84,Texas State,Central Michigan,New Mexico State,Southern Miss,Marshall,UConn,Jacksonville State,Army
+85,Florida,Louisiana Tech,Sacramento State,Kentucky,Boston College,Florida State,Texas State,Louisiana Tech
+86,Florida International,UCF,Houston,Fresno State,Middle Tennessee,East Carolina,Colorado,App State
+87,Arkansas State,South Carolina,Michigan,Kansas,Purdue,Western Michigan,Temple,Vanderbilt
+88,Georgia Southern,Texas State,South Florida,Army,Texas State,Oregon State,Arkansas,Wyoming
+89,Rutgers,Florida,Troy,Miami (OH),North Texas,Colorado State,Army,San José State
+90,Delaware,Florida International,West Virginia,Missouri State,Florida Atlantic,NC State,Syracuse,TCU
+91,Wisconsin,Arkansas State,Buffalo,Louisiana Tech,Navy,Ohio,Marshall,Georgia Tech
+92,Coastal Carolina,Georgia Southern,Liberty,Arkansas State,Army,Miami (OH),Michigan State,Kansas State
+93,Louisiana,Rutgers,Stanford,Georgia Southern,Georgia Tech,South Alabama,Maryland,Troy
+94,Utah State,Delaware,Eastern Michigan,Delaware,NC State,San José State,UAB,Florida International
+95,Marshall,Wisconsin,TCU,Wisconsin,San Diego State,Troy,Boston College,Central Michigan
+96,Colorado,Coastal Carolina,Georgia Tech,Coastal Carolina,Old Dominion,Central Michigan,Oklahoma,Georgia Southern
+97,North Carolina,Louisiana,Louisville,Louisiana,UNLV,Florida International,East Carolina,Buffalo
+98,Akron,Utah State,North Texas,Akron,Florida State,Arkansas State,Kansas,Texas State
+99,Michigan State,Marshall,Clemson,Rice,East Carolina,Rutgers,UConn,Colorado
+100,Rice,Colorado,Tulane,Temple,Kennesaw State,Delaware,Georgia Southern,Temple
+101,Stanford,Akron,NC State,Kent State,Southern Miss,Stanford,New Mexico State,Syracuse
+102,Temple,Michigan State,California,South Alabama,Washington State,Kent State,Colorado State,Boston College
+103,Buffalo,Rice,Baylor,Syracuse,Kansas,Wyoming,Louisiana Tech,Old Dominion
+104,Tulsa,Temple,Boise State,Arkansas,Miami (OH),Middle Tennessee,San Diego State,Coastal Carolina
+105,Kent State,Buffalo,Toledo,Ball State,Missouri State,Purdue,Miami (OH),Marshall
+106,Florida Atlantic,Tulsa,Hawai'i,Boston College,Louisiana Tech,Eastern Michigan,Troy,Michigan State
+107,Maryland,Kent State,Western Kentucky,Middle Tennessee,Arkansas State,Tulane,Florida International,Maryland
+108,Virginia Tech,Florida Atlantic,East Carolina,Nevada,Georgia Southern,Buffalo,Arkansas State,UAB
+109,App State,Maryland,Western Michigan,UTEP,Coastal Carolina,UAB,Rutgers,Navy
+110,UCLA,Virginia Tech,Ohio,UNLV,Akron,Navy,Delaware,Kansas
+111,Liberty,App State,Washington State,Jacksonville State,Rice,Kansas,Stanford,Nevada
+112,South Alabama,UCLA,Fresno State,New Mexico State,Temple,Louisiana Tech,Kent State,Colorado State
+113,Syracuse,Liberty,Miami (OH),Sacramento State,Kent State,Syracuse,Wyoming,Western Kentucky
+114,Wyoming,South Alabama,Missouri State,Tulane,Syracuse,Georgia Tech,Middle Tennessee,Bowling Green
+115,Air Force,Syracuse,Central Michigan,Ohio,New Mexico State,San Diego State,Tulane,New Mexico State
+116,Bowling Green,Wyoming,Texas State,Central Michigan,Arkansas,Old Dominion,Buffalo,San Diego State
+117,New Mexico State,Air Force,Florida International,Florida International,Ball State,Western Kentucky,Bowling Green,Rutgers
+118,Arkansas,Bowling Green,Arkansas State,Marshall,Nevada,Kennesaw State,Georgia Tech,Delaware
+119,Ball State,New Mexico State,Rutgers,Stanford,Oregon State,Southern Miss,Kennesaw State,Middle Tennessee
+120,UAB,Arkansas,Wisconsin,Buffalo,UTEP,Washington State,Navy,Arkansas State
+121,Boston College,Ball State,Coastal Carolina,Florida Atlantic,Sam Houston,Missouri State,Southern Miss,Stanford
+122,Eastern Michigan,UAB,Utah State,Wyoming,Sacramento State,Georgia Southern,Missouri State,Kent State
+123,Middle Tennessee,Boston College,Marshall,UAB,Tulane,Coastal Carolina,Nevada,Tulane
+124,UL Monroe,Middle Tennessee,Akron,Hawai'i,Ohio,Akron,Sam Houston,Utah State
+125,Nevada,UL Monroe,Kent State,Eastern Michigan,Hawai'i,Rice,Old Dominion,Kennesaw State
+126,Northern Illinois,Nevada,Florida Atlantic,Georgia Tech,Florida International,Temple,Western Kentucky,Southern Miss
+127,Purdue,Northern Illinois,Wyoming,Western Kentucky,Rutgers,New Mexico State,Washington State,Missouri State
+128,San José State,Purdue,Bowling Green,East Carolina,Stanford,Ball State,Coastal Carolina,Sam Houston
+129,Oregon State,San José State,Ball State,Washington State,Buffalo,Nevada,Akron,Washington State
+130,UTEP,Oregon State,UAB,Texas State,Wyoming,UTEP,Rice,Akron
+131,Colorado State,UTEP,Boston College,Rutgers,UAB,Sam Houston,Ball State,Rice
+132,Sam Houston,Colorado State,UL Monroe,Utah State,Eastern Michigan,Sacramento State,UTEP,Ball State
+133,Oklahoma State,Sam Houston,Northern Illinois,Bowling Green,Western Kentucky,Hawai'i,Sacramento State,UTEP
+134,Georgia State,Oklahoma State,Oregon State,UL Monroe,Utah State,Utah State,Hawai'i,Sacramento State
+135,Charlotte,Georgia State,UTEP,Northern Illinois,Bowling Green,Bowling Green,Utah State,Hawai'i
+136,Massachusetts,Charlotte,Sam Houston,Oregon State,UL Monroe,UL Monroe,UL Monroe,UL Monroe
+137,North Dakota State,Massachusetts,Oklahoma State,Sam Houston,Northern Illinois,Northern Illinois,Northern Illinois,Northern Illinois
+138,Sacramento State,Sacramento State,Charlotte,Charlotte,Charlotte,Charlotte,Charlotte,Charlotte
