@@ -14,11 +14,11 @@ UTSA,South Florida,WIN,7,Home,3,0,2,0,0,5
 South Alabama,Arkansas State,WIN,7,Road,3,2,0,0,0,5
 Arkansas State,South Alabama,LOSS,7,Home,0,0,0,0,0,0
 Iowa State,BYU,LOSS,14,Road,0,0,0,0,0,0
-BYU,Iowa State,WIN,14,Home,3,2,2,2,0,9
+BYU,Iowa State,WIN,14,Home,3,2,1,2,0,8
 Iowa,Washington,WIN,17,Road,3,2,1,2,0,8
 Washington,Iowa,LOSS,17,Home,0,0,0,0,0,0
 Florida State,Louisville,LOSS,24,Road,0,0,0,0,0,0
-Louisville,Florida State,WIN,24,Home,3,2,2,2,0,9
+Louisville,Florida State,WIN,24,Home,3,2,1,2,0,8
 Washington State,Utah State,LOSS,1,Road,0,0,0,0,0,0
 Utah State,Washington State,WIN,1,Home,3,0,0,0,0,3
 Wyoming,San José State,WIN,3,Road,3,2,1,0,0,6
@@ -30,7 +30,7 @@ Alabama,Georgia,LOSS,3,Home,0,0,0,0,3,3
 Stanford,Notre Dame,LOSS,51,Road,0,0,0,0,0,0
 Notre Dame,Stanford,WIN,51,Home,3,2,0,2,0,7
 Maryland,Ohio State,LOSS,29,Road,0,0,0,0,0,0
-Ohio State,Maryland,WIN,29,Home,3,2,1,2,0,8
+Ohio State,Maryland,WIN,29,Home,3,2,0,2,0,7
 Indiana,Nebraska,WIN,3,Road,3,2,3,2,0,10
 Nebraska,Indiana,LOSS,3,Home,0,0,0,0,3,3
 Ole Miss,Vanderbilt,WIN,35,Road,3,2,1,2,0,8
@@ -38,7 +38,7 @@ Vanderbilt,Ole Miss,LOSS,35,Home,0,0,0,0,0,0
 LSU,Kentucky,LOSS,1,Road,0,0,0,0,3,3
 Kentucky,LSU,WIN,1,Home,3,0,3,2,0,8
 Kansas,Utah,LOSS,17,Road,0,0,0,0,0,0
-Utah,Kansas,WIN,17,Home,3,2,1,2,0,8
+Utah,Kansas,WIN,17,Home,3,2,0,2,0,7
 UCLA,Oregon,WIN,2,Road,3,2,2,2,0,9
 Oregon,UCLA,LOSS,2,Home,0,0,0,0,3,3
 Texas A&M,Missouri,LOSS,21,Road,0,0,0,0,0,0
@@ -54,10 +54,10 @@ Penn State,USC,LOSS,8,Home,0,0,0,0,0,0
 Houston,Kansas State,WIN,19,Road,3,2,1,2,0,8
 Kansas State,Houston,LOSS,19,Home,0,0,0,0,0,0
 Boise State,Fresno State,WIN,7,Road,3,2,2,0,0,7
-Fresno State,Boise State,LOSS,7,Home,0,0,0,0,0,0
+Fresno State,Boise State,LOSS,7,Home,0,0,0,0,3,3
 North Carolina,Pittsburgh,WIN,4,Road,3,2,3,2,0,10
 Pittsburgh,North Carolina,LOSS,4,Home,0,0,0,0,0,0
-Arizona,West Virginia,WIN,21,Road,3,2,2,2,0,9
+Arizona,West Virginia,WIN,21,Road,3,2,1,2,0,8
 West Virginia,Arizona,LOSS,21,Home,0,0,0,0,0,0
 Wake Forest,NC State,WIN,24,Road,3,2,1,2,0,8
 NC State,Wake Forest,LOSS,24,Home,0,0,0,0,0,0
@@ -74,43 +74,43 @@ App State,Old Dominion,LOSS,7,Home,0,0,0,0,0,0
 Miami (OH),Massachusetts,WIN,1,Road,3,2,2,0,0,7
 Massachusetts,Miami (OH),LOSS,1,Home,0,0,0,0,0,0
 Duke,Georgia Tech,LOSS,3,Road,0,0,0,0,0,0
-Georgia Tech,Duke,WIN,3,Home,3,0,3,2,0,8
+Georgia Tech,Duke,WIN,3,Home,3,0,2,2,0,7
 Virginia Tech,California,LOSS,5,Road,0,0,0,0,0,0
-California,Virginia Tech,WIN,5,Home,3,0,3,2,0,8
-Illinois,Michigan State,WIN,1,Road,3,2,1,2,0,8
+California,Virginia Tech,WIN,5,Home,3,0,2,2,0,7
+Illinois,Michigan State,WIN,1,Road,3,2,0,2,0,7
 Michigan State,Illinois,LOSS,1,Home,0,0,0,0,0,0
 Charlotte,North Texas,LOSS,40,Road,0,0,0,0,0,0
 North Texas,Charlotte,WIN,40,Home,3,2,0,0,0,5
 Tulsa,Navy,LOSS,8,Road,0,0,0,0,0,0
-Navy,Tulsa,WIN,8,Home,3,0,2,0,0,5
+Navy,Tulsa,WIN,8,Home,3,0,1,0,0,4
 Eastern Michigan,Akron,WIN,2,Road,3,2,0,0,0,5
 Akron,Eastern Michigan,LOSS,2,Home,0,0,0,0,0,0
-Buffalo,Toledo,WIN,15,Road,3,2,2,0,0,7
+Buffalo,Toledo,WIN,15,Road,3,2,1,0,0,6
 Toledo,Buffalo,LOSS,15,Home,0,0,0,0,0,0
 Central Michigan,Ohio,LOSS,17,Road,0,0,0,0,0,0
 Ohio,Central Michigan,WIN,17,Home,3,2,1,0,0,6
 Kent State,Western Michigan,LOSS,31,Road,0,0,0,0,0,0
 Western Michigan,Kent State,WIN,31,Home,3,2,0,0,0,5
-UConn,Temple,WIN,14,Road,3,2,1,0,0,6
+UConn,Temple,WIN,14,Road,3,2,0,0,0,5
 Temple,UConn,LOSS,14,Home,0,0,0,0,0,0
 San Diego State,Oregon State,LOSS,52,Road,0,0,0,0,0,0
 Oregon State,San Diego State,WIN,52,Home,3,2,0,0,0,5
 UAB,Memphis,LOSS,25,Road,0,0,0,0,0,0
-Memphis,UAB,WIN,25,Home,3,2,1,0,0,6
+Memphis,UAB,WIN,25,Home,3,2,0,0,0,5
 Nevada,UTEP,WIN,17,Road,3,2,0,0,0,5
 UTEP,Nevada,LOSS,17,Home,0,0,0,0,0,0
 North Dakota State,UNLV,LOSS,6,Road,0,0,0,0,0,0
 UNLV,North Dakota State,WIN,6,Home,3,0,3,0,0,6
-Coastal Carolina,Marshall,WIN,6,Road,3,2,1,0,0,6
+Coastal Carolina,Marshall,WIN,6,Road,3,2,0,0,0,5
 Marshall,Coastal Carolina,LOSS,6,Home,0,0,0,0,0,0
 Syracuse,Virginia,LOSS,3,Road,0,0,0,0,0,0
 Virginia,Syracuse,WIN,3,Home,3,0,1,2,0,6
 Air Force,Northern Illinois,WIN,21,Road,3,2,0,0,0,5
 Northern Illinois,Air Force,LOSS,21,Home,0,0,0,0,0,0
 Louisiana,Louisiana Tech,LOSS,1,Road,0,0,0,0,0,0
-Louisiana Tech,Louisiana,WIN,1,Home,3,0,2,0,0,5
+Louisiana Tech,Louisiana,WIN,1,Home,3,0,1,0,0,4
 Minnesota,Purdue,LOSS,28,Road,0,0,0,0,0,0
-Purdue,Minnesota,WIN,28,Home,3,2,3,2,0,10
+Purdue,Minnesota,WIN,28,Home,3,2,2,2,0,9
 James Madison,Georgia Southern,WIN,3,Road,3,2,1,0,0,6
 Georgia Southern,James Madison,LOSS,3,Home,0,0,0,0,3,3
 Hawai'i,Arizona State,LOSS,18,Road,0,0,0,0,0,0

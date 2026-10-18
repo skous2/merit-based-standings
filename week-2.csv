@@ -1,6 +1,6 @@
 Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Qual Loss,Total
 Miami,FCS,WIN,70,Home,3,2,0,0,0,5
-Missouri,Kansas,WIN,17,Road,3,2,1,2,0,8
+Missouri,Kansas,WIN,17,Road,3,2,0,2,0,7
 Kansas,Missouri,LOSS,17,Home,0,0,0,0,0,0
 Louisville,FCS,WIN,46,Home,3,2,0,0,0,5
 Virginia,FCS,WIN,56,Home,3,2,0,0,0,5
@@ -17,7 +17,7 @@ Indiana,FCS,WIN,55,Home,3,2,0,0,0,5
 Oregon,Oklahoma State,LOSS,8,Road,0,0,0,0,0,0
 Oklahoma State,Oregon,WIN,8,Home,3,0,2,2,0,7
 Louisiana Tech,LSU,LOSS,31,Road,0,0,0,0,0,0
-LSU,Louisiana Tech,WIN,31,Home,3,2,0,0,0,5
+LSU,Louisiana Tech,WIN,31,Home,3,2,1,0,0,6
 Charlotte,Ole Miss,LOSS,32,Road,0,0,0,0,0,0
 Ole Miss,Charlotte,WIN,32,Home,3,2,0,0,0,5
 Arizona State,Texas A&M,LOSS,28,Road,0,0,0,0,0,0
@@ -29,27 +29,27 @@ Kentucky,Alabama,LOSS,28,Home,0,0,0,0,0,0
 Texas Tech,Oregon State,WIN,11,Road,3,2,1,0,0,6
 Oregon State,Texas Tech,LOSS,11,Home,0,0,0,0,0,0
 Louisiana,USC,LOSS,19,Road,0,0,0,0,0,0
-USC,Louisiana,WIN,19,Home,3,2,2,0,0,7
+USC,Louisiana,WIN,19,Home,3,2,1,0,0,6
 Arizona,BYU,LOSS,11,Road,0,0,0,0,0,0
-BYU,Arizona,WIN,11,Home,3,0,2,2,0,7
-Penn State,Temple,WIN,18,Road,3,2,1,0,0,6
+BYU,Arizona,WIN,11,Home,3,0,3,2,0,8
+Penn State,Temple,WIN,18,Road,3,2,0,0,0,5
 Temple,Penn State,LOSS,18,Home,0,0,0,0,0,0
 SMU,FCS,WIN,46,Home,3,2,0,0,0,5
-Tennessee,Georgia Tech,WIN,21,Road,3,2,0,2,0,7
+Tennessee,Georgia Tech,WIN,21,Road,3,2,1,2,0,8
 Georgia Tech,Tennessee,LOSS,21,Home,0,0,0,0,0,0
 Utah State,Washington,LOSS,2,Road,0,0,0,0,0,0
 Washington,Utah State,WIN,2,Home,3,0,0,0,0,3
 Arkansas,Utah,LOSS,33,Road,0,0,0,0,0,0
 Utah,Arkansas,WIN,33,Home,3,2,1,2,0,8
 Iowa State,Iowa,LOSS,3,Road,0,0,0,0,3,3
-Iowa,Iowa State,WIN,3,Home,3,0,2,2,0,7
+Iowa,Iowa State,WIN,3,Home,3,0,1,2,0,6
 Houston,FCS,WIN,71,Home,3,2,0,0,0,5
 Washington State,Kansas State,LOSS,27,Road,0,0,0,0,0,0
 Kansas State,Washington State,WIN,27,Home,3,2,0,0,0,5
 North Carolina,FCS,WIN,32,Home,3,2,0,0,0,5
 Old Dominion,Virginia Tech,LOSS,23,Road,0,0,0,0,0,0
 Virginia Tech,Old Dominion,WIN,23,Home,3,2,0,0,0,5
-Wake Forest,Purdue,WIN,2,Road,3,2,1,2,0,8
+Wake Forest,Purdue,WIN,2,Road,3,2,2,2,0,9
 Purdue,Wake Forest,LOSS,2,Home,0,0,0,0,3,3
 South Florida,Army,WIN,4,Road,3,2,1,0,0,6
 Army,South Florida,LOSS,4,Home,0,0,0,0,0,0
@@ -62,7 +62,7 @@ West Virginia,FCS,WIN,45,Home,3,2,0,0,0,5
 Central Michigan,FCS,WIN,3,Home,3,0,0,0,0,3
 Miami (OH),FCS,WIN,38,Home,3,2,0,0,0,5
 Ball State,FCS,WIN,24,Home,3,2,0,0,0,5
-Mississippi State,Minnesota,WIN,25,Road,3,2,3,2,0,10
+Mississippi State,Minnesota,WIN,25,Road,3,2,2,2,0,9
 Minnesota,Mississippi State,LOSS,25,Home,0,0,0,0,0,0
 Colorado,FCS,WIN,31,Home,3,2,0,0,0,5
 UCF,Pittsburgh,LOSS,5,Road,0,0,0,0,3,3
@@ -70,7 +70,7 @@ Pittsburgh,UCF,WIN,5,Home,3,0,2,2,0,7
 California,Syracuse,WIN,3,Road,3,2,1,2,0,8
 Syracuse,California,LOSS,3,Home,0,0,0,0,0,0
 Duke,Illinois,WIN,4,Road,3,2,1,2,0,8
-Illinois,Duke,LOSS,4,Home,0,0,0,0,3,3
+Illinois,Duke,LOSS,4,Home,0,0,0,0,0,0
 Eastern Michigan,Michigan State,LOSS,28,Road,0,0,0,0,0,0
 Michigan State,Eastern Michigan,WIN,28,Home,3,2,1,0,0,6
 Maryland,UConn,WIN,24,Road,3,2,1,0,0,6
@@ -83,7 +83,7 @@ Akron,FCS,WIN,35,Home,3,2,0,0,0,5
 Toledo,FCS,WIN,53,Home,3,2,0,0,0,5
 Massachusetts,FCS,WIN,27,Home,3,2,0,0,0,5
 UNLV,North Texas,LOSS,38,Road,0,0,0,0,0,0
-North Texas,UNLV,WIN,38,Home,3,2,1,0,0,6
+North Texas,UNLV,WIN,38,Home,3,2,2,0,0,7
 Wyoming,FCS,WIN,8,Home,3,0,0,0,0,3
 New Mexico,FCS,WIN,63,Home,3,2,0,0,0,5
 Troy,FCS,WIN,17,Home,3,2,0,0,0,5
@@ -93,7 +93,7 @@ Florida,FCS,WIN,49,Home,3,2,0,0,0,5
 Memphis,Boise State,LOSS,18,Road,0,0,0,0,0,0
 Boise State,Memphis,WIN,18,Home,3,2,2,0,0,7
 Buffalo,Florida International,LOSS,13,Road,0,0,0,0,0,0
-Florida International,Buffalo,WIN,13,Home,3,0,0,0,0,3
+Florida International,Buffalo,WIN,13,Home,3,0,1,0,0,4
 Jacksonville State,Ohio,LOSS,2,Road,0,0,0,0,0,0
 Ohio,Jacksonville State,WIN,2,Home,3,0,1,0,0,4
 Western Michigan,FCS,WIN,35,Home,3,2,0,0,0,5
@@ -127,7 +127,7 @@ San José State,FCS,WIN,10,Home,3,0,0,0,0,3
 UTEP,FCS,WIN,41,Home,3,2,0,0,0,5
 Georgia Southern,Clemson,LOSS,15,Road,0,0,0,0,0,0
 Clemson,Georgia Southern,WIN,15,Home,3,2,1,0,0,6
-North Dakota State,Air Force,WIN,6,Road,3,2,2,0,0,7
+North Dakota State,Air Force,WIN,6,Road,3,2,1,0,0,6
 Air Force,North Dakota State,LOSS,6,Home,0,0,0,0,3,3
 Sacramento State,Fresno State,LOSS,46,Road,0,0,0,0,0,0
 Fresno State,Sacramento State,WIN,46,Home,3,2,0,0,0,5
