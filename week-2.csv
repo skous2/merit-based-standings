@@ -6,11 +6,11 @@ Louisville,FCS,WIN,46,Home,3,2,0,0,0,5
 Virginia,FCS,WIN,56,Home,3,2,0,0,0,5
 NC State,FCS,WIN,73,Home,3,2,0,0,0,5
 Rutgers,Boston College,LOSS,7,Road,0,0,0,0,0,0
-Boston College,Rutgers,WIN,7,Home,3,0,0,2,0,5
+Boston College,Rutgers,WIN,7,Home,3,0,1,2,0,6
 Ohio State,Texas,LOSS,1,Road,0,0,0,0,3,3
 Texas,Ohio State,WIN,1,Home,3,0,3,2,0,8
 Western Kentucky,Georgia,LOSS,50,Road,0,0,0,0,0,0
-Georgia,Western Kentucky,WIN,50,Home,3,2,0,0,0,5
+Georgia,Western Kentucky,WIN,50,Home,3,2,1,0,0,6
 Rice,Notre Dame,LOSS,52,Road,0,0,0,0,0,0
 Notre Dame,Rice,WIN,52,Home,3,2,0,0,0,5
 Indiana,FCS,WIN,55,Home,3,2,0,0,0,5
@@ -26,16 +26,16 @@ Oklahoma,Michigan,LOSS,7,Road,0,0,0,0,0,0
 Michigan,Oklahoma,WIN,7,Home,3,0,1,2,0,6
 Alabama,Kentucky,WIN,28,Road,3,2,3,2,0,10
 Kentucky,Alabama,LOSS,28,Home,0,0,0,0,0,0
-Texas Tech,Oregon State,WIN,11,Road,3,2,1,0,0,6
+Texas Tech,Oregon State,WIN,11,Road,3,2,2,0,0,7
 Oregon State,Texas Tech,LOSS,11,Home,0,0,0,0,0,0
 Louisiana,USC,LOSS,19,Road,0,0,0,0,0,0
 USC,Louisiana,WIN,19,Home,3,2,1,0,0,6
 Arizona,BYU,LOSS,11,Road,0,0,0,0,0,0
-BYU,Arizona,WIN,11,Home,3,0,3,2,0,8
+BYU,Arizona,WIN,11,Home,3,0,2,2,0,7
 Penn State,Temple,WIN,18,Road,3,2,0,0,0,5
 Temple,Penn State,LOSS,18,Home,0,0,0,0,0,0
 SMU,FCS,WIN,46,Home,3,2,0,0,0,5
-Tennessee,Georgia Tech,WIN,21,Road,3,2,1,2,0,8
+Tennessee,Georgia Tech,WIN,21,Road,3,2,0,2,0,7
 Georgia Tech,Tennessee,LOSS,21,Home,0,0,0,0,0,0
 Utah State,Washington,LOSS,2,Road,0,0,0,0,0,0
 Washington,Utah State,WIN,2,Home,3,0,0,0,0,3
@@ -66,8 +66,8 @@ Mississippi State,Minnesota,WIN,25,Road,3,2,2,2,0,9
 Minnesota,Mississippi State,LOSS,25,Home,0,0,0,0,0,0
 Colorado,FCS,WIN,31,Home,3,2,0,0,0,5
 UCF,Pittsburgh,LOSS,5,Road,0,0,0,0,3,3
-Pittsburgh,UCF,WIN,5,Home,3,0,2,2,0,7
-California,Syracuse,WIN,3,Road,3,2,1,2,0,8
+Pittsburgh,UCF,WIN,5,Home,3,0,1,2,0,6
+California,Syracuse,WIN,3,Road,3,2,0,2,0,7
 Syracuse,California,LOSS,3,Home,0,0,0,0,0,0
 Duke,Illinois,WIN,4,Road,3,2,1,2,0,8
 Illinois,Duke,LOSS,4,Home,0,0,0,0,0,0
@@ -83,7 +83,7 @@ Akron,FCS,WIN,35,Home,3,2,0,0,0,5
 Toledo,FCS,WIN,53,Home,3,2,0,0,0,5
 Massachusetts,FCS,WIN,27,Home,3,2,0,0,0,5
 UNLV,North Texas,LOSS,38,Road,0,0,0,0,0,0
-North Texas,UNLV,WIN,38,Home,3,2,2,0,0,7
+North Texas,UNLV,WIN,38,Home,3,2,1,0,0,6
 Wyoming,FCS,WIN,8,Home,3,0,0,0,0,3
 New Mexico,FCS,WIN,63,Home,3,2,0,0,0,5
 Troy,FCS,WIN,17,Home,3,2,0,0,0,5
@@ -127,7 +127,7 @@ San José State,FCS,WIN,10,Home,3,0,0,0,0,3
 UTEP,FCS,WIN,41,Home,3,2,0,0,0,5
 Georgia Southern,Clemson,LOSS,15,Road,0,0,0,0,0,0
 Clemson,Georgia Southern,WIN,15,Home,3,2,1,0,0,6
-North Dakota State,Air Force,WIN,6,Road,3,2,1,0,0,6
+North Dakota State,Air Force,WIN,6,Road,3,2,2,0,0,7
 Air Force,North Dakota State,LOSS,6,Home,0,0,0,0,3,3
 Sacramento State,Fresno State,LOSS,46,Road,0,0,0,0,0,0
 Fresno State,Sacramento State,WIN,46,Home,3,2,0,0,0,5
