@@ -10,7 +10,12 @@ const PORT = process.env.PORT || 3000;
 // HTML gets no-cache so browsers always revalidate with the server instead of
 // silently reusing a stale page after a deploy (heuristic caching otherwise
 // lets Chrome/etc. serve old HTML with no explicit freshness signal).
+// ETag/Last-Modified are off because they're derived from size + mtime: Cloud Run
+// source builds normalize mtimes, so a same-length edit like "Week 8" -> "Week 9"
+// keeps the same validators and revalidation returns a 304 for the stale page.
 app.use(express.static('public', {
+  etag: false,
+  lastModified: false,
   setHeaders: (res, filePath) => {
     if (filePath.endsWith('.html')) {
       res.setHeader('Cache-Control', 'no-cache');
