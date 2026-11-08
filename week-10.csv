@@ -1,0 +1,126 @@
+Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Qual Loss,Total
+Ohio,Akron,WIN,8,Road,3,2,0,0,0,5
+Akron,Ohio,LOSS,8,Home,0,0,0,0,0,0
+Buffalo,Miami (OH),WIN,3,Road,3,2,1,0,0,6
+Miami (OH),Buffalo,LOSS,3,Home,0,0,0,0,0,0
+Ball State,Massachusetts,LOSS,1,Road,0,0,0,0,0,0
+Massachusetts,Ball State,WIN,1,Home,3,0,0,0,0,3
+Toledo,Sacramento State,WIN,3,Road,3,2,0,0,0,5
+Sacramento State,Toledo,LOSS,3,Home,0,0,0,0,0,0
+Central Michigan,Eastern Michigan,WIN,28,Road,3,2,1,0,0,6
+Eastern Michigan,Central Michigan,LOSS,28,Home,0,0,0,0,0,0
+UTSA,Florida Atlantic,LOSS,31,Road,0,0,0,0,0,0
+Florida Atlantic,UTSA,WIN,31,Home,3,2,2,0,0,7
+James Madison,Southern Miss,WIN,31,Road,3,2,0,0,0,5
+Southern Miss,James Madison,LOSS,31,Home,0,0,0,0,0,0
+TCU,Arizona,LOSS,1,Road,0,0,0,0,3,3
+Arizona,TCU,WIN,1,Home,3,0,1,2,0,6
+Virginia Tech,SMU,LOSS,23,Road,0,0,0,0,0,0
+SMU,Virginia Tech,WIN,23,Home,3,2,3,2,0,10
+South Florida,East Carolina,LOSS,3,Road,0,0,0,0,0,0
+East Carolina,South Florida,WIN,3,Home,3,0,2,0,0,5
+Nebraska,Illinois,LOSS,11,Road,0,0,0,0,0,0
+Illinois,Nebraska,WIN,11,Home,3,0,2,2,0,7
+New Mexico,Nevada,WIN,28,Road,3,2,0,0,0,5
+Nevada,New Mexico,LOSS,28,Home,0,0,0,0,0,0
+Miami,Notre Dame,LOSS,7,Road,0,0,0,0,3,3
+Notre Dame,Miami,WIN,7,Home,3,0,3,2,0,8
+Georgia,Ole Miss,WIN,35,Road,3,2,3,2,0,10
+Ole Miss,Georgia,LOSS,35,Home,0,0,0,0,0,0
+BYU,Utah,LOSS,8,Road,0,0,0,0,0,0
+Utah,BYU,WIN,8,Home,3,0,3,2,0,8
+Alabama,LSU,WIN,18,Road,3,2,3,2,0,10
+LSU,Alabama,LOSS,18,Home,0,0,0,0,0,0
+Kentucky,Tennessee,LOSS,28,Road,0,0,0,0,0,0
+Tennessee,Kentucky,WIN,28,Home,3,2,3,2,0,10
+Texas,Missouri,WIN,14,Road,3,2,3,2,0,10
+Missouri,Texas,LOSS,14,Home,0,0,0,0,0,0
+UCLA,Minnesota,WIN,14,Road,3,2,2,2,0,9
+Minnesota,UCLA,LOSS,14,Home,0,0,0,0,0,0
+Oregon,Ohio State,WIN,13,Road,3,2,3,2,0,10
+Ohio State,Oregon,LOSS,13,Home,0,0,0,0,0,0
+West Virginia,Texas Tech,LOSS,5,Road,0,0,0,0,3,3
+Texas Tech,West Virginia,WIN,5,Home,3,0,2,2,0,7
+Wake Forest,FCS,WIN,77,Home,3,2,0,0,0,5
+Cincinnati,Houston,LOSS,7,Road,0,0,0,0,3,3
+Houston,Cincinnati,WIN,7,Home,3,0,2,2,0,7
+Iowa,Northwestern,WIN,14,Road,3,2,3,2,0,10
+Northwestern,Iowa,LOSS,14,Home,0,0,0,0,0,0
+Texas A&M,South Carolina,LOSS,8,Road,0,0,0,0,0,0
+South Carolina,Texas A&M,WIN,8,Home,3,0,1,2,0,6
+Oklahoma,Florida,WIN,16,Road,3,2,3,2,0,10
+Florida,Oklahoma,LOSS,16,Home,0,0,0,0,0,0
+Boise State,Colorado State,WIN,26,Road,3,2,0,0,0,5
+Colorado State,Boise State,LOSS,26,Home,0,0,0,0,0,0
+Iowa State,Baylor,LOSS,11,Road,0,0,0,0,0,0
+Baylor,Iowa State,WIN,11,Home,3,0,2,2,0,7
+Clemson,Syracuse,WIN,5,Road,3,2,1,2,0,8
+Syracuse,Clemson,LOSS,5,Home,0,0,0,0,0,0
+Florida State,Boston College,WIN,7,Road,3,2,1,2,0,8
+Boston College,Florida State,LOSS,7,Home,0,0,0,0,0,0
+North Carolina,UConn,WIN,17,Road,3,2,1,0,0,6
+UConn,North Carolina,LOSS,17,Home,0,0,0,0,0,0
+Tulsa,Tulane,WIN,50,Road,3,2,1,0,0,6
+Tulane,Tulsa,LOSS,50,Home,0,0,0,0,0,0
+Duke,NC State,WIN,38,Road,3,2,1,2,0,8
+NC State,Duke,LOSS,38,Home,0,0,0,0,0,0
+Maryland,Purdue,WIN,5,Road,3,2,1,2,0,8
+Purdue,Maryland,LOSS,5,Home,0,0,0,0,0,0
+Arkansas,Auburn,LOSS,3,Road,0,0,0,0,0,0
+Auburn,Arkansas,WIN,3,Home,3,0,1,2,0,6
+Oklahoma State,Kansas State,WIN,38,Road,3,2,1,2,0,8
+Kansas State,Oklahoma State,LOSS,38,Home,0,0,0,0,0,0
+Old Dominion,Coastal Carolina,WIN,13,Road,3,2,0,0,0,5
+Coastal Carolina,Old Dominion,LOSS,13,Home,0,0,0,0,0,0
+Georgia State,App State,WIN,16,Road,3,2,1,0,0,6
+App State,Georgia State,LOSS,16,Home,0,0,0,0,0,0
+UL Monroe,Arkansas State,WIN,2,Road,3,2,0,0,0,5
+Arkansas State,UL Monroe,LOSS,2,Home,0,0,0,0,0,0
+Delaware,Kennesaw State,LOSS,2,Road,0,0,0,0,0,0
+Kennesaw State,Delaware,WIN,2,Home,3,0,0,0,0,3
+Penn State,Washington,WIN,3,Road,3,2,2,2,0,9
+Washington,Penn State,LOSS,3,Home,0,0,0,0,0,0
+Charlotte,UAB,LOSS,11,Road,0,0,0,0,0,0
+UAB,Charlotte,WIN,11,Home,3,0,0,0,0,3
+Temple,Navy,LOSS,7,Road,0,0,0,0,0,0
+Navy,Temple,WIN,7,Home,3,0,0,0,0,3
+Marshall,Georgia Southern,LOSS,36,Road,0,0,0,0,0,0
+Georgia Southern,Marshall,WIN,36,Home,3,2,1,0,0,6
+Western Kentucky,Middle Tennessee,LOSS,9,Road,0,0,0,0,0,0
+Middle Tennessee,Western Kentucky,WIN,9,Home,3,0,0,0,0,3
+UCF,Kansas,WIN,1,Road,3,2,0,2,0,7
+Kansas,UCF,LOSS,1,Home,0,0,0,0,0,0
+Rice,North Texas,LOSS,29,Road,0,0,0,0,0,0
+North Texas,Rice,WIN,29,Home,3,2,0,0,0,5
+Northern Illinois,San José State,LOSS,11,Road,0,0,0,0,0,0
+San José State,Northern Illinois,WIN,11,Home,3,0,0,0,0,3
+Missouri State,Florida International,LOSS,3,Road,0,0,0,0,0,0
+Florida International,Missouri State,WIN,3,Home,3,0,0,0,0,3
+Louisiana Tech,Troy,WIN,24,Road,3,2,1,0,0,6
+Troy,Louisiana Tech,LOSS,24,Home,0,0,0,0,0,0
+Vanderbilt,Mississippi State,WIN,2,Road,3,2,2,2,0,9
+Mississippi State,Vanderbilt,LOSS,2,Home,0,0,0,0,0,0
+Rutgers,Wisconsin,LOSS,21,Road,0,0,0,0,0,0
+Wisconsin,Rutgers,WIN,21,Home,3,2,0,2,0,7
+South Alabama,Louisiana,LOSS,2,Road,0,0,0,0,0,0
+Louisiana,South Alabama,WIN,2,Home,3,0,1,0,0,4
+Sam Houston,Jacksonville State,LOSS,33,Road,0,0,0,0,0,0
+Jacksonville State,Sam Houston,WIN,33,Home,3,2,0,0,0,5
+Colorado,Arizona State,LOSS,10,Road,0,0,0,0,0,0
+Arizona State,Colorado,WIN,10,Home,3,0,1,2,0,6
+Louisville,Georgia Tech,WIN,27,Road,3,2,0,2,0,7
+Georgia Tech,Louisville,LOSS,27,Home,0,0,0,0,0,0
+Michigan State,Michigan,WIN,9,Road,3,2,2,2,0,9
+Michigan,Michigan State,LOSS,9,Home,0,0,0,0,0,0
+Air Force,Army,WIN,3,Road,3,2,1,0,0,6
+Army,Air Force,LOSS,3,Home,0,0,0,0,0,0
+Liberty,New Mexico State,WIN,16,Road,3,2,0,0,0,5
+New Mexico State,Liberty,LOSS,16,Home,0,0,0,0,0,0
+Fresno State,Utah State,LOSS,7,Road,0,0,0,0,0,0
+Utah State,Fresno State,WIN,7,Home,3,0,2,0,0,5
+Hawai'i,UTEP,WIN,3,Road,3,2,0,0,0,5
+UTEP,Hawai'i,LOSS,3,Home,0,0,0,0,0,0
+Texas State,Oregon State,WIN,21,Road,3,2,1,0,0,6
+Oregon State,Texas State,LOSS,21,Home,0,0,0,0,0,0
+Wyoming,UNLV,WIN,6,Road,3,2,1,0,0,6
+UNLV,Wyoming,LOSS,6,Home,0,0,0,0,0,0
