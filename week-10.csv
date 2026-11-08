@@ -27,7 +27,7 @@ Miami,Notre Dame,LOSS,7,Road,0,0,0,0,3,3
 Notre Dame,Miami,WIN,7,Home,3,0,3,2,0,8
 Georgia,Ole Miss,WIN,35,Road,3,2,3,2,0,10
 Ole Miss,Georgia,LOSS,35,Home,0,0,0,0,0,0
-BYU,Utah,LOSS,8,Road,0,0,0,0,0,0
+BYU,Utah,LOSS,8,Road,0,0,0,0,3,3
 Utah,BYU,WIN,8,Home,3,0,3,2,0,8
 Alabama,LSU,WIN,18,Road,3,2,3,2,0,10
 LSU,Alabama,LOSS,18,Home,0,0,0,0,0,0
@@ -46,15 +46,15 @@ Cincinnati,Houston,LOSS,7,Road,0,0,0,0,3,3
 Houston,Cincinnati,WIN,7,Home,3,0,2,2,0,7
 Iowa,Northwestern,WIN,14,Road,3,2,3,2,0,10
 Northwestern,Iowa,LOSS,14,Home,0,0,0,0,0,0
-Texas A&M,South Carolina,LOSS,8,Road,0,0,0,0,0,0
+Texas A&M,South Carolina,LOSS,8,Road,0,0,0,0,3,3
 South Carolina,Texas A&M,WIN,8,Home,3,0,1,2,0,6
 Oklahoma,Florida,WIN,16,Road,3,2,3,2,0,10
 Florida,Oklahoma,LOSS,16,Home,0,0,0,0,0,0
 Boise State,Colorado State,WIN,26,Road,3,2,0,0,0,5
 Colorado State,Boise State,LOSS,26,Home,0,0,0,0,0,0
 Iowa State,Baylor,LOSS,11,Road,0,0,0,0,0,0
-Baylor,Iowa State,WIN,11,Home,3,0,2,2,0,7
-Clemson,Syracuse,WIN,5,Road,3,2,1,2,0,8
+Baylor,Iowa State,WIN,11,Home,3,0,1,2,0,6
+Clemson,Syracuse,WIN,5,Road,3,2,2,2,0,9
 Syracuse,Clemson,LOSS,5,Home,0,0,0,0,0,0
 Florida State,Boston College,WIN,7,Road,3,2,1,2,0,8
 Boston College,Florida State,LOSS,7,Home,0,0,0,0,0,0

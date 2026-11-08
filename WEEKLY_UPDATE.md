@@ -2,6 +2,32 @@
 
 ## Session log
 
+### 2026-11-08
+
+Rule change requested by the site owner after the Week 10 update: a **Quality
+Loss now requires losing by 8 points or fewer** (was 7). Everything else about
+the rule is unchanged (opponent currently top 30, 3 pts).
+
+- Changed `QUAL_LOSS_MAX_MARGIN` in `scripts/config.py` from 7 to 8 and the
+  matching sentence in the About section of `public/index.html`.
+- Rescored the whole 2026 season by **replaying every week in order (1
+  through 10)** from the stored `week-N.csv` results, no re-scraping, so
+  each week's games get graded against the previous week's standings under
+  the new rule, the same way the real weekly runs worked. Running
+  `update_week.py --week 10` once is *not* enough after a rule change: its
+  first pass grades against the old-rule `current-standings.csv`, which carries
+  some of the old rule into the result.
+- Validated the replay method first: replaying with the margin still at 7
+  reproduced every published CSV byte-for-byte, so the 8-point results are
+  exactly what the site would show had the rule always been 8.
+- 10 games that were 8-point losses to top-30 opponents now earn the bonus.
+  60 teams changed position. Biggest moves: Penn State +9 (#44), Oregon +5
+  (#15), Arizona +5 (#18), Oklahoma State -7 (#24).
+- 2025 archive data is untouched (it was scored under its own rules).
+- **If the rules change again mid-season, replay the same way**: for each week
+  w = 1..N, call `update_week.run(w, year, dry_run=False)` with `scrape_week`
+  swapped for a function that returns `load_raw_week(w), [], 0`.
+
 ### 2026-09-13
 
 Week 2 update surfaced a real inconsistency in the SOS/Quality-Loss grading,

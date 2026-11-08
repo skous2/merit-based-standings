@@ -1,78 +1,78 @@
 Standing,Team,Total Points,AVG Points,Initial Standing,Conference
-1,Utah,67,7.44,11,Big 12
-2,UCLA,66,7.33,110,Big 10
-3,Miami,65,7.22,8,ACC
-4,Georgia,63,7.00,4,SEC
-5,Notre Dame,62,6.89,9,Independent
-6,Alabama,61,6.78,7,SEC
+1,Utah,66,7.33,11,Big 12
+2,Miami,65,7.22,8,ACC
+3,UCLA,65,7.22,110,Big 10
+4,Georgia,64,7.11,4,SEC
+5,Alabama,62,6.89,7,SEC
+6,Notre Dame,62,6.89,9,Independent
 7,Texas,61,6.78,23,SEC
 8,Indiana,60,6.67,2,Big 10
 9,Wake Forest,60,6.67,33,ACC
-10,Texas Tech,55,6.11,5,Big 12
-11,Tennessee,55,6.11,32,SEC
-12,Iowa,54,6.00,20,Big 10
-13,Duke,52,5.78,38,ACC
-14,Kentucky,51,5.67,69,SEC
-15,Ole Miss,50,5.56,13,SEC
-16,LSU,50,5.56,42,SEC
-17,Oklahoma State,50,5.56,133,Big 12
-18,Ohio State,49,5.44,1,Big 10
-19,BYU,49,5.44,3,Big 12
-20,Oregon,49,5.44,6,Big 10
-21,USC,49,5.44,14,Big 10
-22,Louisville,49,5.44,26,ACC
-23,Arizona,48,5.33,12,Big 12
-24,Houston,48,5.33,18,Big 12
-25,Boise State,48,5.33,52,Pac 12
-26,SMU,46,5.11,31,ACC
-27,Clemson,45,5.00,37,ACC
-28,South Carolina,45,5.00,83,SEC
-29,Pittsburgh,43,4.78,25,ACC
-30,Northwestern,43,4.78,57,Big 10
-31,Wisconsin,43,4.78,91,Big 10
+10,Tennessee,58,6.44,32,SEC
+11,Texas Tech,55,6.11,5,Big 12
+12,Iowa,53,5.89,20,Big 10
+13,LSU,53,5.89,42,SEC
+14,Kentucky,53,5.89,69,SEC
+15,Oregon,52,5.78,6,Big 10
+16,Duke,52,5.78,38,ACC
+17,BYU,51,5.67,3,Big 12
+18,Arizona,50,5.56,12,Big 12
+19,Ole Miss,50,5.56,13,SEC
+20,USC,50,5.56,14,Big 10
+21,Houston,50,5.56,18,Big 12
+22,Louisville,50,5.56,26,ACC
+23,Ohio State,49,5.44,1,Big 10
+24,Oklahoma State,48,5.33,133,Big 12
+25,SMU,46,5.11,31,ACC
+26,Clemson,46,5.11,37,ACC
+27,South Carolina,46,5.11,83,SEC
+28,Boise State,45,5.00,52,Pac 12
+29,Northwestern,44,4.89,57,Big 10
+30,Wisconsin,44,4.89,91,Big 10
+31,Pittsburgh,43,4.78,25,ACC
 32,James Madison,43,4.30,29,Sun Belt
 33,Missouri,42,4.67,30,SEC
-34,Illinois,42,4.67,34,Big 10
-35,Baylor,42,4.67,50,Big 12
-36,North Carolina,42,4.67,97,ACC
-37,Virginia Tech,42,4.67,108,ACC
-38,New Mexico,41,4.56,53,Mountain West
-39,Florida,40,4.44,85,SEC
-40,Liberty,38,4.22,111,Conf USA
-41,North Dakota State,38,4.22,137,Mountain West
-42,Oklahoma,37,4.11,17,SEC
-43,Nebraska,37,4.11,40,Big 10
-44,Minnesota,37,4.11,65,Big 10
-45,North Texas,36,4.00,27,American
-46,Auburn,36,4.00,55,SEC
-47,Memphis,36,4.00,60,American
-48,Michigan,35,3.89,22,Big 10
+34,North Carolina,42,4.67,97,ACC
+35,Virginia Tech,42,4.67,108,ACC
+36,Illinois,41,4.56,34,Big 10
+37,New Mexico,41,4.56,53,Mountain West
+38,Oklahoma,40,4.44,17,SEC
+39,Baylor,40,4.44,50,Big 12
+40,Florida,40,4.44,85,SEC
+41,Liberty,38,4.22,111,Conf USA
+42,North Dakota State,38,4.22,137,Mountain West
+43,Michigan,37,4.11,22,Big 10
+44,Penn State,37,4.11,44,Big 10
+45,Minnesota,37,4.11,65,Big 10
+46,North Texas,36,4.00,27,American
+47,Auburn,36,4.00,55,SEC
+48,Memphis,36,4.00,60,American
 49,UTSA,35,3.89,77,American
 50,Louisiana Tech,35,3.89,81,Sun Belt
 51,UCF,35,3.89,82,Big 12
 52,Cincinnati,34,3.78,41,Big 12
-53,Penn State,34,3.78,44,Big 10
-54,Toledo,34,3.78,54,MAC
-55,West Virginia,34,3.78,78,Big 12
-56,Washington,33,3.67,36,Big 10
+53,Toledo,34,3.78,54,MAC
+54,West Virginia,34,3.78,78,Big 12
+55,Washington,33,3.67,36,Big 10
+56,Nebraska,33,3.67,40,Big 10
 57,Ohio,33,3.67,66,MAC
 58,Arizona State,32,3.56,28,Big 12
-59,Air Force,32,3.56,115,Mountain West
-60,Mississippi State,31,3.44,79,SEC
+59,Mississippi State,32,3.56,79,SEC
+60,Air Force,32,3.56,115,Mountain West
 61,Tulsa,31,3.44,104,American
 62,Wyoming,31,3.44,114,Mountain West
 63,TCU,30,3.33,19,Big 12
 64,Fresno State,30,3.33,70,Pac 12
 65,Jacksonville State,30,3.33,74,Conf USA
-66,South Florida,29,3.22,35,American
-67,Western Michigan,29,3.22,64,MAC
-68,Texas State,29,3.22,84,Pac 12
-69,Iowa State,28,3.11,24,Big 12
-70,Virginia,27,3.00,16,ACC
-71,Georgia Southern,27,3.00,88,Sun Belt
-72,Syracuse,27,3.00,113,ACC
-73,Texas A&M,26,2.89,10,SEC
-74,Florida State,26,2.89,59,ACC
+66,Syracuse,30,3.33,113,ACC
+67,Texas A&M,29,3.22,10,SEC
+68,South Florida,29,3.22,35,American
+69,Florida State,29,3.22,59,ACC
+70,Western Michigan,29,3.22,64,MAC
+71,Texas State,29,3.22,84,Pac 12
+72,Virginia,28,3.11,16,ACC
+73,Iowa State,28,3.11,24,Big 12
+74,Georgia Southern,27,3.00,88,Sun Belt
 75,Army,26,2.89,73,American
 76,Louisiana,26,2.89,93,Sun Belt
 77,Buffalo,26,2.89,103,MAC
@@ -89,19 +89,19 @@ Standing,Team,Total Points,AVG Points,Initial Standing,Conference
 88,Vanderbilt,23,2.56,15,SEC
 89,East Carolina,23,2.56,61,American
 90,Michigan State,23,2.56,99,Big 10
-91,San José State,22,2.20,128,Mountain West
-92,California,21,2.33,49,ACC
+91,California,22,2.44,49,ACC
+92,San José State,22,2.20,128,Mountain West
 93,UConn,21,2.33,51,Independent
 94,Colorado,21,2.33,96,Big 12
 95,Arkansas,21,2.33,118,SEC
 96,Troy,20,2.22,72,Sun Belt
 97,Central Michigan,20,2.22,80,MAC
 98,Marshall,20,2.22,95,Sun Belt
-99,South Alabama,20,2.22,112,Sun Belt
-100,Tulane,19,2.11,39,American
-101,Kansas State,19,2.11,46,Big 12
-102,Stanford,19,2.11,101,ACC
-103,Maryland,19,2.11,107,Big 10
+99,Tulane,19,2.11,39,American
+100,Kansas State,19,2.11,46,Big 12
+101,Stanford,19,2.11,101,ACC
+102,Maryland,19,2.11,107,Big 10
+103,South Alabama,19,2.11,112,Sun Belt
 104,Middle Tennessee,19,2.11,123,Conf USA
 105,Eastern Michigan,19,1.90,122,MAC
 106,Delaware,18,2.00,90,Conf USA

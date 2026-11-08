@@ -8,7 +8,7 @@ Virginia Tech,Pittsburgh,LOSS,2,Home,0,0,0,0,3,3
 Liberty,Delaware,WIN,16,Road,3,2,0,0,0,5
 Delaware,Liberty,LOSS,16,Home,0,0,0,0,0,0
 Penn State,Northwestern,LOSS,21,Road,0,0,0,0,0,0
-Northwestern,Penn State,WIN,21,Home,3,2,1,2,0,8
+Northwestern,Penn State,WIN,21,Home,3,2,2,2,0,9
 Vanderbilt,Georgia,LOSS,24,Road,0,0,0,0,0,0
 Georgia,Vanderbilt,WIN,24,Home,3,2,0,2,0,7
 Notre Dame,North Carolina,WIN,11,Road,3,2,2,2,0,9
@@ -33,12 +33,12 @@ Tennessee,Auburn,WIN,10,Home,3,0,2,2,0,7
 Washington,USC,LOSS,4,Road,0,0,0,0,3,3
 USC,Washington,WIN,4,Home,3,0,2,2,0,7
 UCF,Houston,LOSS,10,Road,0,0,0,0,0,0
-Houston,UCF,WIN,10,Home,3,0,2,2,0,7
+Houston,UCF,WIN,10,Home,3,0,1,2,0,6
 Boston College,SMU,LOSS,9,Road,0,0,0,0,0,0
 SMU,Boston College,WIN,9,Home,3,0,1,2,0,6
 Utah State,Boise State,LOSS,19,Road,0,0,0,0,0,0
 Boise State,Utah State,WIN,19,Home,3,2,0,0,0,5
-Kentucky,South Carolina,WIN,1,Road,3,2,2,2,0,9
+Kentucky,South Carolina,WIN,1,Road,3,2,3,2,0,10
 South Carolina,Kentucky,LOSS,1,Home,0,0,0,0,3,3
 Memphis,Charlotte,WIN,51,Road,3,2,0,0,0,5
 Charlotte,Memphis,LOSS,51,Home,0,0,0,0,0,0

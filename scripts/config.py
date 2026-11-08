@@ -3,7 +3,8 @@
 Point values reflect the 2026-season rule revision (confirmed with the site
 owner 2026-08-21): Win=3, Conf=2, quality win requires a home margin of 14+
 (road wins always qualify), and a new quality-loss bonus rewards close losses
-to currently top-30 teams.
+to currently top-30 teams. Quality-loss margin raised from 7 to 8 points on
+2026-11-08 (whole season replayed under the new rule).
 """
 import json
 from pathlib import Path
@@ -23,7 +24,7 @@ SOS_TIERS = (
 
 QUAL_LOSS_POINTS = 3
 QUAL_LOSS_RANK_THRESHOLD = 30  # opponent must be currently ranked at or above this
-QUAL_LOSS_MAX_MARGIN = 7  # loss must be by this many points or fewer
+QUAL_LOSS_MAX_MARGIN = 8  # loss must be by this many points or fewer
 
 FCS_LABEL = "FCS"
 

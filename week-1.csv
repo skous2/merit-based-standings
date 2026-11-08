@@ -29,7 +29,7 @@ Toledo,Michigan State,LOSS,10,Road,0,0,0,0,0,0
 Michigan State,Toledo,WIN,10,Home,3,0,2,0,0,5
 Ball State,Ohio State,LOSS,53,Road,0,0,0,0,0,0
 Ohio State,Ball State,WIN,53,Home,3,2,0,0,0,5
-Boise State,Oregon,LOSS,7,Road,0,0,0,0,3,3
+Boise State,Oregon,LOSS,7,Road,0,0,0,0,0,0
 Oregon,Boise State,WIN,7,Home,3,0,3,0,0,6
 Georgia,FCS,WIN,60,Home,3,2,0,0,0,5
 Texas State,Texas,LOSS,52,Road,0,0,0,0,0,0
@@ -57,7 +57,7 @@ Coastal Carolina,West Virginia,LOSS,7,Road,0,0,0,0,0,0
 West Virginia,Coastal Carolina,WIN,7,Home,3,0,0,0,0,3
 Syracuse,FCS,WIN,63,Home,3,2,0,0,0,5
 Ohio,Nebraska,LOSS,28,Road,0,0,0,0,0,0
-Nebraska,Ohio,WIN,28,Home,3,2,2,0,0,7
+Nebraska,Ohio,WIN,28,Home,3,2,1,0,0,6
 UConn,FCS,WIN,49,Home,3,2,0,0,0,5
 Army,FCS,WIN,56,Home,3,2,0,0,0,5
 Bowling Green,FCS,LOSS,7,Home,0,0,0,0,0,0

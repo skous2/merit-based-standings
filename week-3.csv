@@ -1,6 +1,6 @@
 Team 1,Team 2,Result,Margin,Road?,Win,Qual Win,SOS,Conf,Qual Loss,Total
 Syracuse,Pittsburgh,LOSS,14,Road,0,0,0,0,0,0
-Pittsburgh,Syracuse,WIN,14,Home,3,2,1,2,0,8
+Pittsburgh,Syracuse,WIN,14,Home,3,2,2,2,0,9
 Miami,Wake Forest,WIN,13,Road,3,2,3,2,0,10
 Wake Forest,Miami,LOSS,13,Home,0,0,0,0,0,0
 Houston,Texas Tech,LOSS,2,Road,0,0,0,0,3,3
@@ -16,7 +16,7 @@ Western Kentucky,Indiana,LOSS,38,Road,0,0,0,0,0,0
 Indiana,Western Kentucky,WIN,38,Home,3,2,0,0,0,5
 Kent State,Ohio State,LOSS,56,Road,0,0,0,0,0,0
 Ohio State,Kent State,WIN,56,Home,3,2,0,0,0,5
-LSU,Ole Miss,LOSS,8,Road,0,0,0,0,0,0
+LSU,Ole Miss,LOSS,8,Road,0,0,0,0,3,3
 Ole Miss,LSU,WIN,8,Home,3,0,3,2,0,8
 Kentucky,Texas A&M,WIN,10,Road,3,2,1,2,0,8
 Texas A&M,Kentucky,LOSS,10,Home,0,0,0,0,0,0
@@ -80,7 +80,7 @@ Liberty,Ball State,WIN,36,Home,3,2,0,0,0,5
 Louisiana Tech,Baylor,LOSS,17,Road,0,0,0,0,0,0
 Baylor,Louisiana Tech,WIN,17,Home,3,2,2,0,0,7
 UL Monroe,FCS,LOSS,3,Home,0,0,0,0,0,0
-Mississippi State,South Carolina,WIN,7,Road,3,2,2,2,0,9
+Mississippi State,South Carolina,WIN,7,Road,3,2,3,2,0,10
 South Carolina,Mississippi State,LOSS,7,Home,0,0,0,0,0,0
 East Carolina,Old Dominion,WIN,3,Road,3,2,0,0,0,5
 Old Dominion,East Carolina,LOSS,3,Home,0,0,0,0,0,0
@@ -102,7 +102,7 @@ South Florida,FCS,WIN,42,Home,3,2,0,0,0,5
 Nevada,Middle Tennessee,LOSS,7,Road,0,0,0,0,0,0
 Middle Tennessee,Nevada,WIN,7,Home,3,0,0,0,0,3
 Ohio,South Alabama,LOSS,5,Road,0,0,0,0,0,0
-South Alabama,Ohio,WIN,5,Home,3,0,2,0,0,5
+South Alabama,Ohio,WIN,5,Home,3,0,1,0,0,4
 Georgia Southern,Jacksonville State,LOSS,4,Road,0,0,0,0,0,0
 Jacksonville State,Georgia Southern,WIN,4,Home,3,0,1,0,0,4
 Sam Houston,FCS,WIN,59,Home,3,2,0,0,0,5

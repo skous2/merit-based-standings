@@ -13,7 +13,7 @@ California,Clemson,LOSS,14,Home,0,0,0,0,0,0
 Texas,Tennessee,WIN,3,Road,3,2,3,2,0,10
 Tennessee,Texas,LOSS,3,Home,0,0,0,0,3,3
 Oklahoma,Georgia,LOSS,28,Road,0,0,0,0,0,0
-Georgia,Oklahoma,WIN,28,Home,3,2,1,2,0,8
+Georgia,Oklahoma,WIN,28,Home,3,2,2,2,0,9
 Notre Dame,Purdue,WIN,39,Road,3,2,1,2,0,8
 Purdue,Notre Dame,LOSS,39,Home,0,0,0,0,0,0
 Ole Miss,Florida,LOSS,24,Road,0,0,0,0,0,0
@@ -23,16 +23,16 @@ Miami,Central Michigan,WIN,49,Home,3,2,0,0,0,5
 Illinois,Ohio State,LOSS,23,Road,0,0,0,0,0,0
 Ohio State,Illinois,WIN,23,Home,3,2,2,2,0,9
 South Carolina,Alabama,LOSS,31,Road,0,0,0,0,0,0
-Alabama,South Carolina,WIN,31,Home,3,2,2,2,0,9
+Alabama,South Carolina,WIN,31,Home,3,2,3,2,0,10
 Texas A&M,LSU,LOSS,29,Road,0,0,0,0,0,0
 LSU,Texas A&M,WIN,29,Home,3,2,1,2,0,8
 Sam Houston,Texas Tech,LOSS,35,Road,0,0,0,0,0,0
 Texas Tech,Sam Houston,WIN,35,Home,3,2,0,0,0,5
 Oregon,USC,WIN,14,Road,3,2,3,2,0,10
 USC,Oregon,LOSS,14,Home,0,0,0,0,0,0
-Wisconsin,Penn State,WIN,4,Road,3,2,1,2,0,8
+Wisconsin,Penn State,WIN,4,Road,3,2,2,2,0,9
 Penn State,Wisconsin,LOSS,4,Home,0,0,0,0,0,0
-Utah,Iowa State,WIN,14,Road,3,2,2,2,0,9
+Utah,Iowa State,WIN,14,Road,3,2,1,2,0,8
 Iowa State,Utah,LOSS,14,Home,0,0,0,0,0,0
 Wake Forest,Louisville,WIN,3,Road,3,2,3,2,0,10
 Louisville,Wake Forest,LOSS,3,Home,0,0,0,0,3,3

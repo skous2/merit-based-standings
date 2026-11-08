@@ -14,7 +14,7 @@ UTSA,South Florida,WIN,7,Home,3,0,2,0,0,5
 South Alabama,Arkansas State,WIN,7,Road,3,2,0,0,0,5
 Arkansas State,South Alabama,LOSS,7,Home,0,0,0,0,0,0
 Iowa State,BYU,LOSS,14,Road,0,0,0,0,0,0
-BYU,Iowa State,WIN,14,Home,3,2,2,2,0,9
+BYU,Iowa State,WIN,14,Home,3,2,1,2,0,8
 Iowa,Washington,WIN,17,Road,3,2,2,2,0,9
 Washington,Iowa,LOSS,17,Home,0,0,0,0,0,0
 Florida State,Louisville,LOSS,24,Road,0,0,0,0,0,0
@@ -39,7 +39,7 @@ LSU,Kentucky,LOSS,1,Road,0,0,0,0,3,3
 Kentucky,LSU,WIN,1,Home,3,0,3,2,0,8
 Kansas,Utah,LOSS,17,Road,0,0,0,0,0,0
 Utah,Kansas,WIN,17,Home,3,2,0,2,0,7
-UCLA,Oregon,WIN,2,Road,3,2,3,2,0,10
+UCLA,Oregon,WIN,2,Road,3,2,2,2,0,9
 Oregon,UCLA,LOSS,2,Home,0,0,0,0,3,3
 Texas A&M,Missouri,LOSS,21,Road,0,0,0,0,0,0
 Missouri,Texas A&M,WIN,21,Home,3,2,1,2,0,8
@@ -48,9 +48,9 @@ Arkansas,Tennessee,LOSS,7,Home,0,0,0,0,3,3
 South Carolina,Florida,WIN,19,Road,3,2,3,2,0,10
 Florida,South Carolina,LOSS,19,Home,0,0,0,0,0,0
 UCF,Oklahoma State,LOSS,14,Road,0,0,0,0,0,0
-Oklahoma State,UCF,WIN,14,Home,3,2,2,2,0,9
-USC,Penn State,WIN,8,Road,3,2,1,2,0,8
-Penn State,USC,LOSS,8,Home,0,0,0,0,0,0
+Oklahoma State,UCF,WIN,14,Home,3,2,1,2,0,8
+USC,Penn State,WIN,8,Road,3,2,2,2,0,9
+Penn State,USC,LOSS,8,Home,0,0,0,0,3,3
 Houston,Kansas State,WIN,19,Road,3,2,1,2,0,8
 Kansas State,Houston,LOSS,19,Home,0,0,0,0,0,0
 Boise State,Fresno State,WIN,7,Road,3,2,2,0,0,7
@@ -104,7 +104,7 @@ UNLV,North Dakota State,WIN,6,Home,3,0,2,0,0,5
 Coastal Carolina,Marshall,WIN,6,Road,3,2,1,0,0,6
 Marshall,Coastal Carolina,LOSS,6,Home,0,0,0,0,0,0
 Syracuse,Virginia,LOSS,3,Road,0,0,0,0,0,0
-Virginia,Syracuse,WIN,3,Home,3,0,1,2,0,6
+Virginia,Syracuse,WIN,3,Home,3,0,2,2,0,7
 Air Force,Northern Illinois,WIN,21,Road,3,2,0,0,0,5
 Northern Illinois,Air Force,LOSS,21,Home,0,0,0,0,0,0
 Louisiana,Louisiana Tech,LOSS,1,Road,0,0,0,0,0,0

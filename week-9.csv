@@ -13,7 +13,7 @@ Troy,James Madison,WIN,3,Road,3,2,2,0,0,7
 James Madison,Troy,LOSS,3,Home,0,0,0,0,0,0
 Tulane,Charlotte,WIN,7,Road,3,2,0,0,0,5
 Charlotte,Tulane,LOSS,7,Home,0,0,0,0,0,0
-Baylor,UCF,WIN,32,Road,3,2,2,2,0,9
+Baylor,UCF,WIN,32,Road,3,2,1,2,0,8
 UCF,Baylor,LOSS,32,Home,0,0,0,0,0,0
 Kent State,Sacramento State,LOSS,21,Road,0,0,0,0,0,0
 Sacramento State,Kent State,WIN,21,Home,3,2,0,0,0,5
@@ -37,7 +37,7 @@ Mississippi State,Texas,LOSS,28,Road,0,0,0,0,0,0
 Texas,Mississippi State,WIN,28,Home,3,2,2,2,0,9
 Auburn,Ole Miss,LOSS,30,Road,0,0,0,0,0,0
 Ole Miss,Auburn,WIN,30,Home,3,2,2,2,0,9
-Arizona,Texas Tech,LOSS,8,Road,0,0,0,0,0,0
+Arizona,Texas Tech,LOSS,8,Road,0,0,0,0,3,3
 Texas Tech,Arizona,WIN,8,Home,3,0,3,2,0,8
 Virginia,Wake Forest,LOSS,44,Road,0,0,0,0,0,0
 Wake Forest,Virginia,WIN,44,Home,3,2,1,2,0,8
@@ -91,7 +91,7 @@ Southern Miss,UL Monroe,WIN,14,Road,3,2,0,0,0,5
 UL Monroe,Southern Miss,LOSS,14,Home,0,0,0,0,0,0
 New Mexico,San José State,WIN,5,Road,3,2,1,0,0,6
 San José State,New Mexico,LOSS,5,Home,0,0,0,0,0,0
-South Carolina,Oklahoma,WIN,17,Road,3,2,1,2,0,8
+South Carolina,Oklahoma,WIN,17,Road,3,2,2,2,0,9
 Oklahoma,South Carolina,LOSS,17,Home,0,0,0,0,0,0
 Purdue,Penn State,LOSS,14,Road,0,0,0,0,0,0
 Penn State,Purdue,WIN,14,Home,3,2,1,2,0,8
